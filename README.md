@@ -14,6 +14,6 @@ It shares some ressources, this was the reason to put them into one repository.
     Pcb_Diver_Flasher:      KiCAD (8.0) PCB for this unit
     SKEDD-PIC-Cable:        KiCAD (8.0) schematic for the connection cable PICKIT <> PCB for program and debug purposes
 
-## Current state
-Folder structures and content are still under construction!
+## Current state (14.12.2024)
+The folder structures and content are still under construction!
 
