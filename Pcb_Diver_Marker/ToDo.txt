@@ -1,0 +1,11 @@
+
+Bibliothek Batteriehalter um Version für 17500 erweitern
+Bibliothek für SKEDD laden und Projekt hinzufügen
+
+Weitere PCB Version erstellen für Batterie 17500 
+	=> Entscheidung welche es wird kommt später, Berechnung Laufzeiten...
+	SKEDD Stecker auf Platine(n) setzen
+	
+	
+
+
