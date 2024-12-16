@@ -1,15 +1,13 @@
 // ----------------------------------------------------------------------------
 //  Projectinfos
 // ----------------------------------------------------------------------------
-//  Name:    "Diver_Marker" and "PCB_Flasher"
-//  Details: The Diver_marker" is a small device with driven by a small AAA Lithium battery
-//           It is carried by the diver and genereates light signals with two different colours to mark the diver in low light / bad visibility conditions.
-//           The PCB_Flasher is a little bit bigger and driven by an 18650 Lithium accumulator. With two 3W LEDs it generates high power flashes
-//           Usage is to mark input / output on night dives or dives with bad visibility
+//  Name:    "Diver_Flasher"
+//  Details: Diver_Flasher is a little bit bigger and driven by an 18650 Lithium 
+//           accumulator. With two 3W LEDs it generates high power flashes
+//           Usage is to mark input / output on night dives or dives with bad 
+//           visibility
 //
-//  This code covers both applications. The final machine code is selected by #define command at the beginning of the project
-//
-//  Main Source File for LED Flasher
+//  Main Source File for Diver Flasher
 //
 //  File Name:   	main.c
 //  Device:  		PIC16F15313
@@ -30,50 +28,44 @@
 // debug switch: fasten up timout for debugging if defined
 //#define FAST_MODE
 
-#define LED1_ON             LED_1_SetHigh()
-#define LED1_OFF            LED_1_SetLow()
-#define LED2_ON             LED_2_SetHigh()
-#define LED2_OFF            LED_2_SetLow()
-#define LED3_ON             LED_3_SetHigh()
-#define LED3_OFF            LED_3_SetLow();
-#define ALL_LEDS_ON         LED_1_SetHigh(); LED_2_SetHigh(); LED_3_SetHigh();
+#define FLASH_ON            LED_Flash_SetHigh()
+#define FLASH_OFF           LED_Flash_SetLow()
 
-// Blink parameters in ms
-#define LED_ON_TIME         (60u)
-#define LED_OFF_TIME        (2850u)
+#define BOOST_ON            EN_5V_SetHigh()
+#define BOOST_OFF           EN_5V_SetLow()
+
+// All basic parameters
+#define CYCLE_TIME          (2000u) // complete cycle time 2 seconds
+#define BOOST_TIME          (200u)  // 200ms time to load 5V capacitor
+#define FLASH_TIME          (50u)   // Flash time in ms
+#define WAIT_TIME           (CYCLE_TIME-BOOST_TIME-FLASH_TIME)
+#define A_MINUTE            (60000u) // ms tics per minute
 
 // System active time before sleep in minutes
 
 #ifdef FAST_MODE
-  #define A_MINUTE          (15000u)
-  #define DRY_OFF_TIME      (1u)      // short timeouts for sw development 
-  #define WET_OFF_TIME      (3u)      // 15 seconds and 45 seconds
+  #define OFF_TIME          (1u)      // short timeouts for sw development 
 #else
-  #define A_MINUTE          (60000u)
-  #define DRY_OFF_TIME      (5u)      // normal timing     
-  #define WET_OFF_TIME      (75u)
+  #define OFF_TIME          (90u)      // normal timing     
 #endif
 
 // Helper macros for easy acces in SW
 #define OFF_TIME_REACHED      (u16_Timeout  == u16_MinutesElapsed) 
 #define MAIN_FSM_IN_WAIT      (MainFSM_Wait == ms_MainFSM)
-#define WATER_DETECTED        (FALSE        == WAKE_INPUT_PORT)
 
 // ----------------------------------------------------------------------------
 // Module global variables (scope = main)
 // ----------------------------------------------------------------------------
 volatile  u8  u1_TimerIsrOcured   = 0;
 static    u16 u16_MinutesElapsed  = 0;
-static    u8  u1_InWater          = FALSE;
 static    u16 u16_Timeout         = 0;
 
 typedef enum 
 {
-  MainFSM_Init, // temp state after power on
-  MainFSM_Led1, // LED 1 is powered
-  MainFSM_Led2, // ditto LED 2
-  MainFSM_Led3, // ditto LED 3
-  MainFSM_Wait, // pause before fire LED 1 again
+  MainFSM_Init,     // temp state after power on
+  MainFSM_Boost,    // boost regulator is switchend on, 5V cap charging
+  MainFSM_Flash,    // boost + LEDs are on 
+  MainFSM_Wait      // all off, wait before cycle restarts
 } MainFSM_t;
 static MainFSM_t ms_MainFSM = MainFSM_Init;
 
@@ -91,7 +83,6 @@ static u16                      u16_SwTimer[SW_TIMER_CNT];
 // ----------------------------------------------------------------------------
 // Declaration of all functions of main
 // ----------------------------------------------------------------------------
-
 static void PrepareSleep(void);
 static void PrepareRun(void);
 static void MySwTimer(void);
@@ -99,9 +90,8 @@ static void MainFSM(void);
 static void HandleSleep(void);
 
 // ----------------------------------------------------------------------------
-// Definition of all fucntions of main
+// Definition of all functions of main
 // ----------------------------------------------------------------------------
-
 static void PrepareSleep(void)
 {
   TMR0_StopTimer();   // disable timer to avoid wakeup by timer interrupt
@@ -124,12 +114,10 @@ static void PrepareRun(void)
   ms_MainFSM = MainFSM_Init;    // Reset main FSM
 }     
 
-
 // ----------------------------------------------------------------------------
 static void MySwTimer(void)
 {
   u8 lu8_i;
-  
   for (lu8_i = 0; lu8_i < SW_TIMER_CNT; lu8_i++)
   {
     if (0 != u16_SwTimer[lu8_i]) 
@@ -144,51 +132,40 @@ static void MainFSM(void)
 {
   switch (ms_MainFSM)
   {
-    default: 
-      LED1_OFF;
-      LED2_OFF;
-      LED3_OFF;
+    default:                        // just in case: switch everything off
+      BOOST_OFF;                    // and run into the init state
+      FLASH_OFF;
       
     case MainFSM_Init: 
-      LED1_ON;
-      LOAD_MAIN_FSM_TIMER(LED_ON_TIME);
-      ms_MainFSM = MainFSM_Led1;
+      BOOST_ON;                     // we start with the boost time
+      LOAD_MAIN_FSM_TIMER(BOOST_TIME);
+      ms_MainFSM = MainFSM_Boost;
       break;
-    
-    case MainFSM_Led1: 
-      if(MAIN_FSM_TIMER_ELAPSED)
-      {
-        LED1_OFF;
-        LED2_ON;
-        LOAD_MAIN_FSM_TIMER(LED_ON_TIME);
-        ms_MainFSM = MainFSM_Led2;
-      }
+
+      case MainFSM_Boost:         // boost regulator is switch on, 5V cap charging
+        if(MAIN_FSM_TIMER_ELAPSED)
+        {
+          FLASH_ON;               // enable flash while boost is still active
+          LOAD_MAIN_FSM_TIMER(FLASH_TIME);
+          ms_MainFSM = MainFSM_Flash;
+        }          
       break;
-    
-    case MainFSM_Led2: 
-      if(MAIN_FSM_TIMER_ELAPSED)
-      {
-        LED2_OFF;
-        LED3_ON;
-        LOAD_MAIN_FSM_TIMER(LED_ON_TIME);
-        ms_MainFSM = MainFSM_Led3;
-      }
+      
+      case MainFSM_Flash:         // FLASH LEDs are on, wait for timeout
+        if(MAIN_FSM_TIMER_ELAPSED)
+        {
+          FLASH_OFF;
+          BOOST_OFF;
+          LOAD_MAIN_FSM_TIMER(WAIT_TIME);
+          ms_MainFSM = MainFSM_Wait;          
+        }
       break;
-    
-    case MainFSM_Led3: 
-      if(MAIN_FSM_TIMER_ELAPSED)
-      {
-        LED3_OFF;
-        LOAD_MAIN_FSM_TIMER(LED_OFF_TIME);
-        ms_MainFSM = MainFSM_Wait;
-      }
-      break;
-    
-    case MainFSM_Wait:
-      if(MAIN_FSM_TIMER_ELAPSED)
-      {
-        ms_MainFSM = MainFSM_Init;
-      }
+          
+      case MainFSM_Wait:      // pause before cycle restarts      
+        if(MAIN_FSM_TIMER_ELAPSED)
+        {
+          ms_MainFSM = MainFSM_Boost;                    
+        }
       break;
   }
 }
@@ -201,25 +178,7 @@ static void HandleSleep(void)
   {
     LOAD_MINUTE_TIMER(A_MINUTE);    // Reload for the next minute
     u16_MinutesElapsed++;           // one more minute has elapsed
-    
-    if (WATER_DETECTED)             // decision depending on current state
-    {
-      u16_Timeout = WET_OFF_TIME;   // use this timeout if wet ...
-      if (FALSE == u1_InWater)      // Edge dry => wet?
-      {
-        u16_MinutesElapsed = 0;     // yes, rest counter 
-      }
-    } 
-    else
-    {
-      u16_Timeout = DRY_OFF_TIME;   // use this timeout if dry ...
-      if (FALSE != u1_InWater)      // Edge wet => dry?
-      {
-        u16_MinutesElapsed = 0;     // yes, rest counter 
-      }     
-    }
-    u1_InWater = WATER_DETECTED;    // store current value for edge detection
-
+ 
     if(OFF_TIME_REACHED)            // Time to switch off reached?
     {    
       PrepareSleep();               // enable wakeup on falling edge of RA0     

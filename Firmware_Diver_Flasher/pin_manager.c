@@ -11,7 +11,7 @@
 void PIN_MANAGER_Initialize(void)
 {
     LATA    = 0x00;     // init port A output latch to zero
-    TRISA   = 0x01;     // set port complete to output but RA0 (wakeup) 
+    TRISA   = 0x04;     // set port complete to output but RA2 (reed, wakeup) 
     ANSELA  = 0x0;      // no analog inputs used
     WPUA    = 0x01;     // internal weak pull on RA0 input
     ODCONA  = 0x00;     // no poen drain function

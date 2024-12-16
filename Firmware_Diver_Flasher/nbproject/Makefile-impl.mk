@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Firmware
+PROJECTNAME=Firmware_Diver_Flasher
 
 # Active Configuration
 DEFAULTCONF=default
