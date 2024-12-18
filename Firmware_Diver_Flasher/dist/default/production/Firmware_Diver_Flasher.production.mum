@@ -1,7 +1,7 @@
 
 16F15313 Memory Summary:
-    Program space        used   129h (   297) of   800h words   ( 14.5%)
-    Data space           used     Fh (    15) of   100h bytes   (  5.9%)
+    Program space        used   128h (   296) of   800h words   ( 14.5%)
+    Data space           used     Dh (    13) of   100h bytes   (  5.1%)
     EEPROM space         None available
     Configuration bits   used     5h (     5) of     5h words   (100.0%)
     ID Location space    used     4h (     4) of     4h bytes   (100.0%)

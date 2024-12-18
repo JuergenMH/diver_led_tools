@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "mcc.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,14 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 17 "main.c"
+# 1 "mcc.c" 2
+
+
+
+
+
+
+
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -9965,25 +9971,16 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 2 3
-# 17 "main.c" 2
+# 8 "mcc.c" 2
 
-# 1 "./globaldef.h" 1
-# 18 "main.c" 2
 
-# 1 "./interrupt_manager.h" 1
-# 19 "main.c" 2
-
-# 1 "./pin_manager.h" 1
-# 80 "./pin_manager.h"
-void PIN_MANAGER_Initialize (void);
-# 20 "main.c" 2
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdbool.h" 1 3
+# 10 "mcc.c" 2
 
 # 1 "./mcc.h" 1
 # 10 "./mcc.h"
 void SYSTEM_Initialize(void);
-# 21 "main.c" 2
-
-# 1 "./tmr0.h" 1
+# 11 "mcc.c" 2
 
 
 
@@ -9991,154 +9988,76 @@ void SYSTEM_Initialize(void);
 
 
 
+#pragma config FEXTOSC = OFF
+#pragma config RSTOSC = HFINT1
+#pragma config CLKOUTEN = OFF
+#pragma config CSWEN = OFF
+#pragma config FCMEN = OFF
 
-void TMR0_Initialize(void);
-void TMR0_StartTimer(void);
-void TMR0_StopTimer(void);
-# 22 "main.c" 2
-# 60 "main.c"
-typedef enum
+
+#pragma config MCLRE = ON
+#pragma config PWRTE = OFF
+#pragma config LPBOREN = OFF
+#pragma config BOREN = OFF
+#pragma config BORV = LO
+#pragma config ZCD = OFF
+#pragma config PPS1WAY = ON
+#pragma config STVREN = ON
+
+
+#pragma config WDTCPS = WDTCPS_31
+#pragma config WDTE = OFF
+#pragma config WDTCWS = WDTCWS_7
+#pragma config WDTCCS = SC
+
+
+#pragma config BBSIZE = BB512
+#pragma config BBEN = OFF
+#pragma config SAFEN = OFF
+#pragma config WRTAPP = OFF
+#pragma config WRTB = OFF
+#pragma config WRTC = OFF
+#pragma config WRTSAF = OFF
+#pragma config LVP = ON
+
+
+#pragma config CP = OFF
+
+
+
+
+void PMD_Initialize(void);
+void OSCILLATOR_Initialize(void);
+
+
+
+
+void PMD_Initialize(void)
 {
-  MainFSM_Init,
-  MainFSM_Boost,
-  MainFSM_Flash,
-  MainFSM_Wait
-} MainFSM_t;
-static MainFSM_t ms_MainFSM = MainFSM_Init;
-
-volatile unsigned char u1_TimerIsrOcured = 0;
-static unsigned int u16_MinutesElapsed = 0;
-
-
-
-static unsigned int u16_SwTimer[(2u)];
-# 86 "main.c"
-static void PrepareSleep(void);
-static void PrepareRun(void);
-static void MySwTimer(void);
-static void MainFSM(void);
-static void HandleSleep(void);
-
-
-
-
-static void PrepareSleep(void)
-{
-  TMR0_StopTimer();
-  GIE = 0;
-  IOCAF = 0;
-  IOCAN0 = 4;
-  IOCIE = 1;
-}
-
-static void PrepareRun(void)
-{
-  IOCAN0 = 0;
-  IOCIE = 0;
-  IOCAF = 0;
-  GIE = 1;
-
-  TMR0_StartTimer();
-
-  u16_MinutesElapsed = 0;
-  ms_MainFSM = MainFSM_Init;
-}
-
-
-static void MySwTimer(void)
-{
-  unsigned char lu8_i;
-  for (lu8_i = 0; lu8_i < (2u); lu8_i++)
-  {
-    if (0 != u16_SwTimer[lu8_i])
-    {
-      u16_SwTimer[lu8_i]--;
-    }
-  }
+  PMD0 = 0x00;
+  PMD1 = 0x00;
+  PMD2 = 0x00;
+  PMD3 = 0x00;
+  PMD4 = 0x00;
+  PMD5 = 0x00;
 }
 
 
-static void MainFSM(void)
+void OSCILLATOR_Initialize(void)
 {
-  switch (ms_MainFSM)
-  {
-    default:
-      do { LATAbits.LATA5 = 0; } while(0);
-      do { LATAbits.LATA4 = 0; } while(0);
-
-    case MainFSM_Init:
-      do { LATAbits.LATA5 = 1; } while(0);
-      u16_SwTimer[0]=(10u);
-      ms_MainFSM = MainFSM_Boost;
-      break;
-
-    case MainFSM_Boost:
-      if((0 == u16_SwTimer[0]))
-      {
-        do { LATAbits.LATA4 = 1; } while(0);
-        u16_SwTimer[0]=(50u);
-        ms_MainFSM = MainFSM_Flash;
-      }
-    break;
-
-    case MainFSM_Flash:
-      if((0 == u16_SwTimer[0]))
-      {
-        do { LATAbits.LATA4 = 0; } while(0);
-        do { LATAbits.LATA5 = 0; } while(0);
-        u16_SwTimer[0]=((2000u)-(10u)-(50u));
-        ms_MainFSM = MainFSM_Wait;
-      }
-    break;
-
-    case MainFSM_Wait:
-      if((0 == u16_SwTimer[0]))
-      {
-        ms_MainFSM = MainFSM_Init;
-      }
-    break;
-  }
+  OSCCON1 = 0x62;
+  OSCCON3 = 0x00;
+  OSCEN = 0x00;
+  OSCFRQ = 0x02;
+  OSCSTAT = 0x00;
+  OSCTUNE = 0x00;
 }
 
 
-static void HandleSleep(void)
+void SYSTEM_Initialize(void)
 {
-  if ((0 == u16_SwTimer[1]) &&
-      (MainFSM_Wait == ms_MainFSM))
-  {
-    u16_SwTimer[1]=(60000u);
-    u16_MinutesElapsed++;
+  CPUDOZE = 0x00;
 
-    if(((2u) == u16_MinutesElapsed))
-    {
-      PrepareSleep();
-      __asm("sleep");
-      __nop();
-      PrepareRun();
-    }
-  }
-}
-
-
-
-
-void main(void)
-{
-  SYSTEM_Initialize();
-  PIN_MANAGER_Initialize();
-  TMR0_Initialize();
-  (INTCONbits.GIE = 1);
-  (INTCONbits.PEIE = 1);
-  u16_SwTimer[1]=(60000u);
-
-  while ((1u))
-  {
-    if(((0u) != u1_TimerIsrOcured))
-    {
-      u1_TimerIsrOcured = (0u);
-      MySwTimer();
-      MainFSM();
-      HandleSleep();
-    }
-  }
+  PMD_Initialize();
+  OSCILLATOR_Initialize();
 }

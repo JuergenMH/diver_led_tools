@@ -10027,13 +10027,13 @@ static void PrepareSleep(void)
   TMR0_StopTimer();
   GIE = 0;
   IOCAF = 0;
-  IOCAN0 = 4;
+  IOCAN2 = 1;
   IOCIE = 1;
 }
 
 static void PrepareRun(void)
 {
-  IOCAN0 = 0;
+  IOCAN2 = 0;
   IOCIE = 0;
   IOCAF = 0;
   GIE = 1;
@@ -10109,7 +10109,7 @@ static void HandleSleep(void)
     u16_SwTimer[1]=(60000u);
     u16_MinutesElapsed++;
 
-    if(((2u) == u16_MinutesElapsed))
+    if(((1u) == u16_MinutesElapsed))
     {
       PrepareSleep();
       __asm("sleep");

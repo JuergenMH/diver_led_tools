@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v2.50\pic\dat\20240725155939_en.msgs \
   -cn -h+dist/default/debug\Firmware_Diver_Flasher.debug.sym \
   --cmf=dist/default/debug\Firmware_Diver_Flasher.debug.cmf -z -Q16F15313 \
-  -oC:\Users\JEGGEL~1\AppData\Local\Temp\xcAsnlk.\driver_tmp_3.o \
+  -oC:\Users\JEGGEL~1\AppData\Local\Temp\xcAsois.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/debug/Firmware_Diver_Flasher.debug.map \
-  --md=C:\Users\JEGGEL~1\AppData\Local\Temp\xcAsnlk.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\JEGGEL~1\AppData\Local\Temp\xcAsois.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFh -ASTRCODE=00h-07FFh \
   -ASTRING=00h-0FFhx8 -ACONST=00h-0FFhx8 -AENTRY=00h-0FFhx8 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
@@ -41,7 +41,7 @@ Linker command line:
   -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry=04h,sivt,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\JEGGEL~1\AppData\Local\Temp\xcAsnlk.\driver_tmp_12.o \
+  C:\Users\JEGGEL~1\AppData\Local\Temp\xcAsois.\driver_tmp_12.o \
   dist/default/debug\Firmware_Diver_Flasher.debug.o 
 
 Object code version is 3.11
@@ -51,7 +51,7 @@ Machine type is 16F15313
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\JEGGEL~1\AppData\Local\Temp\xcAsnlk.\driver_tmp_12.o
+C:\Users\JEGGEL~1\AppData\Local\Temp\xcAsois.\driver_tmp_12.o
                 end_init                             14       14        1        8       0
                 reset_vec                             0        0        1        0       0
                 config                             8007     8007        5        0       4

@@ -842,8 +842,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;pin_manager.c: 15:     ANSELA = 0x0;
 [e = _ANSELA -> -> 0 `i `uc ]
 "16
-[; ;pin_manager.c: 16:     WPUA = 0x01;
-[e = _WPUA -> -> 1 `i `uc ]
+[; ;pin_manager.c: 16:     WPUA = 0x04;
+[e = _WPUA -> -> 4 `i `uc ]
 "17
 [; ;pin_manager.c: 17:     ODCONA = 0x00;
 [e = _ODCONA -> -> 0 `i `uc ]

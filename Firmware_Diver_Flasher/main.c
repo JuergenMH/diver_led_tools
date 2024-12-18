@@ -44,7 +44,7 @@
 // System active time before sleep in minutes
 
 #ifdef FAST_MODE
-  #define OFF_TIME          (2u)      // short auto power off (sw development)
+  #define OFF_TIME          (1u)      // short auto power off (sw development)
 #else
   #define OFF_TIME          (90u)      // normal timing     
 #endif
@@ -97,13 +97,13 @@ static void PrepareSleep(void)
   TMR0_StopTimer();   // disable timer to avoid wakeup by timer interrupt
   GIE    = 0;         // real interrupt is not necessary for wakeup
   IOCAF  = 0;         // clear all interrupt change flags from port RA
-  IOCAN0 = 1;         // enable wakeup by falling edge on RA0
+  IOCAN2 = 1;         // enable wakeup by falling edge on RA2
   IOCIE  = 1;         // enable IO change interrupt module
 }
 
 static void PrepareRun(void)
 {
-  IOCAN0 = 0;         // disable interrupt by falling edge on RA0
+  IOCAN2 = 0;         // disable interrupt by falling edge on RA2
   IOCIE  = 0;         // disable interrupt module
   IOCAF  = 0;         // clear all interrupt change flags from port RA
   GIE    = 1;         // enable interrupt system again
@@ -173,8 +173,8 @@ static void MainFSM(void)
 // ----------------------------------------------------------------------------
 static void HandleSleep(void)
 {
-  if (MINUTE_TIMER_ELAPSED  &&      // SW timer counts down from 65000 ms
-      MAIN_FSM_IN_WAIT)
+  if (MINUTE_TIMER_ELAPSED  &&      // auto power off time reached?
+      MAIN_FSM_IN_WAIT)             // switch off at the end of the cycle
   {
     LOAD_MINUTE_TIMER(A_MINUTE);    // Reload for the next minute
     u16_MinutesElapsed++;           // one more minute has elapsed
