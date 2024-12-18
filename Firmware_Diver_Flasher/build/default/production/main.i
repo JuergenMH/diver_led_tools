@@ -7,7 +7,7 @@
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 17 "main.c"
+# 26 "main.c"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -9965,23 +9965,23 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 2 3
-# 17 "main.c" 2
+# 26 "main.c" 2
 
 # 1 "./globaldef.h" 1
-# 18 "main.c" 2
+# 27 "main.c" 2
 
 # 1 "./interrupt_manager.h" 1
-# 19 "main.c" 2
+# 28 "main.c" 2
 
 # 1 "./pin_manager.h" 1
 # 80 "./pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 20 "main.c" 2
+# 29 "main.c" 2
 
 # 1 "./mcc.h" 1
 # 10 "./mcc.h"
 void SYSTEM_Initialize(void);
-# 21 "main.c" 2
+# 30 "main.c" 2
 
 # 1 "./tmr0.h" 1
 
@@ -9995,8 +9995,8 @@ void SYSTEM_Initialize(void);
 void TMR0_Initialize(void);
 void TMR0_StartTimer(void);
 void TMR0_StopTimer(void);
-# 22 "main.c" 2
-# 60 "main.c"
+# 31 "main.c" 2
+# 76 "main.c"
 typedef enum
 {
   MainFSM_Init,
@@ -10008,11 +10008,11 @@ static MainFSM_t ms_MainFSM = MainFSM_Init;
 
 volatile unsigned char u1_TimerIsrOcured = 0;
 static unsigned int u16_MinutesElapsed = 0;
+static unsigned int u16_SwTimer[(3u)];
 
 
 
-static unsigned int u16_SwTimer[(2u)];
-# 86 "main.c"
+
 static void PrepareSleep(void);
 static void PrepareRun(void);
 static void MySwTimer(void);
@@ -10022,38 +10022,62 @@ static void HandleSleep(void);
 
 
 
-static void PrepareSleep(void)
+static void PerformSleep(void)
 {
+
   TMR0_StopTimer();
   GIE = 0;
   IOCAF = 0;
   IOCAN2 = 1;
   IOCIE = 1;
-}
 
-static void PrepareRun(void)
-{
+  __asm("sleep");
+  __nop();
+
+
   IOCAN2 = 0;
   IOCIE = 0;
   IOCAF = 0;
   GIE = 1;
 
-  TMR0_StartTimer();
-
   u16_MinutesElapsed = 0;
   ms_MainFSM = MainFSM_Init;
+  TMR0_StartTimer();
+  u16_SwTimer[2]=(5000u);
 }
 
 
 static void MySwTimer(void)
 {
   unsigned char lu8_i;
-  for (lu8_i = 0; lu8_i < (2u); lu8_i++)
+  for (lu8_i = 0; lu8_i < (3u); lu8_i++)
   {
     if (0 != u16_SwTimer[lu8_i])
     {
       u16_SwTimer[lu8_i]--;
     }
+  }
+}
+
+
+static void HandlePowerOff()
+{
+
+  if ((0 == u16_SwTimer[1]))
+  {
+    u16_SwTimer[1]=(60000u);
+    u16_MinutesElapsed++;
+
+    if(((90u) == u16_MinutesElapsed))
+    {
+      PerformSleep();
+    }
+  }
+
+  if (((0u) != PORTAbits.RA2) &&
+     (0 == u16_SwTimer[2]))
+  {
+    PerformSleep();
   }
 }
 
@@ -10092,30 +10116,12 @@ static void MainFSM(void)
     break;
 
     case MainFSM_Wait:
+      HandlePowerOff();
       if((0 == u16_SwTimer[0]))
       {
         ms_MainFSM = MainFSM_Init;
       }
     break;
-  }
-}
-
-
-static void HandleSleep(void)
-{
-  if ((0 == u16_SwTimer[1]) &&
-      (MainFSM_Wait == ms_MainFSM))
-  {
-    u16_SwTimer[1]=(60000u);
-    u16_MinutesElapsed++;
-
-    if(((1u) == u16_MinutesElapsed))
-    {
-      PrepareSleep();
-      __asm("sleep");
-      __nop();
-      PrepareRun();
-    }
   }
 }
 
@@ -10130,6 +10136,7 @@ void main(void)
   (INTCONbits.GIE = 1);
   (INTCONbits.PEIE = 1);
   u16_SwTimer[1]=(60000u);
+  u16_SwTimer[2]=(5000u);
 
   while ((1u))
   {
@@ -10138,7 +10145,6 @@ void main(void)
       u1_TimerIsrOcured = (0u);
       MySwTimer();
       MainFSM();
-      HandleSleep();
     }
   }
 }
