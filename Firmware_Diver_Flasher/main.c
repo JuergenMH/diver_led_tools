@@ -25,41 +25,38 @@
 // Hardware access macros and other definitions
 // ----------------------------------------------------------------------------
 
-// debug switch: fasten up timout for debugging if defined
-//#define FAST_MODE
 
 #define FLASH_ON            LED_Flash_SetHigh()
 #define FLASH_OFF           LED_Flash_SetLow()
-
 #define BOOST_ON            EN_5V_SetHigh()
 #define BOOST_OFF           EN_5V_SetLow()
 
 // All basic parameters
-#define CYCLE_TIME          (2000u) // complete cycle time 2 seconds
-#define BOOST_TIME          (200u)  // 200ms time to load 5V capacitor
-#define FLASH_TIME          (50u)   // Flash time in ms
+#define A_MINUTE            (60000u)  // ms tics per minute
+#define CYCLE_TIME          (2000u)   // complete cycle time 2 seconds
+#define BOOST_TIME          (10u)     // time to load 5V capacitor
+#define FLASH_TIME          (50u)     // flash time in ms
 #define WAIT_TIME           (CYCLE_TIME-BOOST_TIME-FLASH_TIME)
-#define A_MINUTE            (60000u) // ms tics per minute
+
+// debug switch: fasten up timout for debugging if defined
+#define FAST_MODE
 
 // System active time before sleep in minutes
 
 #ifdef FAST_MODE
-  #define OFF_TIME          (1u)      // short timeouts for sw development 
+  #define OFF_TIME          (2u)      // short auto power off (sw development)
 #else
   #define OFF_TIME          (90u)      // normal timing     
 #endif
 
-// Helper macros for easy acces in SW
-#define OFF_TIME_REACHED      (u16_Timeout  == u16_MinutesElapsed) 
+// Helper macros for easy access in SW
+#define TIMER_ISR_OCCURED     (FALSE != u1_TimerIsrOcured)
+#define OFF_TIME_REACHED      (OFF_TIME == u16_MinutesElapsed) 
 #define MAIN_FSM_IN_WAIT      (MainFSM_Wait == ms_MainFSM)
 
 // ----------------------------------------------------------------------------
 // Module global variables (scope = main)
 // ----------------------------------------------------------------------------
-volatile  u8  u1_TimerIsrOcured   = 0;
-static    u16 u16_MinutesElapsed  = 0;
-static    u16 u16_Timeout         = 0;
-
 typedef enum 
 {
   MainFSM_Init,     // temp state after power on
@@ -69,11 +66,14 @@ typedef enum
 } MainFSM_t;
 static MainFSM_t ms_MainFSM = MainFSM_Init;
 
+volatile  u8  u1_TimerIsrOcured   = 0;  // flag set by timer ISR
+static    u16 u16_MinutesElapsed  = 0;  // minute counter for auto power off
+
 // Software timer variables
-#define SW_TIMER_CNT            (2u)
+#define SW_TIMER_CNT            (2u)    // we need 2 SW counters
 static u16                      u16_SwTimer[SW_TIMER_CNT];
 
-// Software time access macros
+// Software time access macros, to make access easy
 #define LOAD_MAIN_FSM_TIMER(x)  u16_SwTimer[0]=x
 #define MAIN_FSM_TIMER_ELAPSED  (0 == u16_SwTimer[0])
 
@@ -136,37 +136,37 @@ static void MainFSM(void)
       BOOST_OFF;                    // and run into the init state
       FLASH_OFF;
       
-    case MainFSM_Init: 
+    case MainFSM_Init:              // cycle start here
       BOOST_ON;                     // we start with the boost time
       LOAD_MAIN_FSM_TIMER(BOOST_TIME);
       ms_MainFSM = MainFSM_Boost;
       break;
 
-      case MainFSM_Boost:         // boost regulator is switch on, 5V cap charging
-        if(MAIN_FSM_TIMER_ELAPSED)
-        {
-          FLASH_ON;               // enable flash while boost is still active
-          LOAD_MAIN_FSM_TIMER(FLASH_TIME);
-          ms_MainFSM = MainFSM_Flash;
-        }          
-      break;
+    case MainFSM_Boost:             // booster is on, 5V cap charging
+      if(MAIN_FSM_TIMER_ELAPSED)
+      {
+        FLASH_ON;                   // enable flash while boost is still active
+        LOAD_MAIN_FSM_TIMER(FLASH_TIME);
+        ms_MainFSM = MainFSM_Flash;
+      }          
+    break;
       
-      case MainFSM_Flash:         // FLASH LEDs are on, wait for timeout
-        if(MAIN_FSM_TIMER_ELAPSED)
-        {
-          FLASH_OFF;
-          BOOST_OFF;
-          LOAD_MAIN_FSM_TIMER(WAIT_TIME);
-          ms_MainFSM = MainFSM_Wait;          
-        }
-      break;
+    case MainFSM_Flash:             // LEDS and boost on, wait for timeout
+      if(MAIN_FSM_TIMER_ELAPSED)
+      {
+        FLASH_OFF;
+        BOOST_OFF;
+        LOAD_MAIN_FSM_TIMER(WAIT_TIME);
+        ms_MainFSM = MainFSM_Wait;          
+      }
+    break;
           
-      case MainFSM_Wait:      // pause before cycle restarts      
-        if(MAIN_FSM_TIMER_ELAPSED)
-        {
-          ms_MainFSM = MainFSM_Boost;                    
-        }
-      break;
+    case MainFSM_Wait:              // all off, pause before cycle restarts      
+      if(MAIN_FSM_TIMER_ELAPSED)
+      {
+        ms_MainFSM = MainFSM_Init;                    
+      }
+    break;
   }
 }
 
@@ -200,12 +200,11 @@ void main(void)
   INTERRUPT_GlobalInterruptEnable();      // time isr is used
   INTERRUPT_PeripheralInterruptEnable();  // both flags to be set for TISR
   LOAD_MINUTE_TIMER(A_MINUTE);            // init SW timer for minute counter  
-  
+      
   while (TRUE)
   {
-    if(FALSE != u1_TimerIsrOcured)        // timer interrupt occurred?
+    if(TIMER_ISR_OCCURED)                 // timer interrupt occurred?
     {
-      //LED_3_Toggle();                   // enable to measure ISR freq.
       u1_TimerIsrOcured = FALSE;          // clear local flag from ISR
       MySwTimer();                        // handle all software timers
       MainFSM();                          // perform main function in FSM
