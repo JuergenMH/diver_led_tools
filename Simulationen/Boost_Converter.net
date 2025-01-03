@@ -1,0 +1,24 @@
+* C:\Users\JEggeling\OneDrive - Beko Technologies GmbH\Documents\LTspice\Boost_Converter.asc
+V1 U_BAT 0 3.9 Rser=0.1
+R1 U_OUT N002 0.22 tol=2 pwr=1
+R2 U_OUT N003 0.22 tol=2 pwr=1
+D1 N002 0 LXK2-PW14
+D2 N003 0 LXK2-PW14
+M1 SW_OUT SW_IN 0 0 NTB52N10
+V2 SW_IN 0 PULSE(0 5 0 1µ 1µ 25µ 50µ 100)
+C1 N001 0 470µ V=25 Irms=750m Rser=0.16 Lser=0
+L1 U_BAT SW_OUT 330µ Ipk=2.8 Rser=0.23 Rpar=86577.4 Cpar=0
+D3 SW_OUT N001 RB058LAM100
+C2 U_BAT 0 470µ V=25 Irms=750m Rser=0.16 Lser=0
+C3 U_OUT 0 470µ V=25 Irms=750m Rser=0.16 Lser=0
+R3 U_OUT N001 0.22 tol=2 pwr=1
+.model D D
+.lib C:\Users\JEggeling\AppData\Local\LTspice\lib\cmp\standard.dio
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\JEggeling\AppData\Local\LTspice\lib\cmp\standard.mos
+.tran 0 5ms 0 0.002ms startup
+* IL1\nMax = 5,5A\nMittel = 3,7A
+* ID3\nMax = 5,4A\nMittel = 3,6A
+.backanno
+.end
