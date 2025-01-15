@@ -4259,7 +4259,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LB-P200W2C60"
+		(property "Value" "LB-P200W2C-H3"
 			(at 237.49 52.3874 90)
 			(effects
 				(font
@@ -4830,7 +4830,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "a518bf40-e8bc-464b-9666-ccb029041ccb")
 		(property "Reference" "D100"
 			(at 212.09 49.8474 90)
@@ -4841,8 +4840,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LB-P200W2C60"
-			(at 212.09 52.3874 90)
+		(property "Value" "LB-P200W2C-H3"
+			(at 212.344 52.324 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4875,6 +4874,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Supplier1" "Reichelt LB-P200W2C-H3"
+			(at 223.266 67.818 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -5567,7 +5574,7 @@
 			)
 		)
 		(property "Supplier1" "Mouser, 946-MP3217DJLFZ "
-			(at 115.316 64.008 0)
+			(at 115.062 64.262 0)
 			(effects
 				(font
 					(size 1.27 1.27)
