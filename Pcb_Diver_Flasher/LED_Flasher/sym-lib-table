@@ -1,6 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "SKEDD")(type "KiCad")(uri "${KIPRJMOD}/SKEDD.kicad_sym")(options "")(descr ""))
-  (lib (name "MyPIC")(type "KiCad")(uri "${KIPRJMOD}/MyPIC.kicad_sym")(options "")(descr ""))
-  (lib (name "MyPower")(type "KiCad")(uri "${KIPRJMOD}/MyPower.kicad_sym")(options "")(descr ""))
-)
