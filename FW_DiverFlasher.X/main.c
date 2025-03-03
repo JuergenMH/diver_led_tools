@@ -17,9 +17,9 @@
 #define LEDOntTime    50u               // LED on for 50ms
 #define LEDOffTime    950u              // while developement LED period = 1s
 #define TargetCurrent 730               // .. a little bit below 750mA
-#define T2PRLoadInit  160u              // controle value start up value (20탎)
-#define T2PRLoadMin   80u               // 80 is about 10탎
-#define T2PRLoadMax   240u              // 240 is about 30탎
+#define T2PRLoadInit  100u              // control value start up value (+6탎)
+#define T2PRLoadMin   80u               // 80 is about 10 + 6탎 = 16탎
+#define T2PRLoadMax   200u              // 200 is about 25 + 6탎 = 31탎
 
 // type definitions 
 typedef enum 
@@ -54,26 +54,27 @@ static void MyTmr0(void)
   if (0 != BoosterActive_u8)
   {
     // Measure current and calculate a new pulse width
-    // VREF=1,024V, Shunt=1Ohm => 10 bit result ist mA
+    // VREF=1,024V, Shunt=1Ohm => 10 bit result is mA
     ActualCurrent_s16 = (int16_t) ADC_GetConversionResult();
     ADC_StartConversion();                    // start next AD
     
     // generate new control value, based on deviation current - target
     if (0 < ActualCurrent_s16-TargetCurrent)  // acutal current too high?
-    {                                         // yes, current ist too high
+    {                                         // yes, current is too high
       if (T2PRLoadMin <= T2PRLoad_u8)         // check pulse minimum  
-        T2PRLoad_u8--;                        // reduce pulse witdth
+        T2PRLoad_u8--;                        // reduce pulse width
     }
     else                                      // current too low       
     {  
       if (T2PRLoadMax >= T2PRLoad_u8)         // check pulse maximum
         T2PRLoad_u8++;                        // increment pulse width
-    }  
+    }
+    
     // Start a new output pulse 
     Switch_SetHigh();                         // start the pulse
     T2PR = T2PRLoad_u8;                       // load HW timer with period
     TMR2_Start();                             // and prepare pulse stop
-  }
+}
   
   // handle the 1m time for the scheduler in main
   if (0 == MsTimer_u8)
@@ -154,6 +155,7 @@ int main(void)
     TMR2_OverflowCallbackRegister(MyTmr2);  // dito for timer 2   
     ADC_SelectChannel(Current);             // current input as AD channel
     FVRCON = 0xC1;                          // enable ADC setting for FVR
+    // T2CON = 0x10;
     INTERRUPT_GlobalInterruptEnable();      // Enable the Global Interrupts     
     INTERRUPT_PeripheralInterruptEnable();  // Enable the Peripheral Interrupts  
     StartStopBooster(0);                    // Switch booster off
