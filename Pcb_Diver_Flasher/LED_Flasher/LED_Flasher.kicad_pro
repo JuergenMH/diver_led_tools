@@ -58,16 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "copper_edge_clearance|122342000|120000000|f20c36f0-89b2-4a62-a9ca-4d90ee8b662d|ad430520-9f19-45ae-b0be-21ac64ae27a3",
-          ""
-        ],
-        [
-          "copper_edge_clearance|68142000|100000000|f20c36f0-89b2-4a62-a9ca-4d90ee8b662d|d5a27ea1-66c9-4c2d-937a-16d7e8abac4b",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -508,7 +499,6 @@
         "bus_width": 12,
         "clearance": 0.3,
         "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -526,7 +516,6 @@
         "bus_width": 12,
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -544,7 +533,6 @@
         "bus_width": 12,
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -562,7 +550,6 @@
         "bus_width": 12,
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.4,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -580,7 +567,6 @@
         "bus_width": 12,
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.3,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -602,16 +588,8 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "Signal_Normal",
-        "pattern": "5V_EN"
-      },
-      {
         "netclass": "Power_Normal",
-        "pattern": "/Battery_Power"
-      },
-      {
-        "netclass": "Signal_Normal",
-        "pattern": "Flash_on"
+        "pattern": ""
       },
       {
         "netclass": "Signal_Normal",
@@ -622,11 +600,7 @@
         "pattern": "/ICSPCLK"
       },
       {
-        "netclass": "Signal_Normal",
-        "pattern": "/Reed"
-      },
-      {
-        "netclass": "Power_Normal",
+        "netclass": "Power_Big",
         "pattern": "GND"
       },
       {
@@ -638,20 +612,40 @@
         "pattern": "/MCLR!"
       },
       {
-        "netclass": "Signal_Normal",
-        "pattern": "/FB"
-      },
-      {
         "netclass": "Power_Big",
         "pattern": "/LED_PWR"
       },
       {
-        "netclass": "Power_Normal",
-        "pattern": "/A1"
+        "netclass": "Power_Big",
+        "pattern": "/Boost"
       },
       {
-        "netclass": "Power_Normal",
-        "pattern": "/A2"
+        "netclass": "Power_Big",
+        "pattern": "/LED"
+      },
+      {
+        "netclass": "Signal_Normal",
+        "pattern": "/Current"
+      },
+      {
+        "netclass": "Signal_Normal",
+        "pattern": "/Reed_In"
+      },
+      {
+        "netclass": "Signal_Normal",
+        "pattern": "/DEBUG"
+      },
+      {
+        "netclass": "Power_Big",
+        "pattern": "/SW_OUT"
+      },
+      {
+        "netclass": "Power_Big",
+        "pattern": "/Shunt"
+      },
+      {
+        "netclass": "Power_Big",
+        "pattern": "+BATT"
       }
     ]
   },
