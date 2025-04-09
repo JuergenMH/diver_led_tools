@@ -108,6 +108,7 @@
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
         "text_height": "warning",
+        "text_on_edge_cuts": "error",
         "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
@@ -188,12 +189,16 @@
       ],
       "track_widths": [
         0.0,
+        0.254,
         0.3,
         0.4,
         0.5,
+        0.508,
         0.6,
+        0.762,
         0.8,
         1.0,
+        1.016,
         1.2,
         1.5
       ],
@@ -499,7 +504,6 @@
         "bus_width": 12,
         "clearance": 0.3,
         "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -514,10 +518,9 @@
         "wire_width": 6
       },
       {
-        "bus_width": 12,
+        "bus_width": 40,
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -535,7 +538,6 @@
         "bus_width": 12,
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -550,10 +552,9 @@
         "wire_width": 6
       },
       {
-        "bus_width": 12,
+        "bus_width": 30,
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.4,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -568,10 +569,9 @@
         "wire_width": 6
       },
       {
-        "bus_width": 12,
+        "bus_width": 20,
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.3,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -593,10 +593,6 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "Power_Normal",
-        "pattern": ""
-      },
-      {
         "netclass": "Signal_Normal",
         "pattern": "/ICSPDAT"
       },
@@ -605,7 +601,7 @@
         "pattern": "/ICSPCLK"
       },
       {
-        "netclass": "Power_Big",
+        "netclass": "Power_Normal",
         "pattern": "GND"
       },
       {
@@ -617,22 +613,6 @@
         "pattern": "/MCLR!"
       },
       {
-        "netclass": "Power_Big",
-        "pattern": "/LED_PWR"
-      },
-      {
-        "netclass": "Power_Big",
-        "pattern": "/Boost"
-      },
-      {
-        "netclass": "Power_Big",
-        "pattern": "/LED"
-      },
-      {
-        "netclass": "Signal_Normal",
-        "pattern": "/Current"
-      },
-      {
         "netclass": "Signal_Normal",
         "pattern": "/Reed_In"
       },
@@ -641,16 +621,40 @@
         "pattern": "/DEBUG"
       },
       {
-        "netclass": "Power_Big",
-        "pattern": "/SW_OUT"
-      },
-      {
-        "netclass": "Power_Big",
-        "pattern": "/Shunt"
-      },
-      {
-        "netclass": "Power_Big",
+        "netclass": "Power_Normal",
         "pattern": "+BATT"
+      },
+      {
+        "netclass": "Power_Normal",
+        "pattern": "/A_D104"
+      },
+      {
+        "netclass": "Power_Normal",
+        "pattern": "/A_D103"
+      },
+      {
+        "netclass": "Signal_Normal",
+        "pattern": "/BQ100"
+      },
+      {
+        "netclass": "Signal_Normal",
+        "pattern": "/BQ101"
+      },
+      {
+        "netclass": "Signal_Normal",
+        "pattern": "GreenOn"
+      },
+      {
+        "netclass": "Signal_Normal",
+        "pattern": "BlueOn"
+      },
+      {
+        "netclass": "Power_Normal",
+        "pattern": "/K_D013"
+      },
+      {
+        "netclass": "Power_Normal",
+        "pattern": "/K_D104"
       }
     ]
   },
@@ -750,13 +754,31 @@
           "label": "Beschreibung",
           "name": "Description",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Distributor",
+          "name": "Distributor",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Distr. Best.-Nr",
+          "name": "Distr. Best.-Nr",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Herstellernummer",
+          "name": "Herstellernummer",
+          "show": true
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": false,
       "name": "",
-      "sort_asc": true,
+      "sort_asc": false,
       "sort_field": "Reference"
     },
     "connection_grid_size": 50.0,
