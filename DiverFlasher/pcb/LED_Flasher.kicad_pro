@@ -64,7 +64,27 @@
           ""
         ],
         [
+          "lib_footprint_mismatch|151500000|98000000|f7f60ef4-b92b-47e5-8ffc-8f871243d411|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|79675000|106900000|a278dfc0-2d79-496a-a2a7-12622797c934|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
           "lib_footprint_mismatch|81550000|98125000|dc17ec54-fef7-468d-9c70-ec320b3fa0b8|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|94742000|108000000|8fc1d56b-ef39-4226-acf3-d9e107512615|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "silk_over_copper|148819810|112097542|d93d6bc3-e863-43c0-8c19-db81897d1082|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "silk_over_copper|149684105|112022394|541dae5d-5273-424b-9cfe-99a74af7860a|00000000-0000-0000-0000-000000000000",
           ""
         ]
       ],
@@ -117,6 +137,7 @@
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
         "text_height": "warning",
+        "text_on_edge_cuts": "error",
         "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
