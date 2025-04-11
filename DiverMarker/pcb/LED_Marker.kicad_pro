@@ -760,21 +760,21 @@
         },
         {
           "group_by": false,
-          "label": "Distr. Best.-Nr",
-          "name": "Distr. Best.-Nr",
+          "label": "Distr. Best.-Nr_1",
+          "name": "Distr. Best.-Nr_1",
           "show": true
         },
         {
           "group_by": false,
-          "label": "Distributor",
-          "name": "Distributor",
+          "label": "Distributor_1",
+          "name": "Distributor_1",
           "show": true
         },
         {
           "group_by": false,
           "label": "Herstellernummer",
           "name": "Herstellernummer",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -859,13 +859,25 @@
           "label": "DNP",
           "name": "${DNP}",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Distributor_2",
+          "name": "Distributor_2",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Distr. Best.-Nr_2",
+          "name": "Distr. Best.-Nr_2",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": false,
       "name": "",
-      "sort_asc": false,
+      "sort_asc": true,
       "sort_field": "Reference"
     },
     "connection_grid_size": 50.0,

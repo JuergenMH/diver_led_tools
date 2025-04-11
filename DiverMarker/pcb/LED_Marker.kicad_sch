@@ -4085,7 +4085,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "TNPW08051K00FEEA"
 			(at 121.92 157.48 0)
 			(effects
 				(font
@@ -4093,7 +4093,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 121.92 157.48 0)
 			(effects
 				(font
@@ -4101,7 +4101,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 121.92 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 121.92 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 121.92 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 121.92 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 121.92 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 121.92 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 121.92 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 121.92 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 121.92 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 121.92 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 121.92 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 121.92 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 121.92 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 121.92 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "71-TNPW08051K00FEEA"
+			(at 121.92 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
 			(at 121.92 157.48 0)
 			(effects
 				(font
@@ -4179,7 +4299,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "CRCW080510K0FKEA"
 			(at 226.06 116.84 0)
 			(effects
 				(font
@@ -4187,7 +4307,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 226.06 116.84 0)
 			(effects
 				(font
@@ -4195,7 +4315,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 226.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 226.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 226.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 226.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 226.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 226.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 226.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 226.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 226.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 226.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 226.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 226.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 226.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 226.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "71-CRCW0805-10K-E3"
+			(at 226.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
 			(at 226.06 116.84 0)
 			(effects
 				(font
@@ -4273,7 +4513,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "EXV107M016A9GAA"
 			(at 88.9 44.45 0)
 			(effects
 				(font
@@ -4281,7 +4521,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 88.9 44.45 0)
 			(effects
 				(font
@@ -4289,7 +4529,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 88.9 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 88.9 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 88.9 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 88.9 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 88.9 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 88.9 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 88.9 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 88.9 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 88.9 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 88.9 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 88.9 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 88.9 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 88.9 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 88.9 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "80-EXV107M016A9GAA"
+			(at 88.9 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
 			(at 88.9 44.45 0)
 			(effects
 				(font
@@ -4367,7 +4727,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "CRCW12062R20FKEAHP"
 			(at 190.5 34.29 0)
 			(effects
 				(font
@@ -4375,7 +4735,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 190.5 34.29 0)
 			(effects
 				(font
@@ -4383,7 +4743,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 190.5 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 190.5 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 190.5 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 190.5 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 190.5 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 190.5 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 190.5 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 190.5 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 190.5 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 190.5 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 190.5 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 190.5 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 190.5 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 190.5 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "71-CRCW12062R20FKEAH"
+			(at 190.5 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
 			(at 190.5 34.29 0)
 			(effects
 				(font
@@ -4527,7 +5007,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "n.a."
 			(at 173.99 116.84 0)
 			(effects
 				(font
@@ -4535,7 +5015,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 173.99 116.84 0)
 			(effects
 				(font
@@ -4543,7 +5023,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 173.99 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 173.99 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 173.99 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 173.99 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 173.99 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 173.99 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 173.99 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 173.99 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 173.99 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 173.99 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 173.99 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 173.99 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 173.99 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 173.99 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "n.a."
+			(at 173.99 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "n.a."
 			(at 173.99 116.84 0)
 			(effects
 				(font
@@ -4616,7 +5216,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "PIC16LF15313T-I/SN"
 			(at 140.97 123.19 0)
 			(effects
 				(font
@@ -4624,7 +5224,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 140.97 123.19 0)
 			(effects
 				(font
@@ -4632,7 +5232,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 140.97 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 140.97 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "579-IC16LF15313TI/SN"
+			(at 140.97 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 140.97 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
+			(at 140.97 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 140.97 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 140.97 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 140.97 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 140.97 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 140.97 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 140.97 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 140.97 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 140.97 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 140.97 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 140.97 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
 			(at 140.97 123.19 0)
 			(effects
 				(font
@@ -4728,7 +5448,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "n.a."
 			(at 113.03 105.41 0)
 			(effects
 				(font
@@ -4736,7 +5456,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 113.03 105.41 0)
 			(effects
 				(font
@@ -4744,7 +5464,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 113.03 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 113.03 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 113.03 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 113.03 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 113.03 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 113.03 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 113.03 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 113.03 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 113.03 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 113.03 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 113.03 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 113.03 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 113.03 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 113.03 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "n.a."
+			(at 113.03 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "n.a."
 			(at 113.03 105.41 0)
 			(effects
 				(font
@@ -4819,7 +5659,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "VJ0805Y104KXBAT"
 			(at 156.21 135.89 0)
 			(effects
 				(font
@@ -4827,7 +5667,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 156.21 135.89 0)
 			(effects
 				(font
@@ -4835,7 +5675,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 156.21 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 156.21 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 156.21 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 156.21 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 156.21 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 156.21 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 156.21 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 156.21 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 156.21 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 156.21 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 156.21 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 156.21 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 156.21 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 156.21 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "77-VJ0805Y104KXBAT"
+			(at 156.21 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
 			(at 156.21 135.89 0)
 			(effects
 				(font
@@ -4885,7 +5845,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Battery:BatteryHolder_Keystone_2460_1xAA"
+		(property "Footprint" "n.a."
 			(at 22.86 124.206 90)
 			(effects
 				(font
@@ -4912,7 +5872,39 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" "ANS LI 2XAA"
+		(property "Herstellernummer" "5021003"
+			(at 30.48 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Availability" ""
+			(at 22.86 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Check_prices" ""
+			(at 22.86 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 22.86 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "ANS LI 2XAA"
 			(at 32.385 130.175 0)
 			(effects
 				(font
@@ -4920,16 +5912,104 @@
 				)
 			)
 		)
-		(property "Distributor" "Reichelt"
-			(at 30.48 127.635 0)
+		(property "Distr. Best.-Nr_2" ""
+			(at 22.86 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Herstellernummer" "5021003"
-			(at 30.48 132.715 0)
+		(property "Distributor_1" "Reichelt"
+			(at 30.48 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 22.86 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 22.86 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 22.86 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 22.86 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 22.86 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 22.86 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 22.86 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 22.86 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 22.86 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 22.86 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 22.86 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5003,7 +6083,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "TNPW08051K00FEEA"
 			(at 165.1 67.31 0)
 			(effects
 				(font
@@ -5011,7 +6091,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 165.1 67.31 0)
 			(effects
 				(font
@@ -5019,7 +6099,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 165.1 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 165.1 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 165.1 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 165.1 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 165.1 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 165.1 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 165.1 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 165.1 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 165.1 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 165.1 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 165.1 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 165.1 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 165.1 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 165.1 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "71-TNPW08051K00FEEA"
+			(at 165.1 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
 			(at 165.1 67.31 0)
 			(effects
 				(font
@@ -5050,7 +6250,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "4d19f2d5-7caa-484c-ae6f-2db8f952b93d")
 		(property "Reference" "R101"
 			(at 93.98 113.0299 0)
@@ -5097,7 +6296,15 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "CRCW080510K0FKEA"
+			(at 109.855 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Availability" ""
 			(at 91.44 114.3 0)
 			(effects
 				(font
@@ -5105,7 +6312,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Check_prices" ""
 			(at 91.44 114.3 0)
 			(effects
 				(font
@@ -5113,8 +6320,120 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Description_1" ""
 			(at 91.44 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 91.44 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 91.44 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 91.44 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 91.44 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 91.44 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 91.44 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 91.44 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 91.44 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 91.44 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 91.44 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 91.44 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 91.44 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "71-CRCW0805-10K-E3"
+			(at 111.76 112.395 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
+			(at 103.505 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5188,7 +6507,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "TNPW08051K00FEEA"
 			(at 114.3 67.31 0)
 			(effects
 				(font
@@ -5196,7 +6515,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 114.3 67.31 0)
 			(effects
 				(font
@@ -5204,7 +6523,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "71-TNPW08051K00FEEA"
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
 			(at 114.3 67.31 0)
 			(effects
 				(font
@@ -5282,7 +6721,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "CRCW12062R20FKEAHP"
 			(at 139.7 34.29 0)
 			(effects
 				(font
@@ -5290,7 +6729,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 139.7 34.29 0)
 			(effects
 				(font
@@ -5298,7 +6737,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 139.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 139.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 139.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 139.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 139.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 139.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 139.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 139.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 139.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 139.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 139.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 139.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 139.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 139.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "71-CRCW12062R20FKEAH"
+			(at 139.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
 			(at 139.7 34.29 0)
 			(effects
 				(font
@@ -5376,7 +6935,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "n.a."
 			(at 160.02 116.84 0)
 			(effects
 				(font
@@ -5384,7 +6943,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 160.02 116.84 0)
 			(effects
 				(font
@@ -5392,7 +6951,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 160.02 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 160.02 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 160.02 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 160.02 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 160.02 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 160.02 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 160.02 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 160.02 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 160.02 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 160.02 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 160.02 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 160.02 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 160.02 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 160.02 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "n.a."
+			(at 160.02 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "n.a."
 			(at 160.02 116.84 0)
 			(effects
 				(font
@@ -5464,7 +7143,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "TNPW0805100KFHEA"
 			(at 127 67.31 0)
 			(effects
 				(font
@@ -5472,7 +7151,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 127 67.31 0)
 			(effects
 				(font
@@ -5480,7 +7159,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 127 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 127 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 127 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 127 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 127 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 127 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 127 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 127 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 127 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 127 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 127 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 127 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 127 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 127 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "71-TNPW0805100KFHEA"
+			(at 127 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
 			(at 127 67.31 0)
 			(effects
 				(font
@@ -5557,24 +7356,144 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
-			(at 58.42 139.065 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Distributor" ""
-			(at 57.785 141.605 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Herstellernummer" ""
+		(property "Herstellernummer" "n.a."
 			(at 74.295 150.495 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Availability" ""
+			(at 73.66 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Check_prices" ""
+			(at 73.66 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 73.66 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 73.66 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 73.66 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 73.66 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 73.66 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 73.66 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 73.66 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 73.66 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 73.66 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 73.66 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 73.66 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 73.66 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 73.66 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "n.a."
+			(at 73.66 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "n.a."
+			(at 73.66 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5601,7 +7520,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "8c01f9b8-cb26-467c-91f4-7b5d7c234bc5")
 		(property "Reference" "D101"
 			(at 72.39 101.6 0)
@@ -5664,7 +7582,15 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" " BAV16W-7-F"
+			(at 74.295 114.935 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Availability" ""
 			(at 72.39 107.95 0)
 			(effects
 				(font
@@ -5672,7 +7598,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Check_prices" ""
 			(at 72.39 107.95 0)
 			(effects
 				(font
@@ -5680,8 +7606,120 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Description_1" ""
 			(at 72.39 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 72.39 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 72.39 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 72.39 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 72.39 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 72.39 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 72.39 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 72.39 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 72.39 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 72.39 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 72.39 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 72.39 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 72.39 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "621-BAV16W-F"
+			(at 76.2 112.395 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
+			(at 72.39 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5823,7 +7861,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "n.a."
 			(at 231.14 138.43 0)
 			(effects
 				(font
@@ -5831,7 +7869,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 231.14 138.43 0)
 			(effects
 				(font
@@ -5839,7 +7877,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 231.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 231.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 231.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 231.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 231.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 231.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 231.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 231.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 231.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 231.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 231.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 231.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 231.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 231.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "n.a."
+			(at 231.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "n.a."
 			(at 231.14 138.43 0)
 			(effects
 				(font
@@ -5947,24 +8105,144 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" "LB-P200B2C-H"
-			(at 151.13 50.165 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Distributor" "Reichelt"
-			(at 147.32 46.355 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Herstellernummer" "LB-P200B2C-H"
 			(at 151.13 48.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Availability" ""
+			(at 139.7 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Check_prices" ""
+			(at 139.7 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 139.7 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "LB-P200B2C-H"
+			(at 139.7 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 139.7 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Reichelt"
+			(at 139.7 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 139.7 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 139.7 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 139.7 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 139.7 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 139.7 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 139.7 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 139.7 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 139.7 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 139.7 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 139.7 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 139.7 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6038,7 +8316,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "TNPW0805100KFHEA"
 			(at 177.8 67.31 0)
 			(effects
 				(font
@@ -6046,7 +8324,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 177.8 67.31 0)
 			(effects
 				(font
@@ -6054,7 +8332,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 177.8 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 177.8 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 177.8 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 177.8 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 177.8 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 177.8 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 177.8 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 177.8 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 177.8 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 177.8 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 177.8 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 177.8 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 177.8 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 177.8 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "71-TNPW0805100KFHEA"
+			(at 177.8 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
 			(at 177.8 67.31 0)
 			(effects
 				(font
@@ -6131,24 +8529,144 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" "1702629"
-			(at 61.595 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Distributor" "Farnell"
-			(at 60.325 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Herstellernummer" "Keystone 2460"
-			(at 64.135 138.43 0)
+			(at 41.91 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Availability" ""
+			(at 50.8 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Check_prices" ""
+			(at 50.8 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 50.8 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "534-2460"
+			(at 61.595 137.795 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" "1702629"
+			(at 60.96 132.715 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
+			(at 60.325 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" "Farnell"
+			(at 60.325 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 50.8 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 50.8 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 50.8 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 50.8 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 50.8 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 50.8 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 50.8 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 50.8 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 50.8 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 50.8 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6291,7 +8809,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "EXV107M016A9GAA"
 			(at 198.12 135.89 0)
 			(effects
 				(font
@@ -6299,7 +8817,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 198.12 135.89 0)
 			(effects
 				(font
@@ -6307,7 +8825,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 198.12 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 198.12 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 198.12 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 198.12 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 198.12 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 198.12 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 198.12 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 198.12 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 198.12 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 198.12 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 198.12 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 198.12 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 198.12 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 198.12 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "80-EXV107M016A9GAA"
+			(at 198.12 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
 			(at 198.12 135.89 0)
 			(effects
 				(font
@@ -6451,7 +9089,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "BST52TA"
 			(at 137.16 57.15 0)
 			(effects
 				(font
@@ -6459,7 +9097,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 137.16 57.15 0)
 			(effects
 				(font
@@ -6467,7 +9105,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 137.16 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 137.16 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "522-BST52TA"
+			(at 137.16 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 137.16 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
+			(at 137.16 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 137.16 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 137.16 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 137.16 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 137.16 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 137.16 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 137.16 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 137.16 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 137.16 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 137.16 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 137.16 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
 			(at 137.16 57.15 0)
 			(effects
 				(font
@@ -6548,7 +9306,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "n.a."
 			(at 138.43 157.48 0)
 			(effects
 				(font
@@ -6556,7 +9314,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 138.43 157.48 0)
 			(effects
 				(font
@@ -6564,7 +9322,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 138.43 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 138.43 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 138.43 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 138.43 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 138.43 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 138.43 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 138.43 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 138.43 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 138.43 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 138.43 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 138.43 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 138.43 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 138.43 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 138.43 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "n.a."
+			(at 138.43 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "n.a."
 			(at 138.43 157.48 0)
 			(effects
 				(font
@@ -6640,7 +9518,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" ""
+		(property "Herstellernummer" "BST52TA"
 			(at 187.96 57.15 0)
 			(effects
 				(font
@@ -6648,7 +9526,7 @@
 				)
 			)
 		)
-		(property "Distributor" ""
+		(property "Availability" ""
 			(at 187.96 57.15 0)
 			(effects
 				(font
@@ -6656,7 +9534,127 @@
 				)
 			)
 		)
-		(property "Herstellernummer" ""
+		(property "Check_prices" ""
+			(at 187.96 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 187.96 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "522-BST52TA"
+			(at 187.96 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 187.96 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
+			(at 187.96 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 187.96 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 187.96 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 187.96 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 187.96 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 187.96 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 187.96 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 187.96 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 187.96 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 187.96 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 187.96 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
 			(at 187.96 57.15 0)
 			(effects
 				(font
@@ -6736,24 +9734,144 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" "MK15 C2"
-			(at 98.425 138.43 90)
+		(property "Herstellernummer" "MK15-C-2 "
+			(at 99.695 140.335 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Distributor" "Reichelt"
-			(at 97.79 136.525 90)
+		(property "Availability" ""
+			(at 91.44 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Herstellernummer" "MK15C2"
-			(at 97.79 140.335 90)
+		(property "Check_prices" ""
+			(at 91.44 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 91.44 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "876-MK15-C-2"
+			(at 102.235 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" "MK15 C2"
+			(at 98.425 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Mouser"
+			(at 97.155 136.525 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" "Reichelt"
+			(at 97.155 146.685 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 91.44 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 91.44 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 91.44 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 91.44 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 91.44 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 91.44 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 91.44 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 91.44 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 91.44 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 91.44 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6848,24 +9966,144 @@
 				(hide yes)
 			)
 		)
-		(property "Distr. Best.-Nr" "LB-P200G3C-H"
-			(at 201.93 50.165 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Distributor" "Reichelt"
-			(at 198.12 46.355 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Herstellernummer" "LB-P200G3C-H"
 			(at 201.93 48.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Availability" ""
+			(at 190.5 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Check_prices" ""
+			(at 190.5 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 190.5 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_1" "LB-P200G3C-H"
+			(at 190.5 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distr. Best.-Nr_2" ""
+			(at 190.5 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_1" "Reichelt"
+			(at 190.5 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor_2" ""
+			(at 190.5 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 190.5 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 190.5 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 190.5 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 190.5 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 190.5 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 190.5 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 190.5 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 190.5 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 190.5 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 190.5 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
