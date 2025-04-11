@@ -775,6 +775,24 @@
           "label": "Beschreibung",
           "name": "Description",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Distributor_1",
+          "name": "Distributor_1",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Distr. Best.-Nr_1",
+          "name": "Distr. Best.-Nr_1",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Hersteller.-Nr.",
+          "name": "Hersteller.-Nr.",
+          "show": false
         }
       ],
       "filter_string": "",
