@@ -2713,12 +2713,6 @@
 		(uuid "39e17c9c-a288-4d15-8bda-84784a21fbc4")
 	)
 	(junction
-		(at 198.12 143.51)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "47c41d8b-7f0a-4eca-82b6-b80048d7f181")
-	)
-	(junction
 		(at 114.3 148.59)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2825,12 +2819,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ce822a00-1a05-4b82-80b7-a4b461b74ac4")
-	)
-	(junction
-		(at 156.21 143.51)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "da2f02b7-02f3-4f8e-937f-0c23c06d89bb")
 	)
 	(junction
 		(at 97.79 76.2)
@@ -3480,7 +3468,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 143.51) (xy 198.12 143.51)
+			(xy 152.4 157.48) (xy 194.31 157.48)
 		)
 		(stroke
 			(width 0)
@@ -4086,10 +4074,10 @@
 			)
 		)
 		(property "Herstellernummer" "TNPW08051K00FEEA"
-			(at 121.92 157.48 0)
+			(at 131.445 152.4 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -4214,18 +4202,18 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "71-TNPW08051K00FEEA"
-			(at 121.92 157.48 0)
+			(at 132.715 151.13 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
 		(property "Distributor_1" "Mouser"
-			(at 121.92 157.48 0)
+			(at 127.635 149.86 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -4252,7 +4240,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "18c20c57-c3c5-4732-affc-df237d0db32f")
 		(property "Reference" "R106"
 			(at 228.6 115.5699 0)
@@ -4300,10 +4287,10 @@
 			)
 		)
 		(property "Herstellernummer" "CRCW080510K0FKEA"
-			(at 226.06 116.84 0)
+			(at 234.95 122.555 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -4428,18 +4415,18 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "71-CRCW0805-10K-E3"
-			(at 226.06 116.84 0)
+			(at 236.22 121.285 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
 		(property "Distributor_1" "Mouser"
-			(at 226.06 116.84 0)
+			(at 231.14 120.015 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -4466,7 +4453,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1a39327e-2ac0-4161-846e-6058e6b61aa6")
 		(property "Reference" "C108"
 			(at 92.71 42.2909 0)
@@ -4514,10 +4500,10 @@
 			)
 		)
 		(property "Herstellernummer" "EXV107M016A9GAA"
-			(at 88.9 44.45 0)
+			(at 98.425 49.53 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -4642,18 +4628,18 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "80-EXV107M016A9GAA"
-			(at 88.9 44.45 0)
+			(at 99.695 48.26 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
 		(property "Distributor_1" "Mouser"
-			(at 88.9 44.45 0)
+			(at 95.25 46.99 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -4680,7 +4666,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1b78fb2d-e16a-46f4-a8fd-5e99386aa830")
 		(property "Reference" "R107"
 			(at 193.04 33.0199 0)
@@ -4728,10 +4713,10 @@
 			)
 		)
 		(property "Herstellernummer" "CRCW12062R20FKEAHP"
-			(at 190.5 34.29 0)
+			(at 207.01 35.56 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -4856,18 +4841,18 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "71-CRCW12062R20FKEAH"
-			(at 190.5 34.29 0)
+			(at 207.645 34.29 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
 		(property "Distributor_1" "Mouser"
-			(at 190.5 34.29 0)
+			(at 201.93 33.02 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -4960,7 +4945,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "245893ac-e0a2-4466-9bea-6f230e01a58f")
 		(property "Reference" "TP103"
 			(at 176.53 112.2679 0)
@@ -5008,11 +4992,12 @@
 			)
 		)
 		(property "Herstellernummer" "n.a."
-			(at 173.99 116.84 0)
+			(at 179.705 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Availability" ""
@@ -5141,9 +5126,10 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Distributor_1" "n.a."
+		(property "Distributor_1" ""
 			(at 173.99 116.84 0)
 			(effects
 				(font
@@ -5217,10 +5203,10 @@
 			)
 		)
 		(property "Herstellernummer" "PIC16LF15313T-I/SN"
-			(at 140.97 123.19 0)
+			(at 137.16 133.35 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -5249,10 +5235,10 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "579-IC16LF15313TI/SN"
-			(at 140.97 123.19 0)
+			(at 137.795 132.08 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -5265,10 +5251,10 @@
 			)
 		)
 		(property "Distributor_1" "Mouser"
-			(at 140.97 123.19 0)
+			(at 132.715 130.81 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -5454,6 +5440,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Availability" ""
@@ -5582,9 +5569,10 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Distributor_1" "n.a."
+		(property "Distributor_1" ""
 			(at 113.03 105.41 0)
 			(effects
 				(font
@@ -5612,7 +5600,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "2e3da4ee-34da-436e-b946-7070eac0ac06")
 		(property "Reference" "C105"
 			(at 160.02 134.6199 0)
@@ -5660,10 +5647,10 @@
 			)
 		)
 		(property "Herstellernummer" "VJ0805Y104KXBAT"
-			(at 156.21 135.89 0)
+			(at 162.56 141.605 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -5788,18 +5775,18 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "77-VJ0805Y104KXBAT"
-			(at 156.21 135.89 0)
+			(at 163.83 140.335 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
 		(property "Distributor_1" "Mouser"
-			(at 156.21 135.89 0)
+			(at 159.385 139.065 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -5873,10 +5860,10 @@
 			)
 		)
 		(property "Herstellernummer" "5021003"
-			(at 30.48 132.08 0)
+			(at 29.21 130.175 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -5905,10 +5892,10 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "ANS LI 2XAA"
-			(at 32.385 130.175 0)
+			(at 30.48 128.905 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -5921,10 +5908,10 @@
 			)
 		)
 		(property "Distributor_1" "Reichelt"
-			(at 30.48 128.27 0)
+			(at 29.21 127.635 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -6084,10 +6071,10 @@
 			)
 		)
 		(property "Herstellernummer" "TNPW08051K00FEEA"
-			(at 165.1 67.31 0)
+			(at 155.575 73.66 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -6212,18 +6199,18 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "71-TNPW08051K00FEEA"
-			(at 165.1 67.31 0)
+			(at 156.845 72.39 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
 		(property "Distributor_1" "Mouser"
-			(at 165.1 67.31 0)
+			(at 151.765 71.12 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -6297,10 +6284,10 @@
 			)
 		)
 		(property "Herstellernummer" "CRCW080510K0FKEA"
-			(at 109.855 114.3 0)
+			(at 98.425 123.825 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -6425,18 +6412,18 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "71-CRCW0805-10K-E3"
-			(at 111.76 112.395 0)
+			(at 99.695 122.555 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
 		(property "Distributor_1" "Mouser"
-			(at 103.505 110.49 0)
+			(at 94.615 121.285 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -6508,10 +6495,10 @@
 			)
 		)
 		(property "Herstellernummer" "TNPW08051K00FEEA"
-			(at 114.3 67.31 0)
+			(at 104.14 66.675 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -6636,18 +6623,18 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "71-TNPW08051K00FEEA"
-			(at 114.3 67.31 0)
+			(at 105.41 65.405 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
 		(property "Distributor_1" "Mouser"
-			(at 114.3 67.31 0)
+			(at 100.33 64.135 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -6674,7 +6661,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "59f27a05-c684-436e-b808-1098a7256a68")
 		(property "Reference" "R103"
 			(at 142.24 33.0199 0)
@@ -6722,10 +6708,10 @@
 			)
 		)
 		(property "Herstellernummer" "CRCW12062R20FKEAHP"
-			(at 139.7 34.29 0)
+			(at 156.845 33.02 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -6850,18 +6836,18 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "71-CRCW12062R20FKEAH"
-			(at 139.7 34.29 0)
+			(at 157.48 31.75 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
 		(property "Distributor_1" "Mouser"
-			(at 139.7 34.29 0)
+			(at 151.765 30.48 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -6941,6 +6927,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Availability" ""
@@ -7069,9 +7056,10 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Distributor_1" "n.a."
+		(property "Distributor_1" ""
 			(at 160.02 116.84 0)
 			(effects
 				(font
@@ -7144,10 +7132,10 @@
 			)
 		)
 		(property "Herstellernummer" "TNPW0805100KFHEA"
-			(at 127 67.31 0)
+			(at 128.27 80.645 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -7272,18 +7260,18 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "71-TNPW0805100KFHEA"
-			(at 127 67.31 0)
+			(at 129.54 79.375 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
 		(property "Distributor_1" "Mouser"
-			(at 127 67.31 0)
+			(at 124.46 78.105 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -7362,6 +7350,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Availability" ""
@@ -7490,9 +7479,10 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Distributor_1" "n.a."
+		(property "Distributor_1" ""
 			(at 73.66 139.7 0)
 			(effects
 				(font
@@ -7583,10 +7573,10 @@
 			)
 		)
 		(property "Herstellernummer" " BAV16W-7-F"
-			(at 74.295 114.935 0)
+			(at 74.295 113.03 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -7711,10 +7701,10 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "621-BAV16W-F"
-			(at 76.2 112.395 0)
+			(at 74.93 111.76 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -7722,7 +7712,7 @@
 			(at 72.39 110.49 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -7862,11 +7852,12 @@
 			)
 		)
 		(property "Herstellernummer" "n.a."
-			(at 231.14 138.43 0)
+			(at 247.015 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Availability" ""
@@ -7990,19 +7981,21 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "n.a."
-			(at 231.14 138.43 0)
+			(at 247.015 140.335 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Distributor_1" "n.a."
-			(at 231.14 138.43 0)
+		(property "Distributor_1" ""
+			(at 247.015 141.605 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "5"
@@ -8106,10 +8099,10 @@
 			)
 		)
 		(property "Herstellernummer" "LB-P200B2C-H"
-			(at 151.13 48.26 90)
+			(at 148.59 47.625 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -8138,10 +8131,10 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "LB-P200B2C-H"
-			(at 139.7 44.45 0)
+			(at 148.59 48.895 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -8154,10 +8147,10 @@
 			)
 		)
 		(property "Distributor_1" "Reichelt"
-			(at 139.7 44.45 0)
+			(at 146.05 46.355 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -8317,10 +8310,10 @@
 			)
 		)
 		(property "Herstellernummer" "TNPW0805100KFHEA"
-			(at 177.8 67.31 0)
+			(at 177.8 80.645 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -8445,18 +8438,18 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "71-TNPW0805100KFHEA"
-			(at 177.8 67.31 0)
+			(at 179.07 79.375 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
 		(property "Distributor_1" "Mouser"
-			(at 177.8 67.31 0)
+			(at 173.99 78.105 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -8530,10 +8523,10 @@
 			)
 		)
 		(property "Herstellernummer" "Keystone 2460"
-			(at 41.91 139.7 0)
+			(at 62.865 138.43 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -8562,10 +8555,10 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "534-2460"
-			(at 61.595 137.795 0)
+			(at 61.595 137.16 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -8573,7 +8566,7 @@
 			(at 60.96 132.715 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -8581,7 +8574,7 @@
 			(at 60.325 135.89 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -8589,7 +8582,7 @@
 			(at 60.325 130.81 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -8762,7 +8755,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b807e3f1-22da-4f39-95e5-32febc2ff3f9")
 		(property "Reference" "C107"
 			(at 201.93 133.7309 0)
@@ -8810,10 +8802,10 @@
 			)
 		)
 		(property "Herstellernummer" "EXV107M016A9GAA"
-			(at 198.12 135.89 0)
+			(at 204.47 141.605 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -8938,18 +8930,18 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "80-EXV107M016A9GAA"
-			(at 198.12 135.89 0)
+			(at 205.74 140.335 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
 		(property "Distributor_1" "Mouser"
-			(at 198.12 135.89 0)
+			(at 201.295 139.065 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -9042,7 +9034,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "bd8b8db5-d7ed-4f81-8a5c-fb6196c9c797")
 		(property "Reference" "Q100"
 			(at 142.24 55.8799 0)
@@ -9090,10 +9081,10 @@
 			)
 		)
 		(property "Herstellernummer" "BST52TA"
-			(at 137.16 57.15 0)
+			(at 144.78 63.5 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -9122,10 +9113,10 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "522-BST52TA"
-			(at 137.16 57.15 0)
+			(at 146.05 62.23 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -9138,10 +9129,10 @@
 			)
 		)
 		(property "Distributor_1" "Mouser"
-			(at 137.16 57.15 0)
+			(at 144.145 60.96 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -9312,6 +9303,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Availability" ""
@@ -9440,9 +9432,10 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Distributor_1" "n.a."
+		(property "Distributor_1" ""
 			(at 138.43 157.48 0)
 			(effects
 				(font
@@ -9471,7 +9464,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "ddb36b21-19fe-4d04-b67f-c46996e290f3")
 		(property "Reference" "Q101"
 			(at 193.04 55.8799 0)
@@ -9519,10 +9511,10 @@
 			)
 		)
 		(property "Herstellernummer" "BST52TA"
-			(at 187.96 57.15 0)
+			(at 196.215 63.5 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -9551,10 +9543,10 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "522-BST52TA"
-			(at 187.96 57.15 0)
+			(at 197.485 62.23 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -9567,10 +9559,10 @@
 			)
 		)
 		(property "Distributor_1" "Mouser"
-			(at 187.96 57.15 0)
+			(at 195.58 60.96 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -9735,10 +9727,10 @@
 			)
 		)
 		(property "Herstellernummer" "MK15-C-2 "
-			(at 99.695 140.335 90)
+			(at 97.79 139.065 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -9767,34 +9759,34 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "876-MK15-C-2"
-			(at 102.235 138.43 90)
+			(at 99.06 137.795 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
 		(property "Distr. Best.-Nr_2" "MK15 C2"
-			(at 98.425 148.59 90)
+			(at 97.155 142.24 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
 		(property "Distributor_1" "Mouser"
-			(at 97.155 136.525 90)
+			(at 96.52 136.525 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
 		(property "Distributor_2" "Reichelt"
-			(at 97.155 146.685 90)
+			(at 97.155 140.97 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -9967,10 +9959,10 @@
 			)
 		)
 		(property "Herstellernummer" "LB-P200G3C-H"
-			(at 201.93 48.26 90)
+			(at 199.39 47.625 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -9999,10 +9991,10 @@
 			)
 		)
 		(property "Distr. Best.-Nr_1" "LB-P200G3C-H"
-			(at 190.5 44.45 0)
+			(at 199.39 48.895 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -10015,10 +10007,10 @@
 			)
 		)
 		(property "Distributor_1" "Reichelt"
-			(at 190.5 44.45 0)
+			(at 196.85 46.355 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
