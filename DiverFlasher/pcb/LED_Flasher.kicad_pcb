@@ -1612,12 +1612,12 @@
 		(descr "SMD pad as test Point, diameter 1.5mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP103"
-			(at 0 -2.75 0)
+			(at 0.48 1.64 0)
 			(layer "F.SilkS")
 			(uuid "d314c3a8-9f9f-4928-95ee-82673c55a456")
 			(effects
 				(font
-					(size 1 1)
+					(size 0.8 0.8)
 					(thickness 0.15)
 				)
 			)
@@ -6910,7 +6910,7 @@
 		(descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R103"
-			(at -0.8 2 0)
+			(at -0.08 1.73 0)
 			(layer "F.SilkS")
 			(uuid "f9155d46-07ea-4616-9944-747d526233a6")
 			(effects
@@ -8195,6 +8195,19 @@
 		(layer "Edge.Cuts")
 		(uuid "f20c36f0-89b2-4a62-a9ca-4d90ee8b662d")
 	)
+	(gr_text "Rev 1.0"
+		(at 52.18 100.05 0)
+		(layer "F.Cu")
+		(uuid "584eedeb-e608-4a52-b3e6-725c3340f996")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "Diver flasher"
 		(at 84.5 117 0)
 		(layer "F.Cu")
@@ -8287,6 +8300,80 @@
 			(at 158.85 108 90)
 			(layer "F.Fab")
 			(uuid "699e05ec-1b9b-4972-848d-7eb28a92d2a1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "User.1")
+		(uuid "423b744d-eb28-49a1-bfed-845595778c0e")
+		(pts
+			(xy 155 120) (xy 155 96)
+		)
+		(height 3.05)
+		(orientation 1)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "24,0000 mm"
+			(at 156.9 108 90)
+			(layer "User.1")
+			(uuid "423b744d-eb28-49a1-bfed-845595778c0e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "User.1")
+		(uuid "773d14c3-5422-492b-b11f-8b4f391ea24c")
+		(pts
+			(xy 50 96) (xy 155 96)
+		)
+		(height -4)
+		(orientation 0)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "105,0000 mm"
+			(at 102.5 90.85 0)
+			(layer "User.1")
+			(uuid "773d14c3-5422-492b-b11f-8b4f391ea24c")
 			(effects
 				(font
 					(size 1 1)
