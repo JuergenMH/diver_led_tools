@@ -4597,7 +4597,7 @@
 		(descr "SMD capacitor, aluminum electrolytic, Nichicon, 6.3x5.8mm")
 		(tags "capacitor electrolytic")
 		(property "Reference" "C108"
-			(at -0.565 -4.135 270)
+			(at 1.59 -4.27 270)
 			(layer "F.SilkS")
 			(uuid "9c61ab8f-dbcf-48db-98b1-c1fac27f0708")
 			(effects
@@ -6850,7 +6850,7 @@
 			(width 0.1)
 			(type dash_dot)
 		)
-		(layer "User.1")
+		(layer "User.2")
 		(uuid "d70e76da-4026-4965-a15e-7771c92e7a24")
 	)
 	(gr_text "R1.1"
@@ -6877,6 +6877,80 @@
 				(bold yes)
 			)
 			(justify left bottom)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "User.1")
+		(uuid "1fc188cf-7a5e-44f8-81a5-a9088a25c5b0")
+		(pts
+			(xy 100.03 100) (xy 175 100)
+		)
+		(height -2.97)
+		(orientation 0)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "74,9700 mm"
+			(at 137.515 95.88 0)
+			(layer "User.1")
+			(uuid "1fc188cf-7a5e-44f8-81a5-a9088a25c5b0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "User.1")
+		(uuid "ffee6ab4-5dca-4288-b521-893b6e734ae0")
+		(pts
+			(xy 175 120) (xy 175 100)
+		)
+		(height 4.02)
+		(orientation 1)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "20,0000 mm"
+			(at 177.87 110 90)
+			(layer "User.1")
+			(uuid "ffee6ab4-5dca-4288-b521-893b6e734ae0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
 		)
 	)
 	(segment
