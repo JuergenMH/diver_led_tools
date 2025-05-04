@@ -28,7 +28,7 @@
 		(29 "B.CrtYd" user "B.Courtyard")
 		(35 "F.Fab" user)
 		(33 "B.Fab" user)
-		(39 "User.1" user)
+		(39 "User.1" user "Measures.1")
 		(41 "User.2" user)
 		(43 "User.3" user)
 		(45 "User.4" user)
@@ -8195,6 +8195,93 @@
 		(layer "Edge.Cuts")
 		(uuid "f20c36f0-89b2-4a62-a9ca-4d90ee8b662d")
 	)
+	(gr_rect
+		(start 59.4 59.5)
+		(end 79.4 74.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "User.1")
+		(uuid "66033d58-73ac-4e86-afd9-5013a3fe69d7")
+	)
+	(gr_circle
+		(center 69.561258 71.1)
+		(end 86.561258 71.1)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(fill no)
+		(layer "User.1")
+		(uuid "96cfcb52-0d2c-4f1b-b72e-cdcc3b1dc04a")
+	)
+	(gr_line
+		(start 59.15 76.85)
+		(end 54.9 79.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "User.1")
+		(uuid "99a90675-cacd-481b-9e83-4375d2793df4")
+	)
+	(gr_rect
+		(start 75.6 76.5)
+		(end 81.6 82.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "User.1")
+		(uuid "9b71fd5b-d57d-4068-9b1c-31fe082cc642")
+	)
+	(gr_rect
+		(start 57.6 74.7)
+		(end 81.6 76.3)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "User.1")
+		(uuid "9f817263-a019-4508-a6b4-136afca25965")
+	)
+	(gr_rect
+		(start 63.6 76.5)
+		(end 75.6 86.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "User.1")
+		(uuid "ccc786c0-9c98-4dde-8075-d13f7c018914")
+	)
+	(gr_rect
+		(start 58.4 76.4)
+		(end 59.9 77.3)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "User.1")
+		(uuid "cd2d12a6-2317-400a-ba1f-bc080030ccbe")
+	)
+	(gr_arc
+		(start 59.4 59.5)
+		(mid 69.4 54.5)
+		(end 79.4 59.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "User.1")
+		(uuid "e76f3772-e4ed-4919-a5c5-e93eaa958601")
+	)
 	(gr_text "Rev 1.0"
 		(at 52.18 100.05 0)
 		(layer "F.Cu")
@@ -8232,6 +8319,115 @@
 				(bold yes)
 			)
 			(justify left bottom)
+		)
+	)
+	(gr_text "Side View\n"
+		(at 61.9 53.5 0)
+		(layer "User.1")
+		(uuid "3b91b77d-65cf-460d-b2e5-ede0c1bb0ce8")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "Sensor\n"
+		(at 61.7 81.8 90)
+		(layer "User.1")
+		(uuid "439fc0f9-3097-4989-b60e-336998d0c36b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "PCB 1,6mm"
+		(at 65.2 75.9 0)
+		(layer "User.1")
+		(uuid "70931e0a-7f64-46eb-95e0-5f02f4ed9a6b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "Elko\n"
+		(at 77 79.5 0)
+		(layer "User.1")
+		(uuid "a84d62c2-eb2c-411c-a711-b139793fdc06")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "Power\nInduktivität\n"
+		(at 66 82.9 0)
+		(layer "User.1")
+		(uuid "dd61b38f-50d3-4c26-9386-1c83c2b7efd3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "Batteriehalter mit \n18650 Li/Io-Batterie "
+		(at 61.8 64.3 0)
+		(layer "User.1")
+		(uuid "ebf05e40-10d5-46e0-8414-385e6e6b0d49")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(dimension
+		(type aligned)
+		(layer "User.1")
+		(uuid "23dd938d-eaa6-402d-94f9-a06a6f26d970")
+		(pts
+			(xy 54.8 79.6) (xy 59.15 76.85)
+		)
+		(height -5.941513)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "5,1464 mm"
+			(at 53.18559 72.230842 32.30041551)
+			(layer "User.1")
+			(uuid "23dd938d-eaa6-402d-94f9-a06a6f26d970")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
 		)
 	)
 	(dimension
@@ -8374,6 +8570,43 @@
 			(at 102.5 90.85 0)
 			(layer "User.1")
 			(uuid "773d14c3-5422-492b-b11f-8b4f391ea24c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "User.1")
+		(uuid "d1d725d5-caa6-40ba-9d20-407cd2769eb3")
+		(pts
+			(xy 69.561258 88.1) (xy 69.561258 54.1)
+		)
+		(height 19.338742)
+		(orientation 1)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "34,0000 mm"
+			(at 87.75 71.1 90)
+			(layer "User.1")
+			(uuid "d1d725d5-caa6-40ba-9d20-407cd2769eb3")
 			(effects
 				(font
 					(size 1 1)
