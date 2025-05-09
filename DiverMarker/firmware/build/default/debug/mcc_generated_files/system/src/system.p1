@@ -5,6 +5,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "134 mcc_generated_files/system/src/../../system/pins.h
 [; ;mcc_generated_files/system/src/../../system/pins.h: 134: void PIN_MANAGER_Initialize (void);
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
+"151 mcc_generated_files/system/src/../../timer/tmr0.h
+[; ;mcc_generated_files/system/src/../../timer/tmr0.h: 151: void TMR0_Initialize(void);
+[v _TMR0_Initialize `(v ~T0 @X0 0 ef ]
+"85 mcc_generated_files/system/src/../../system/interrupt.h
+[; ;mcc_generated_files/system/src/../../system/interrupt.h: 85: void INTERRUPT_Initialize (void);
+[v _INTERRUPT_Initialize `(v ~T0 @X0 0 ef ]
 "110 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 110: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -823,6 +829,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "42
 [; ;mcc_generated_files/system/src/system.c: 42:     PIN_MANAGER_Initialize();
 [e ( _PIN_MANAGER_Initialize ..  ]
+"43
+[; ;mcc_generated_files/system/src/system.c: 43:     TMR0_Initialize();
+[e ( _TMR0_Initialize ..  ]
+"44
+[; ;mcc_generated_files/system/src/system.c: 44:     INTERRUPT_Initialize();
+[e ( _INTERRUPT_Initialize ..  ]
 "45
 [; ;mcc_generated_files/system/src/system.c: 45: }
 [e :UE 788 ]

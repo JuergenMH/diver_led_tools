@@ -10127,6 +10127,6 @@ void SYSTEM_Initialize(void)
 {
     CLOCK_Initialize();
     PIN_MANAGER_Initialize();
-
-
+    TMR0_Initialize();
+    INTERRUPT_Initialize();
 }

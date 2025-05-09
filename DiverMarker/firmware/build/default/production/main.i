@@ -10162,17 +10162,14 @@ void PerformMainFSM(void)
   {
     case Main_Init:
       { SwTimer1_u16 = 2000u; };
-
-      do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0);
-
-
+      MainFSM = Main_WaitOffTime;
       break;
 
     case Main_WaitOffTime:
       if (0 == SwTimer1_u16)
       {
         do { LATAbits.LATA4 = 1; } while(0);
-        { SwTimer1_u16 = 50u; };
+        { SwTimer1_u16 = 40u; };
         MainFSM = Main_GreenIsOn;
       }
       break;
@@ -10190,7 +10187,7 @@ void PerformMainFSM(void)
       if (0 == SwTimer1_u16)
       {
         do { LATAbits.LATA5 = 1; } while(0);
-        { SwTimer1_u16 = 50u; };
+        { SwTimer1_u16 = 80u; };
         MainFSM = Main_BlueIsOn;
       }
       break;
@@ -10205,9 +10202,6 @@ void PerformMainFSM(void)
 
     default: MainFSM = Main_Init;
   }
-
-
-
 }
 
 
@@ -10216,43 +10210,20 @@ int main(void)
 {
    SYSTEM_Initialize();
     TMR0_OverflowCallbackRegister(MyTmr0);
-
-
-
-
-
-
-    TRISA = 0x14;
-
-
+    (INTCONbits.GIE = 1);
+    (INTCONbits.PEIE = 1);
+    TMR0_Start();
 
     while(1)
     {
-
-    do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0);
-
-
-
       if (0 != TimerFlag_u08)
       {
-
-        do { LATAbits.LATA5 = 1; } while(0);
-        do { LATAbits.LATA4 = 1; } while(0);
-
-        do { LATAbits.LATA5 = 0; } while(0);
-        do { LATAbits.LATA4 = 0; } while(0);
-
-    do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0);
-
-
-
-
 
 
 
         TimerFlag_u08 = 0;
-
-
+        PerformSWTimer();
+        PerformMainFSM();
       }
     }
 }
