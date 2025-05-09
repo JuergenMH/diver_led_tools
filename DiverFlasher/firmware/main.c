@@ -14,13 +14,18 @@
 // ----------------------------------------------------------------------------
 
 // other macros to make code more readable
-#define TicsPerMs     25u               // 25 * 40탎 = 1ms
-#define LEDOntTime    50u               // LED on for 50ms
-#define LEDOffTime    950u              // while developement LED period = 1s
-#define TargetCurrent 730               // .. a little bit below 750mA
-#define T2PRLoadInit  100u              // control value start up value (+6탎)
-#define T2PRLoadMin   80u               // 80 is about 10 + 6탎 = 16탎
-#define T2PRLoadMax   200u              // 200 is about 25 + 6탎 = 31탎
+#define TicsPerMs     25u                 // 25 * 40탎 = 1ms
+#define LEDOntTime    50u                 // LED on for 50ms
+#define LEDOffTime    950u                // while developement LED period = 1s
+//#define TargetCurrent 730                 // .. a little bit below 750mA
+#define TargetCurrent 50                 // .. a little bit below 750mA
+#define T2PRLoadInit  50u                // control value start up value (+6탎)
+//#define T2PRLoadInit  150u                // control value start up value (+6탎)
+#define T2PRLoadMin   40u                 // 80 is about 10 + 6탎 = 16탎
+//#define T2PRLoadMin   80u                 // 80 is about 10 + 6탎 = 16탎
+#define T2PRLoadMax   200u                // 200 is about 25 + 6탎 = 31탎
+
+#define REED_IS_OFF   0!=Reed_GetValue()  // Reed switch is low acitve 
 
 // type definitions 
 typedef enum 
@@ -34,7 +39,7 @@ typedef enum
 // Variables
 static int16_t    ActualCurrent_s16;    // current measured in mA
 static int16_t    DeviationCurrent_s16; // Deviation = Current - Target
-static uint8_t    T2PRLoad_u8;           // calculated reload value for pulse
+static uint8_t    T2PRLoad_u8;          // calculated reload value for pulse
 static uint8_t    MsTimerOccured_u8;    // flag 1ms timer
 static uint8_t    MsTimer_u8;           // helper counter for 1m timer
 static uint8_t    BoosterActive_u8;     // control pulse output on/off
@@ -49,8 +54,7 @@ static void MyTmr0(void)
 {
   #ifdef MeasureTmr0
     Debug_SetHigh();
-  #endif  
-    
+  #endif      
   // Basic pulse functionality only if enabled by the main function
   if (0 != BoosterActive_u8)
   {
@@ -75,16 +79,13 @@ static void MyTmr0(void)
     Switch_SetHigh();                         // start the pulse
     T2PR = T2PRLoad_u8;                       // load HW timer with period
     TMR2_Start();                             // and prepare pulse stop
-}
-  
-  // handle the 1m time for the scheduler in main
-  if (0 == MsTimer_u8)
+  }
+  if (0 == MsTimer_u8)                // handle the 1m time for the scheduler
   {
-    MsTimer_u8 = TicsPerMs; // Reload timer for one ms tic
-    MsTimerOccured_u8 = 1;  // and set the flag for the main function
+    MsTimer_u8 = TicsPerMs;           // Reload timer for one ms tic
+    MsTimerOccured_u8 = 1;            // and set the flag for the main function
   }
   MsTimer_u8--;
-  
   #ifdef MeasureTmr0
     Debug_SetLow();
   #endif 
@@ -107,11 +108,36 @@ static void StartStopBooster(uint8_t Control_u8)
   INTERRUPT_GlobalInterruptEnable();    // enable the global interrupts again
 }
 
+// ----------------------------------------------------------------------------
 static void DoSWTimer()
 {
   if (0!=SWTimerPeriod_u16) SWTimerPeriod_u16--;
 }
 
+// ----------------------------------------------------------------------------
+static void HandlePowerOff()
+{
+  if (REED_IS_OFF)              // user switch off request?  
+  {                             
+    // prepare sleep
+    TMR0_Stop();                // disable timer to avoid wakeup by timer interrupt
+    TMR2_Stop();
+    GIE    = 0;                 // real interrupt is not necessary for wakeup
+    IOCAF  = 0;                 // clear all interrupt change flags from port RA
+    IOCAN2 = 1;                 // enable wakeup by falling edge on RA2
+    IOCIE  = 1;                 // enable IO change interrupt module
+    SLEEP();                    // stop the system exactly here 
+    NOP();                      // proposed to do that after sleep ..
+    // restart the system    
+    IOCAN2 = 0;                 // disable interrupt by falling edge on RA2
+    IOCIE  = 0;                 // disable IO interrupt module
+    IOCAF  = 0;                 // clear all interrupt change flags from port RA
+    GIE    = 1;                 // enable interrupt system again
+    TMR0_Start();               // enable timer again for basic functionality
+  }
+}
+
+// ----------------------------------------------------------------------------
 static void DoMainFSM()
 {
   switch(MainFSM)
@@ -122,7 +148,7 @@ static void DoMainFSM()
       
     case Idle:
       StartStopBooster(1);
-      SWTimerPeriod_u16= LEDOntTime;
+      SWTimerPeriod_u16 = LEDOntTime;
       MainFSM = PulseOn;
       break;
       
@@ -130,16 +156,17 @@ static void DoMainFSM()
       if (0 == SWTimerPeriod_u16)   // on timer elapsed?
       {                             // yes, switch to off period
         StartStopBooster(0);
-        SWTimerPeriod_u16= LEDOffTime;
+        SWTimerPeriod_u16 = LEDOffTime;
         MainFSM = PulseOff;        
       }
       break;
       
     case PulseOff:                  // LED is in OFF state
+      HandlePowerOff();             // switch off in LED off mode only
       if (0 == SWTimerPeriod_u16)   // off timer elapsed?
       {                             // yes, switch to on period
         StartStopBooster(1);
-        SWTimerPeriod_u16= LEDOntTime;
+        SWTimerPeriod_u16 = LEDOntTime;
         MainFSM = PulseOn;        
       }
       break;
@@ -151,26 +178,26 @@ static void DoMainFSM()
 // ----------------------------------------------------------------------------
 int main(void)
 {
-    SYSTEM_Initialize();
-    TMR0_OverflowCallbackRegister(MyTmr0);  // hook to own function for timer 0
-    TMR2_OverflowCallbackRegister(MyTmr2);  // dito for timer 2   
-    ADC_SelectChannel(Current);             // current input as AD channel
-    FVRCON = 0xC1;                          // enable ADC setting for FVR
+  SYSTEM_Initialize();
+  TMR0_OverflowCallbackRegister(MyTmr0);  // hook to own function for timer 0
+  TMR2_OverflowCallbackRegister(MyTmr2);  // dito for timer 2   
+  ADC_SelectChannel(Current);             // current input as AD channel
+  FVRCON = 0xC1;                          // enable ADC setting for FVR
     
-    INTERRUPT_GlobalInterruptEnable();      // Enable the Global Interrupts     
-    INTERRUPT_PeripheralInterruptEnable();  // Enable the Peripheral Interrupts  
-    StartStopBooster(0);                    // Switch booster off
-    TMR0_Start();                           // Start the 40uS background timer
+  INTERRUPT_GlobalInterruptEnable();      // Enable the Global Interrupts     
+  INTERRUPT_PeripheralInterruptEnable();  // Enable the Peripheral Interrupts  
+  StartStopBooster(0);                    // Switch booster off
+  TMR0_Start();                           // Start the 40uS background timer
  
-    while(1)                                // Background loop
+  while(1)                                // Background loop
+  {
+    if (0 != MsTimerOccured_u8)           // one ms event occured?
     {
-      if (0 != MsTimerOccured_u8)           // one ms event occured?
-      {
-        MsTimerOccured_u8 = 0;              // yes, clear the event
-        DoSWTimer();                        // handle all SW timer
-        DoMainFSM();                        // visible behaviour in this FSM
-      }
-    }    
+      MsTimerOccured_u8 = 0;              // yes, clear the event
+      DoSWTimer();                        // handle all SW timer
+      DoMainFSM();                        // visible behaviour in this FSM
+    }
+  }    
 }
 
 // ----------------------------------------------------------------------------

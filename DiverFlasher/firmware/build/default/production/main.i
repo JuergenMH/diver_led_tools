@@ -10397,7 +10397,7 @@ void TMR2_PeriodMatchCallbackRegister(void (* callbackHandler)(void));
 # 58 "./mcc_generated_files/system/system.h"
 void SYSTEM_Initialize(void);
 # 4 "main.c" 2
-# 26 "main.c"
+# 31 "main.c"
 typedef enum
 {
   Init,
@@ -10426,7 +10426,6 @@ static void MyTmr0(void)
 
 
 
-
   if (0 != BoosterActive_u8)
   {
 
@@ -10435,9 +10434,9 @@ static void MyTmr0(void)
     ADC_StartConversion();
 
 
-    if (0 < ActualCurrent_s16-730)
+    if (0 < ActualCurrent_s16-50)
     {
-      if (80u <= T2PRLoad_u8)
+      if (40u <= T2PRLoad_u8)
         T2PRLoad_u8--;
     }
     else
@@ -10450,16 +10449,13 @@ static void MyTmr0(void)
     do { LATAbits.LATA5 = 1; } while(0);
     T2PR = T2PRLoad_u8;
     TMR2_Start();
-}
-
-
+  }
   if (0 == MsTimer_u8)
   {
     MsTimer_u8 = 25u;
     MsTimerOccured_u8 = 1;
   }
   MsTimer_u8--;
-
 
 
 
@@ -10478,14 +10474,41 @@ static void StartStopBooster(uint8_t Control_u8)
 {
   (INTCONbits.GIE = 0);
   BoosterActive_u8 = Control_u8;
-  T2PRLoad_u8 = 100u;
+  T2PRLoad_u8 = 50u;
   (INTCONbits.GIE = 1);
 }
+
 
 static void DoSWTimer()
 {
   if (0!=SWTimerPeriod_u16) SWTimerPeriod_u16--;
 }
+
+
+
+
+static void HandlePowerOff()
+{
+  if (0!=PORTAbits.RA2)
+  {
+
+    TMR0_Stop();
+    GIE = 0;
+    IOCAF = 0;
+    IOCAN2 = 1;
+    IOCIE = 1;
+    __asm("sleep");
+    __nop();
+
+
+    IOCAN2 = 0;
+    IOCIE = 0;
+    IOCAF = 0;
+    GIE = 1;
+    TMR0_Start();
+  }
+}
+
 
 static void DoMainFSM()
 {
@@ -10497,7 +10520,7 @@ static void DoMainFSM()
 
     case Idle:
       StartStopBooster(1);
-      SWTimerPeriod_u16= 50u;
+      SWTimerPeriod_u16 = 50u;
       MainFSM = PulseOn;
       break;
 
@@ -10505,16 +10528,17 @@ static void DoMainFSM()
       if (0 == SWTimerPeriod_u16)
       {
         StartStopBooster(0);
-        SWTimerPeriod_u16= 950u;
+        SWTimerPeriod_u16 = 950u;
         MainFSM = PulseOff;
       }
       break;
 
     case PulseOff:
+      HandlePowerOff();
       if (0 == SWTimerPeriod_u16)
       {
         StartStopBooster(1);
-        SWTimerPeriod_u16= 50u;
+        SWTimerPeriod_u16 = 50u;
         MainFSM = PulseOn;
       }
       break;

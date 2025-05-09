@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"42 main.c
-[; ;main.c: 42: static MainFSM_t MainFSM = Init;
+"47 main.c
+[; ;main.c: 47: static MainFSM_t MainFSM = Init;
 [c E5988 0 1 2 3 .. ]
 [n E5988 . Init Idle PulseOn PulseOff  ]
 "119 ./mcc_generated_files/system/../adc/adc.h
@@ -37,6 +37,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 "426
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 426: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
+"452
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 452:     struct {
+[s S33 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S33 . RA0 RA1 RA2 RA3 RA4 RA5 ]
+"451
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 451: typedef union {
+[u S32 `S33 1 ]
+[n S32 . . ]
+"461
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 461: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x00C)));
+[v _PORTAbits `VS32 ~T0 @X0 0 e@12 ]
+"195 ./mcc_generated_files/system/../timer/tmr0.h
+[; ;./mcc_generated_files/system/../timer/tmr0.h: 195: void TMR0_Stop(void);
+[v _TMR0_Stop `(v ~T0 @X0 0 ef ]
+"17867 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 17867: extern volatile __bit GIE __attribute__((address(0x5F)));
+[v _GIE `Vb ~T0 @X0 0 e@95 ]
+"16448
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 16448: extern volatile unsigned char IOCAF __attribute__((address(0x1F3F)));
+[v _IOCAF `Vuc ~T0 @X0 0 e@7999 ]
+"18035
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 18035: extern volatile __bit IOCAN2 __attribute__((address(0xF9F2)));
+[v _IOCAN2 `Vb ~T0 @X0 0 e@63986 ]
+"18065
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 18065: extern volatile __bit IOCIE __attribute__((address(0x38B4)));
+[v _IOCIE `Vb ~T0 @X0 0 e@14516 ]
+"8 C:\Program Files\Microchip\xc8\v2.50\pic\include\builtins.h
+[v ___nop `(v ~T0 @X0 0 ef ]
+[p i ___nop ]
+"186 ./mcc_generated_files/system/../timer/tmr0.h
+[; ;./mcc_generated_files/system/../timer/tmr0.h: 186: void TMR0_Start(void);
+[v _TMR0_Start `(v ~T0 @X0 0 ef ]
 [p mainexit ]
 "58 ./mcc_generated_files/system/system.h
 [; ;./mcc_generated_files/system/system.h: 58: void SYSTEM_Initialize(void);
@@ -49,9 +81,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "485 ./mcc_generated_files/system/../timer/tmr2.h
 [; ;./mcc_generated_files/system/../timer/tmr2.h: 485: void TMR2_PeriodMatchCallbackRegister(void (* callbackHandler)(void));
 [v _TMR2_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F5984 ]
-[v F6010 `(v ~T0 @X0 0 tf ]
-"157 main.c
-[; ;main.c: 157:     ADC_SelectChannel(Current);
+[v F6011 `(v ~T0 @X0 0 tf ]
+"186 main.c
+[; ;main.c: 186:     ADC_SelectChannel(Current);
 [c E5878 59 60 61 62 63 4 .. ]
 [n E5878 . channel_AVSS channel_Temp channel_DAC1 channel_FVR_BUF1 channel_FVR_BUF2 Current  ]
 "94 ./mcc_generated_files/system/../adc/adc.h
@@ -60,9 +92,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "9914 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 9914: extern volatile unsigned char FVRCON __attribute__((address(0x90C)));
 [v _FVRCON `Vuc ~T0 @X0 0 e@2316 ]
-"186 ./mcc_generated_files/system/../timer/tmr0.h
-[; ;./mcc_generated_files/system/../timer/tmr0.h: 186: void TMR0_Start(void);
-[v _TMR0_Start `(v ~T0 @X0 0 ef ]
 "110 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 110: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -867,363 +896,424 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16808
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 16808: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"35 main.c
-[; ;main.c: 35: static int16_t ActualCurrent_s16;
+"40 main.c
+[; ;main.c: 40: static int16_t ActualCurrent_s16;
 [v _ActualCurrent_s16 `s ~T0 @X0 1 s ]
-"36
-[; ;main.c: 36: static int16_t DeviationCurrent_s16;
-[v _DeviationCurrent_s16 `s ~T0 @X0 1 s ]
-"37
-[; ;main.c: 37: static uint8_t T2PRLoad_u8;
-[v _T2PRLoad_u8 `uc ~T0 @X0 1 s ]
-"38
-[; ;main.c: 38: static uint8_t MsTimerOccured_u8;
-[v _MsTimerOccured_u8 `uc ~T0 @X0 1 s ]
-"39
-[; ;main.c: 39: static uint8_t MsTimer_u8;
-[v _MsTimer_u8 `uc ~T0 @X0 1 s ]
-"40
-[; ;main.c: 40: static uint8_t BoosterActive_u8;
-[v _BoosterActive_u8 `uc ~T0 @X0 1 s ]
 "41
-[; ;main.c: 41: static uint16_t SWTimerPeriod_u16;
-[v _SWTimerPeriod_u16 `us ~T0 @X0 1 s ]
+[; ;main.c: 41: static int16_t DeviationCurrent_s16;
+[v _DeviationCurrent_s16 `s ~T0 @X0 1 s ]
 "42
-[; ;main.c: 42: static MainFSM_t MainFSM = Init;
+[; ;main.c: 42: static uint8_t T2PRLoad_u8;
+[v _T2PRLoad_u8 `uc ~T0 @X0 1 s ]
+"43
+[; ;main.c: 43: static uint8_t MsTimerOccured_u8;
+[v _MsTimerOccured_u8 `uc ~T0 @X0 1 s ]
+"44
+[; ;main.c: 44: static uint8_t MsTimer_u8;
+[v _MsTimer_u8 `uc ~T0 @X0 1 s ]
+"45
+[; ;main.c: 45: static uint8_t BoosterActive_u8;
+[v _BoosterActive_u8 `uc ~T0 @X0 1 s ]
+"46
+[; ;main.c: 46: static uint16_t SWTimerPeriod_u16;
+[v _SWTimerPeriod_u16 `us ~T0 @X0 1 s ]
+"47
+[; ;main.c: 47: static MainFSM_t MainFSM = Init;
 [v _MainFSM `E5988 ~T0 @X0 1 s ]
 [i _MainFSM
 . `E5988 0
 ]
-"48
-[; ;main.c: 48: static void MyTmr0(void)
+"53
+[; ;main.c: 53: static void MyTmr0(void)
 [v _MyTmr0 `(v ~T0 @X0 1 sf ]
-"49
-[; ;main.c: 49: {
+"54
+[; ;main.c: 54: {
 {
 [e :U _MyTmr0 ]
 [f ]
-"55
-[; ;main.c: 55:   if (0 != BoosterActive_u8)
-[e $ ! != -> 0 `i -> _BoosterActive_u8 `i 789  ]
-"56
-[; ;main.c: 56:   {
-{
 "59
-[; ;main.c: 59:     ActualCurrent_s16 = (int16_t) ADC_GetConversionResult();
-[e = _ActualCurrent_s16 -> ( _ADC_GetConversionResult ..  `s ]
+[; ;main.c: 59:   if (0 != BoosterActive_u8)
+[e $ ! != -> 0 `i -> _BoosterActive_u8 `i 789  ]
 "60
-[; ;main.c: 60:     ADC_StartConversion();
-[e ( _ADC_StartConversion ..  ]
-"63
-[; ;main.c: 63:     if (0 < ActualCurrent_s16-730)
-[e $ ! < -> 0 `i - -> _ActualCurrent_s16 `i -> 730 `i 790  ]
-"64
-[; ;main.c: 64:     {
+[; ;main.c: 60:   {
 {
-"65
-[; ;main.c: 65:       if (80u <= T2PRLoad_u8)
-[e $ ! <= -> 80 `ui -> _T2PRLoad_u8 `ui 791  ]
-"66
-[; ;main.c: 66:         T2PRLoad_u8--;
+"63
+[; ;main.c: 63:     ActualCurrent_s16 = (int16_t) ADC_GetConversionResult();
+[e = _ActualCurrent_s16 -> ( _ADC_GetConversionResult ..  `s ]
+"64
+[; ;main.c: 64:     ADC_StartConversion();
+[e ( _ADC_StartConversion ..  ]
+"67
+[; ;main.c: 67:     if (0 < ActualCurrent_s16-50)
+[e $ ! < -> 0 `i - -> _ActualCurrent_s16 `i -> 50 `i 790  ]
+"68
+[; ;main.c: 68:     {
+{
+"69
+[; ;main.c: 69:       if (40u <= T2PRLoad_u8)
+[e $ ! <= -> 40 `ui -> _T2PRLoad_u8 `ui 791  ]
+"70
+[; ;main.c: 70:         T2PRLoad_u8--;
 [e -- _T2PRLoad_u8 -> -> 1 `i `uc ]
 [e :U 791 ]
-"67
-[; ;main.c: 67:     }
+"71
+[; ;main.c: 71:     }
 }
 [e $U 792  ]
-"68
-[; ;main.c: 68:     else
+"72
+[; ;main.c: 72:     else
 [e :U 790 ]
-"69
-[; ;main.c: 69:     {
+"73
+[; ;main.c: 73:     {
 {
-"70
-[; ;main.c: 70:       if (200u >= T2PRLoad_u8)
+"74
+[; ;main.c: 74:       if (200u >= T2PRLoad_u8)
 [e $ ! >= -> 200 `ui -> _T2PRLoad_u8 `ui 793  ]
-"71
-[; ;main.c: 71:         T2PRLoad_u8++;
+"75
+[; ;main.c: 75:         T2PRLoad_u8++;
 [e ++ _T2PRLoad_u8 -> -> 1 `i `uc ]
 [e :U 793 ]
-"72
-[; ;main.c: 72:     }
+"76
+[; ;main.c: 76:     }
 }
 [e :U 792 ]
-"75
-[; ;main.c: 75:     do { LATAbits.LATA5 = 1; } while(0);
+"79
+[; ;main.c: 79:     do { LATAbits.LATA5 = 1; } while(0);
 [e :U 796 ]
 {
 [e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
 }
 [e :U 795 ]
-"76
-[; ;main.c: 76:     T2PR = T2PRLoad_u8;
+"80
+[; ;main.c: 80:     T2PR = T2PRLoad_u8;
 [e = _T2PR _T2PRLoad_u8 ]
-"77
-[; ;main.c: 77:     TMR2_Start();
+"81
+[; ;main.c: 81:     TMR2_Start();
 [e ( _TMR2_Start ..  ]
-"78
-[; ;main.c: 78: }
+"82
+[; ;main.c: 82:   }
 }
 [e :U 789 ]
-"81
-[; ;main.c: 81:   if (0 == MsTimer_u8)
-[e $ ! == -> 0 `i -> _MsTimer_u8 `i 797  ]
-"82
-[; ;main.c: 82:   {
-{
 "83
-[; ;main.c: 83:     MsTimer_u8 = 25u;
-[e = _MsTimer_u8 -> -> 25 `ui `uc ]
+[; ;main.c: 83:   if (0 == MsTimer_u8)
+[e $ ! == -> 0 `i -> _MsTimer_u8 `i 797  ]
 "84
-[; ;main.c: 84:     MsTimerOccured_u8 = 1;
-[e = _MsTimerOccured_u8 -> -> 1 `i `uc ]
+[; ;main.c: 84:   {
+{
 "85
-[; ;main.c: 85:   }
+[; ;main.c: 85:     MsTimer_u8 = 25u;
+[e = _MsTimer_u8 -> -> 25 `ui `uc ]
+"86
+[; ;main.c: 86:     MsTimerOccured_u8 = 1;
+[e = _MsTimerOccured_u8 -> -> 1 `i `uc ]
+"87
+[; ;main.c: 87:   }
 }
 [e :U 797 ]
-"86
-[; ;main.c: 86:   MsTimer_u8--;
+"88
+[; ;main.c: 88:   MsTimer_u8--;
 [e -- _MsTimer_u8 -> -> 1 `i `uc ]
-"91
-[; ;main.c: 91: }
+"92
+[; ;main.c: 92: }
 [e :UE 788 ]
 }
-"94
-[; ;main.c: 94: static void MyTmr2()
-[v _MyTmr2 `(v ~T0 @X0 1 sf ]
 "95
-[; ;main.c: 95: {
+[; ;main.c: 95: static void MyTmr2()
+[v _MyTmr2 `(v ~T0 @X0 1 sf ]
+"96
+[; ;main.c: 96: {
 {
 [e :U _MyTmr2 ]
 [f ]
-"96
-[; ;main.c: 96:   do { LATAbits.LATA5 = 0; } while(0);
+"97
+[; ;main.c: 97:   do { LATAbits.LATA5 = 0; } while(0);
 [e :U 801 ]
 {
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 800 ]
-"97
-[; ;main.c: 97: }
+"98
+[; ;main.c: 98: }
 [e :UE 798 ]
 }
-"102
-[; ;main.c: 102: static void StartStopBooster(uint8_t Control_u8)
-[v _StartStopBooster `(v ~T0 @X0 1 sf1`uc ]
 "103
-[; ;main.c: 103: {
+[; ;main.c: 103: static void StartStopBooster(uint8_t Control_u8)
+[v _StartStopBooster `(v ~T0 @X0 1 sf1`uc ]
+"104
+[; ;main.c: 104: {
 {
 [e :U _StartStopBooster ]
-"102
-[; ;main.c: 102: static void StartStopBooster(uint8_t Control_u8)
-[v _Control_u8 `uc ~T0 @X0 1 r1 ]
 "103
-[; ;main.c: 103: {
-[f ]
+[; ;main.c: 103: static void StartStopBooster(uint8_t Control_u8)
+[v _Control_u8 `uc ~T0 @X0 1 r1 ]
 "104
-[; ;main.c: 104:   (INTCONbits.GIE = 0);
-[e = . . _INTCONbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 104: {
+[f ]
 "105
-[; ;main.c: 105:   BoosterActive_u8 = Control_u8;
-[e = _BoosterActive_u8 _Control_u8 ]
+[; ;main.c: 105:   (INTCONbits.GIE = 0);
+[e = . . _INTCONbits 0 3 -> -> 0 `i `uc ]
 "106
-[; ;main.c: 106:   T2PRLoad_u8 = 100u;
-[e = _T2PRLoad_u8 -> -> 100 `ui `uc ]
+[; ;main.c: 106:   BoosterActive_u8 = Control_u8;
+[e = _BoosterActive_u8 _Control_u8 ]
 "107
-[; ;main.c: 107:   (INTCONbits.GIE = 1);
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 107:   T2PRLoad_u8 = 50u;
+[e = _T2PRLoad_u8 -> -> 50 `ui `uc ]
 "108
-[; ;main.c: 108: }
+[; ;main.c: 108:   (INTCONbits.GIE = 1);
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+"109
+[; ;main.c: 109: }
 [e :UE 802 ]
 }
-"110
-[; ;main.c: 110: static void DoSWTimer()
+"112
+[; ;main.c: 112: static void DoSWTimer()
 [v _DoSWTimer `(v ~T0 @X0 1 sf ]
-"111
-[; ;main.c: 111: {
+"113
+[; ;main.c: 113: {
 {
 [e :U _DoSWTimer ]
 [f ]
-"112
-[; ;main.c: 112:   if (0!=SWTimerPeriod_u16) SWTimerPeriod_u16--;
+"114
+[; ;main.c: 114:   if (0!=SWTimerPeriod_u16) SWTimerPeriod_u16--;
 [e $ ! != -> -> 0 `i `ui -> _SWTimerPeriod_u16 `ui 804  ]
 [e -- _SWTimerPeriod_u16 -> -> 1 `i `us ]
 [e :U 804 ]
-"113
-[; ;main.c: 113: }
+"115
+[; ;main.c: 115: }
 [e :UE 803 ]
 }
-"115
-[; ;main.c: 115: static void DoMainFSM()
+"120
+[; ;main.c: 120: static void HandlePowerOff()
+[v _HandlePowerOff `(v ~T0 @X0 1 sf ]
+"121
+[; ;main.c: 121: {
+{
+[e :U _HandlePowerOff ]
+[f ]
+"122
+[; ;main.c: 122:   if (0!=PORTAbits.RA2)
+[e $ ! != -> 0 `i -> . . _PORTAbits 0 2 `i 806  ]
+"123
+[; ;main.c: 123:   {
+{
+"125
+[; ;main.c: 125:     TMR0_Stop();
+[e ( _TMR0_Stop ..  ]
+"126
+[; ;main.c: 126:     GIE = 0;
+[e = _GIE -> -> 0 `i `b ]
+"127
+[; ;main.c: 127:     IOCAF = 0;
+[e = _IOCAF -> -> 0 `i `uc ]
+"128
+[; ;main.c: 128:     IOCAN2 = 1;
+[e = _IOCAN2 -> -> 1 `i `b ]
+"129
+[; ;main.c: 129:     IOCIE = 1;
+[e = _IOCIE -> -> 1 `i `b ]
+"130
+[; ;main.c: 130:     __asm("sleep");
+[; <" sleep ;# ">
+"131
+[; ;main.c: 131:     __nop();
+[e ( ___nop ..  ]
+"134
+[; ;main.c: 134:     IOCAN2 = 0;
+[e = _IOCAN2 -> -> 0 `i `b ]
+"135
+[; ;main.c: 135:     IOCIE = 0;
+[e = _IOCIE -> -> 0 `i `b ]
+"136
+[; ;main.c: 136:     IOCAF = 0;
+[e = _IOCAF -> -> 0 `i `uc ]
+"137
+[; ;main.c: 137:     GIE = 1;
+[e = _GIE -> -> 1 `i `b ]
+"138
+[; ;main.c: 138:     TMR0_Start();
+[e ( _TMR0_Start ..  ]
+"139
+[; ;main.c: 139:   }
+}
+[e :U 806 ]
+"140
+[; ;main.c: 140: }
+[e :UE 805 ]
+}
+"143
+[; ;main.c: 143: static void DoMainFSM()
 [v _DoMainFSM `(v ~T0 @X0 1 sf ]
-"116
-[; ;main.c: 116: {
+"144
+[; ;main.c: 144: {
 {
 [e :U _DoMainFSM ]
 [f ]
-"117
-[; ;main.c: 117:   switch(MainFSM)
-[e $U 807  ]
-"118
-[; ;main.c: 118:   {
+"145
+[; ;main.c: 145:   switch(MainFSM)
+[e $U 809  ]
+"146
+[; ;main.c: 146:   {
 {
-"119
-[; ;main.c: 119:     case Init:
-[e :U 808 ]
-"120
-[; ;main.c: 120:       MainFSM = Idle;
-[e = _MainFSM . `E5988 1 ]
-"121
-[; ;main.c: 121:       break;
-[e $U 806  ]
-"123
-[; ;main.c: 123:     case Idle:
-[e :U 809 ]
-"124
-[; ;main.c: 124:       StartStopBooster(1);
-[e ( _StartStopBooster (1 -> -> 1 `i `uc ]
-"125
-[; ;main.c: 125:       SWTimerPeriod_u16= 50u;
-[e = _SWTimerPeriod_u16 -> -> 50 `ui `us ]
-"126
-[; ;main.c: 126:       MainFSM = PulseOn;
-[e = _MainFSM . `E5988 2 ]
-"127
-[; ;main.c: 127:       break;
-[e $U 806  ]
-"129
-[; ;main.c: 129:     case PulseOn:
+"147
+[; ;main.c: 147:     case Init:
 [e :U 810 ]
-"130
-[; ;main.c: 130:       if (0 == SWTimerPeriod_u16)
-[e $ ! == -> -> 0 `i `ui -> _SWTimerPeriod_u16 `ui 811  ]
-"131
-[; ;main.c: 131:       {
-{
-"132
-[; ;main.c: 132:         StartStopBooster(0);
-[e ( _StartStopBooster (1 -> -> 0 `i `uc ]
-"133
-[; ;main.c: 133:         SWTimerPeriod_u16= 950u;
-[e = _SWTimerPeriod_u16 -> -> 950 `ui `us ]
-"134
-[; ;main.c: 134:         MainFSM = PulseOff;
-[e = _MainFSM . `E5988 3 ]
-"135
-[; ;main.c: 135:       }
-}
+"148
+[; ;main.c: 148:       MainFSM = Idle;
+[e = _MainFSM . `E5988 1 ]
+"149
+[; ;main.c: 149:       break;
+[e $U 808  ]
+"151
+[; ;main.c: 151:     case Idle:
 [e :U 811 ]
-"136
-[; ;main.c: 136:       break;
-[e $U 806  ]
-"138
-[; ;main.c: 138:     case PulseOff:
-[e :U 812 ]
-"139
-[; ;main.c: 139:       if (0 == SWTimerPeriod_u16)
-[e $ ! == -> -> 0 `i `ui -> _SWTimerPeriod_u16 `ui 813  ]
-"140
-[; ;main.c: 140:       {
-{
-"141
-[; ;main.c: 141:         StartStopBooster(1);
+"152
+[; ;main.c: 152:       StartStopBooster(1);
 [e ( _StartStopBooster (1 -> -> 1 `i `uc ]
-"142
-[; ;main.c: 142:         SWTimerPeriod_u16= 50u;
+"153
+[; ;main.c: 153:       SWTimerPeriod_u16 = 50u;
 [e = _SWTimerPeriod_u16 -> -> 50 `ui `us ]
-"143
-[; ;main.c: 143:         MainFSM = PulseOn;
+"154
+[; ;main.c: 154:       MainFSM = PulseOn;
 [e = _MainFSM . `E5988 2 ]
-"144
-[; ;main.c: 144:       }
+"155
+[; ;main.c: 155:       break;
+[e $U 808  ]
+"157
+[; ;main.c: 157:     case PulseOn:
+[e :U 812 ]
+"158
+[; ;main.c: 158:       if (0 == SWTimerPeriod_u16)
+[e $ ! == -> -> 0 `i `ui -> _SWTimerPeriod_u16 `ui 813  ]
+"159
+[; ;main.c: 159:       {
+{
+"160
+[; ;main.c: 160:         StartStopBooster(0);
+[e ( _StartStopBooster (1 -> -> 0 `i `uc ]
+"161
+[; ;main.c: 161:         SWTimerPeriod_u16 = 950u;
+[e = _SWTimerPeriod_u16 -> -> 950 `ui `us ]
+"162
+[; ;main.c: 162:         MainFSM = PulseOff;
+[e = _MainFSM . `E5988 3 ]
+"163
+[; ;main.c: 163:       }
 }
 [e :U 813 ]
-"145
-[; ;main.c: 145:       break;
-[e $U 806  ]
-"146
-[; ;main.c: 146:   }
+"164
+[; ;main.c: 164:       break;
+[e $U 808  ]
+"166
+[; ;main.c: 166:     case PulseOff:
+[e :U 814 ]
+"167
+[; ;main.c: 167:       HandlePowerOff();
+[e ( _HandlePowerOff ..  ]
+"168
+[; ;main.c: 168:       if (0 == SWTimerPeriod_u16)
+[e $ ! == -> -> 0 `i `ui -> _SWTimerPeriod_u16 `ui 815  ]
+"169
+[; ;main.c: 169:       {
+{
+"170
+[; ;main.c: 170:         StartStopBooster(1);
+[e ( _StartStopBooster (1 -> -> 1 `i `uc ]
+"171
+[; ;main.c: 171:         SWTimerPeriod_u16 = 50u;
+[e = _SWTimerPeriod_u16 -> -> 50 `ui `us ]
+"172
+[; ;main.c: 172:         MainFSM = PulseOn;
+[e = _MainFSM . `E5988 2 ]
+"173
+[; ;main.c: 173:       }
 }
-[e $U 806  ]
-[e :U 807 ]
-[e [\ -> _MainFSM `ui , $ -> . `E5988 0 `ui 808
- , $ -> . `E5988 1 `ui 809
- , $ -> . `E5988 2 `ui 810
- , $ -> . `E5988 3 `ui 812
- 806 ]
-[e :U 806 ]
-"147
-[; ;main.c: 147: }
-[e :UE 805 ]
+[e :U 815 ]
+"174
+[; ;main.c: 174:       break;
+[e $U 808  ]
+"175
+[; ;main.c: 175:   }
+}
+[e $U 808  ]
+[e :U 809 ]
+[e [\ -> _MainFSM `ui , $ -> . `E5988 0 `ui 810
+ , $ -> . `E5988 1 `ui 811
+ , $ -> . `E5988 2 `ui 812
+ , $ -> . `E5988 3 `ui 814
+ 808 ]
+[e :U 808 ]
+"176
+[; ;main.c: 176: }
+[e :UE 807 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"152
-[; ;main.c: 152: int main(void)
+"181
+[; ;main.c: 181: int main(void)
 [v _main `(i ~T0 @X0 1 ef ]
-"153
-[; ;main.c: 153: {
+"182
+[; ;main.c: 182: {
 {
 [e :U _main ]
 [f ]
-"154
-[; ;main.c: 154:     SYSTEM_Initialize();
+"183
+[; ;main.c: 183:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"155
-[; ;main.c: 155:     TMR0_OverflowCallbackRegister(MyTmr0);
+"184
+[; ;main.c: 184:     TMR0_OverflowCallbackRegister(MyTmr0);
 [e ( _TMR0_OverflowCallbackRegister (1 &U _MyTmr0 ]
-"156
-[; ;main.c: 156:     TMR2_PeriodMatchCallbackRegister(MyTmr2);
-[e ( _TMR2_PeriodMatchCallbackRegister (1 -> &U _MyTmr2 `*F6010 ]
-"157
-[; ;main.c: 157:     ADC_SelectChannel(Current);
+"185
+[; ;main.c: 185:     TMR2_PeriodMatchCallbackRegister(MyTmr2);
+[e ( _TMR2_PeriodMatchCallbackRegister (1 -> &U _MyTmr2 `*F6011 ]
+"186
+[; ;main.c: 186:     ADC_SelectChannel(Current);
 [e ( _ADC_SelectChannel (1 . `E5878 5 ]
-"158
-[; ;main.c: 158:     FVRCON = 0xC1;
+"187
+[; ;main.c: 187:     FVRCON = 0xC1;
 [e = _FVRCON -> -> 193 `i `uc ]
-"160
-[; ;main.c: 160:     (INTCONbits.GIE = 1);
+"189
+[; ;main.c: 189:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"161
-[; ;main.c: 161:     (INTCONbits.PEIE = 1);
+"190
+[; ;main.c: 190:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-"162
-[; ;main.c: 162:     StartStopBooster(0);
+"191
+[; ;main.c: 191:     StartStopBooster(0);
 [e ( _StartStopBooster (1 -> -> 0 `i `uc ]
-"163
-[; ;main.c: 163:     TMR0_Start();
+"192
+[; ;main.c: 192:     TMR0_Start();
 [e ( _TMR0_Start ..  ]
-"165
-[; ;main.c: 165:     while(1)
-[e :U 816 ]
-"166
-[; ;main.c: 166:     {
-{
-"167
-[; ;main.c: 167:       if (0 != MsTimerOccured_u8)
-[e $ ! != -> 0 `i -> _MsTimerOccured_u8 `i 818  ]
-"168
-[; ;main.c: 168:       {
-{
-"169
-[; ;main.c: 169:         MsTimerOccured_u8 = 0;
-[e = _MsTimerOccured_u8 -> -> 0 `i `uc ]
-"170
-[; ;main.c: 170:         DoSWTimer();
-[e ( _DoSWTimer ..  ]
-"171
-[; ;main.c: 171:         DoMainFSM();
-[e ( _DoMainFSM ..  ]
-"172
-[; ;main.c: 172:       }
-}
+"194
+[; ;main.c: 194:     while(1)
 [e :U 818 ]
-"173
-[; ;main.c: 173:     }
+"195
+[; ;main.c: 195:     {
+{
+"196
+[; ;main.c: 196:       if (0 != MsTimerOccured_u8)
+[e $ ! != -> 0 `i -> _MsTimerOccured_u8 `i 820  ]
+"197
+[; ;main.c: 197:       {
+{
+"198
+[; ;main.c: 198:         MsTimerOccured_u8 = 0;
+[e = _MsTimerOccured_u8 -> -> 0 `i `uc ]
+"199
+[; ;main.c: 199:         DoSWTimer();
+[e ( _DoSWTimer ..  ]
+"200
+[; ;main.c: 200:         DoMainFSM();
+[e ( _DoMainFSM ..  ]
+"201
+[; ;main.c: 201:       }
 }
-[e :U 815 ]
-[e $U 816  ]
+[e :U 820 ]
+"202
+[; ;main.c: 202:     }
+}
 [e :U 817 ]
-"174
-[; ;main.c: 174: }
-[e :UE 814 ]
+[e $U 818  ]
+[e :U 819 ]
+"203
+[; ;main.c: 203: }
+[e :UE 816 ]
 }
