@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v2.50\pic\dat\20240725155939_en.msgs \
   -cn -h+dist/default/debug\firmware.debug.sym \
   --cmf=dist/default/debug\firmware.debug.cmf -z -Q16F15313 \
-  -oC:\Users\juerg\AppData\Local\Temp\xcAsi4c.\driver_tmp_3.o \
+  -oC:\Users\juerg\AppData\Local\Temp\xcAsm4s.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/debug/firmware.debug.map \
-  --md=C:\Users\juerg\AppData\Local\Temp\xcAsi4c.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\juerg\AppData\Local\Temp\xcAsm4s.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFh -ASTRCODE=00h-07FFh \
   -ASTRING=00h-0FFhx8 -ACONST=00h-0FFhx8 -AENTRY=00h-0FFhx8 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
@@ -41,7 +41,7 @@ Linker command line:
   -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry=04h,sivt,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\juerg\AppData\Local\Temp\xcAsi4c.\driver_tmp_12.o \
+  C:\Users\juerg\AppData\Local\Temp\xcAsm4s.\driver_tmp_12.o \
   dist/default/debug\firmware.debug.o 
 
 Object code version is 3.11
@@ -51,50 +51,44 @@ Machine type is 16F15313
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\juerg\AppData\Local\Temp\xcAsi4c.\driver_tmp_12.o
+C:\Users\juerg\AppData\Local\Temp\xcAsm4s.\driver_tmp_12.o
                 end_init                             18       18        1        8       0
                 reset_vec                             0        0        1        0       0
                 config                             8007     8007        5        0       4
 dist/default/debug\firmware.debug.o
-                cinit                                19       19        6        8       0
+                cinit                                19       19        D        8       0
                 intentry                              4        4       14        8       0
                 config                             8007     8007        5        0       4
-                text11                               BC       BC        1       6A       0
-                text10                               83       83        F       6A       0
-                text9                                5E       5E       13       6A       0
-                text7                                A9       A9        9       6A       0
-                text6                                B7       B7        5       6A       0
-                text5                                9F       9F        A       6A       0
-                text4                                71       71       12       6A       0
-                text3                                35       35       15       6A       0
-                text2                                92       92        D       6A       0
-                text1                                B2       B2        5       6A       0
-                maintext                             4A       4A       14       6A       0
-                cstackCOMMON                         77       77        2       70       1
-                bssCOMMON                            74       74        3       70       1
-                nvCOMMON                             70       70        4       70       1
-                stringtext1                          1F       1F       16       3E       0
+                text8                                A8       A8        1       D6       0
+                text7                                A5       A5        3       D6       0
+                text6                                6B       6B       13       D6       0
+                text4                                90       90        9       D6       0
+                text3                                7E       7E       12       D6       0
+                text2                                99       99        7       D6       0
+                text1                                A0       A0        5       D6       0
+                maintext                             26       26       2F        8       0
+                cstackCOMMON                         7C       7C        2       70       1
+                bssCOMMON                            70       70        A       70       1
+                nvCOMMON                             7A       7A        2       70       1
+                stringtext1                          55       55       16       AA       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 end_init                             18       18        1         0
-                cinit                                19       19        6         0
+                cinit                                19       19        D         0
                 intentry                              4        4       14         0
                 reset_vec                             0        0        1         0
-                text11                               BC       BC        1         0
-                text10                               83       83        F         0
-                text9                                5E       5E       13         0
-                text7                                A9       A9        9         0
-                text6                                B7       B7        5         0
-                text5                                9F       9F        A         0
-                text4                                71       71       12         0
-                text3                                35       35       15         0
-                text2                                92       92        D         0
-                text1                                B2       B2        5         0
-                maintext                             4A       4A       14         0
+                text8                                A8       A8        1         0
+                text7                                A5       A5        3         0
+                text6                                6B       6B       13         0
+                text4                                90       90        9         0
+                text3                                7E       7E       12         0
+                text2                                99       99        7         0
+                text1                                A0       A0        5         0
+                maintext                             26       26       2F         0
 
         CLASS   STRCODE        
-                stringtext1                          1F       1F       16         0
+                stringtext1                          55       55       16         0
 
         CLASS   STRING         
 
@@ -103,9 +97,9 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   ENTRY          
 
         CLASS   COMMON         
-                cstackCOMMON                         77       77        2         1
-                bssCOMMON                            74       74        3         1
-                nvCOMMON                             70       70        4         1
+                cstackCOMMON                         7C       7C        2         1
+                bssCOMMON                            70       70        A         1
+                nvCOMMON                             7A       7A        2         1
 
         CLASS   BANK0          
 
@@ -386,10 +380,10 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000001  000001         0       0  CODE        2
-                intentry                       000004  00001B  00001F         8       0  CODE        2
-                stringtext1                    00001F  000016  000035        3E       0  STRCODE     2
-                text3                          000035  000088  0000BD        6A       0  CODE        2
-                nvCOMMON                       000070  000009  000079        70       1  COMMON      1
+                intentry                       000004  000051  000055         8       0  CODE        2
+                bssCOMMON                      000070  00000E  00007E        70       1  COMMON      1
+                stringtext1                    000055  000016  00006B        AA       0  STRCODE     2
+                text6                          00006B  00003E  0000A9        D6       0  CODE        2
 
 
 UNUSED ADDRESS RANGES
@@ -400,12 +394,11 @@ UNUSED ADDRESS RANGES
         BANK2            00120-0016F              50           1
         BIGRAM           02000-020EF              F0           1
         CODE             00001-00003               3           2
-                         000BD-007FF             743
-        COMMON           00079-0007D               5           1
+                         000A9-007FF             757
         CONST            00001-00003               3           2
-                         000BD-007FF             100
+                         000A9-007FF             100
         ENTRY            00001-00003               3           2
-                         000BD-007FF             100
+                         000A9-007FF             100
         IDLOC            08000-08003               4           2
         RAM              00020-0006F              50           1
                          000A0-000EF              50
@@ -475,29 +468,27 @@ UNUSED ADDRESS RANGES
         SFR8             00400-0046F              70           1
         SFR9             00480-004EF              70           1
         STRCODE          00001-00003               3           2
-                         000BD-007FF             743
+                         000A9-007FF             757
         STRING           00001-00003               3           2
-                         000BD-007FF             100
+                         000A9-007FF             100
 
                                   Symbol Table
 
-INT_SetInterruptHandler@InterruptHandler      cstackCOMMON 00077
-TMR0_OverflowCallbackRegister@callbackHandler cstackCOMMON 00077
+TMR0_OverflowCallbackRegister@callbackHandler cstackCOMMON 0007C
 _ANSELA                                       (abs)        01F38
-_CLOCK_Initialize                             text7        000A9
+_CLOCK_Initialize                             text4        00090
 _INLVLA                                       (abs)        01F3C
 _INTCONbits                                   (abs)        0000B
-_INTERRUPT_Initialize                         text5        0009F
 _INTERRUPT_InterruptManager                   intentry     00004
 _INT_DefaultInterruptHandler                  (abs)        00000
-_INT_InterruptHandler                         nvCOMMON     00072
-_INT_SetInterruptHandler                      text6        000B7
+_INT_InterruptHandler                         bssCOMMON    00076
 _IOCAF                                        (abs)        01F3F
 _IOCAN                                        (abs)        01F3E
 _IOCAP                                        (abs)        01F3D
 _LATA                                         (abs)        00018
 _LATAbits                                     (abs)        00018
-_MyTimerHandler                               text10       00083
+_MainFSM                                      bssCOMMON    00078
+_MyTmr0                                       text7        000A5
 _ODCONA                                       (abs)        01F3A
 _OSCCON1                                      (abs)        0088D
 _OSCCON3                                      (abs)        0088F
@@ -505,10 +496,12 @@ _OSCEN                                        (abs)        00891
 _OSCFRQ                                       (abs)        00893
 _OSCTUNE                                      (abs)        00892
 _PIE0bits                                     (abs)        00716
-_PIN_MANAGER_Initialize                       text4        00071
+_PIN_MANAGER_Initialize                       text3        0007E
 _PIR0bits                                     (abs)        0070C
 _SLRCONA                                      (abs)        01F3B
-_SYSTEM_Initialize                            text2        00092
+_SYSTEM_Initialize                            text2        00099
+_SwTimer1_u16                                 bssCOMMON    00072
+_SwTimer2_u16                                 bssCOMMON    00070
 _T0CON0                                       (abs)        0059E
 _T0CON0bits                                   (abs)        0059E
 _T0CON1                                       (abs)        0059F
@@ -516,19 +509,19 @@ _TMR0H                                        (abs)        0059D
 _TMR0L                                        (abs)        0059C
 _TMR0_CounterGet                              (abs)        00000
 _TMR0_CounterSet                              (abs)        00000
-_TMR0_DefaultOverflowCallback                 text11       000BC
+_TMR0_DefaultOverflowCallback                 text8        000A8
 _TMR0_Deinitialize                            (abs)        00000
-_TMR0_ISR                                     text9        0005E
-_TMR0_Initialize                              text3        00035
+_TMR0_ISR                                     text6        0006B
+_TMR0_Initialize                              (abs)        00000
 _TMR0_MaxCountGet                             (abs)        00000
-_TMR0_OverflowCallback                        nvCOMMON     00070
-_TMR0_OverflowCallbackRegister                text1        000B2
+_TMR0_OverflowCallback                        nvCOMMON     0007A
+_TMR0_OverflowCallbackRegister                text1        000A0
 _TMR0_PeriodGet                               (abs)        00000
 _TMR0_PeriodSet                               (abs)        00000
 _TMR0_Start                                   (abs)        00000
 _TMR0_Stop                                    (abs)        00000
 _TRISA                                        (abs)        00012
-_TimerFlag_u08                                bssCOMMON    00076
+_TimerFlag_u08                                bssCOMMON    00079
 _WPUA                                         (abs)        01F39
 __H__absolute__                               __absolute__ 00000
 __Habs1                                       abs1         00000
@@ -598,7 +591,7 @@ __Hbank8                                      bank8        00000
 __Hbank9                                      bank9        00000
 __Hbigram                                     bigram       00000
 __HbssCOMMON                                  bssCOMMON    00000
-__Hcinit                                      cinit        0001F
+__Hcinit                                      cinit        00026
 __Hclrtext                                    clrtext      00000
 __Hcode                                       code         00000
 __Hcommon                                     common       00000
@@ -680,8 +673,8 @@ __Hsfr7                                       sfr7         00000
 __Hsfr8                                       sfr8         00000
 __Hsfr9                                       sfr9         00000
 __Hsivt                                       sivt         00018
-__Hspace_0                                    (abs)        000BD
-__Hspace_1                                    (abs)        00079
+__Hspace_0                                    (abs)        000A9
+__Hspace_1                                    (abs)        0007E
 __Hspace_2                                    (abs)        00000
 __Hspace_3                                    (abs)        00000
 __Hspace_4                                    (abs)        10013
@@ -848,8 +841,8 @@ __Lstack                                      stack        00000
 __Lstrings                                    strings      00000
 __Lstringtext1                                stringtext1  00000
 __Ltext                                       text         00000
-__S0                                          (abs)        000BD
-__S1                                          (abs)        00079
+__S0                                          (abs)        000A9
+__S1                                          (abs)        0007E
 ___heap_hi                                    (abs)        00000
 ___heap_lo                                    (abs)        00000
 ___int_sp                                     stack        00000
@@ -861,41 +854,35 @@ ___stack_hi                                   stack        00000
 ___stack_lo                                   stack        00000
 ___stackhi                                    (abs)        00000
 ___stacklo                                    (abs)        00000
-__end_of_CLOCK_Initialize                     text7        000B2
-__end_of_INTERRUPT_Initialize                 text5        000A9
+__end_of_CLOCK_Initialize                     text4        00099
 __end_of_INTERRUPT_InterruptManager           intentry     00018
-__end_of_INT_SetInterruptHandler              text6        000BC
-__end_of_MainTimer                            stringtext1  00035
-__end_of_MyTimerHandler                       text10       00092
-__end_of_PIN_MANAGER_Initialize               text4        00083
-__end_of_SYSTEM_Initialize                    text2        0009F
-__end_of_TMR0_DefaultOverflowCallback         text11       000BD
-__end_of_TMR0_ISR                             text9        00071
-__end_of_TMR0_Initialize                      text3        0004A
-__end_of_TMR0_OverflowCallbackRegister        text1        000B7
-__end_of__initialization                      cinit        0001C
-__end_of_main                                 maintext     0005E
+__end_of_MainTimer                            stringtext1  0006B
+__end_of_MyTmr0                               text7        000A8
+__end_of_PIN_MANAGER_Initialize               text3        00090
+__end_of_SYSTEM_Initialize                    text2        000A0
+__end_of_TMR0_DefaultOverflowCallback         text8        000A9
+__end_of_TMR0_ISR                             text6        0007E
+__end_of_TMR0_OverflowCallbackRegister        text1        000A5
+__end_of__initialization                      cinit        00023
+__end_of_main                                 maintext     00055
 __initialization                              cinit        00019
-__pbssCOMMON                                  bssCOMMON    00074
-__pcstackCOMMON                               cstackCOMMON 00077
+__pbssCOMMON                                  bssCOMMON    00070
+__pcstackCOMMON                               cstackCOMMON 0007C
 __pintentry                                   intentry     00004
-__pmaintext                                   maintext     0004A
-__pnvCOMMON                                   nvCOMMON     00070
-__pstringtext1                                stringtext1  0001F
-__ptext1                                      text1        000B2
-__ptext10                                     text10       00083
-__ptext11                                     text11       000BC
-__ptext2                                      text2        00092
-__ptext3                                      text3        00035
-__ptext4                                      text4        00071
-__ptext5                                      text5        0009F
-__ptext6                                      text6        000B7
-__ptext7                                      text7        000A9
-__ptext9                                      text9        0005E
-_main                                         maintext     0004A
+__pmaintext                                   maintext     00026
+__pnvCOMMON                                   nvCOMMON     0007A
+__pstringtext1                                stringtext1  00055
+__ptext1                                      text1        000A0
+__ptext2                                      text2        00099
+__ptext3                                      text3        0007E
+__ptext4                                      text4        00090
+__ptext6                                      text6        0006B
+__ptext7                                      text7        000A5
+__ptext8                                      text8        000A8
+_main                                         maintext     00026
 _tmr0PeriodCount                              bssCOMMON    00074
 btemp                                         (abs)        0007E
-end_of_initialization                         cinit        0001C
+end_of_initialization                         cinit        00023
 int$flags                                     (abs)        0007E
 intlevel0                                     functab      00000
 intlevel1                                     functab      00000
@@ -913,44 +900,41 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 mcc_generated_files/system/src/interrupt.c
-		_INT_SetInterruptHandler		CODE           	00B7	0000	5
-		_INTERRUPT_Initialize		CODE           	009F	0000	10
 		_INTERRUPT_InterruptManager		CODE           	0004	0000	20
 
-mcc_generated_files/system/src/interrupt.c estimated size: 35
+mcc_generated_files/system/src/interrupt.c estimated size: 20
 
 mcc_generated_files/system/src/pins.c
-		_PIN_MANAGER_Initialize		CODE           	0071	0000	18
+		_PIN_MANAGER_Initialize		CODE           	007E	0000	18
 
 mcc_generated_files/system/src/pins.c estimated size: 18
 
 shared
-		__initialization		CODE           	0019	0000	3
+		__initialization		CODE           	0019	0000	10
 		_MainTimer     		STRCODE        	0000	0000	0
 
-shared estimated size: 3
+shared estimated size: 10
 
 mcc_generated_files/system/src/clock.c
-		_CLOCK_Initialize		CODE           	00A9	0000	9
+		_CLOCK_Initialize		CODE           	0090	0000	9
 
 mcc_generated_files/system/src/clock.c estimated size: 9
 
 mcc_generated_files/timer/src/tmr0.c
-		_TMR0_OverflowCallbackRegister		CODE           	00B2	0000	5
-		_TMR0_DefaultOverflowCallback		CODE           	00BC	0000	1
-		_TMR0_ISR      		CODE           	005E	0000	19
-		_TMR0_Initialize		CODE           	0035	0000	21
+		_TMR0_OverflowCallbackRegister		CODE           	00A0	0000	5
+		_TMR0_DefaultOverflowCallback		CODE           	00A8	0000	1
+		_TMR0_ISR      		CODE           	006B	0000	19
 
-mcc_generated_files/timer/src/tmr0.c estimated size: 46
+mcc_generated_files/timer/src/tmr0.c estimated size: 25
 
 main.c
-		_main          		CODE           	004A	0000	20
-		_MyTimerHandler		CODE           	0083	0000	15
+		_main          		CODE           	0026	0000	47
+		_MyTmr0        		CODE           	00A5	0000	3
 
-main.c estimated size: 35
+main.c estimated size: 50
 
 mcc_generated_files/system/src/system.c
-		_SYSTEM_Initialize		CODE           	0092	0000	13
+		_SYSTEM_Initialize		CODE           	0099	0000	7
 
-mcc_generated_files/system/src/system.c estimated size: 13
+mcc_generated_files/system/src/system.c estimated size: 7
 

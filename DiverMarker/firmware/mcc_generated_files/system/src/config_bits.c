@@ -40,7 +40,7 @@
 #pragma config RSTOSC = HFINT32    // Reset Oscillator Selection bits->HFINTOSC with OSCFRQ= 32 MHz and CDIV = 1:1
 #pragma config CLKOUTEN = OFF    // Clock Out Enable bit->CLKOUT function is disabled; i/o or oscillator function on OSC2
 #pragma config CSWEN = ON    // Clock Switch Enable bit->Writing to NOSC and NDIV is allowed
-#pragma config FCMEN = ON    // Fail-Safe Clock Monitor Enable bit->FSCM timer enabled
+#pragma config FCMEN = OFF    // Fail-Safe Clock Monitor Enable bit->FSCM timer disabled
 
 //CONFIG2
 #pragma config MCLRE = ON    // Master Clear Enable bit->MCLR pin is Master Clear function
