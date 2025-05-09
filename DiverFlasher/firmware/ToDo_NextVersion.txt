@@ -1,0 +1,3 @@
+MOSFET 2mm in Richtung Batteriehalter schieben
+Auf Unterseite + und - im Ausschnitt des Batteriehalters auf den Bottom Silkscreen
+Beim Spulen-Footprint die Pads ca. 2mm nach außen setzen (leichtere Lötbarkeit)
