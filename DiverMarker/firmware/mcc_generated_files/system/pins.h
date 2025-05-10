@@ -107,24 +107,24 @@
 #define GreenOn_SetAnalogMode()      do { ANSELAbits.ANSA4 = 1; } while(0)
 #define GreenOn_SetDigitalMode()     do { ANSELAbits.ANSA4 = 0; } while(0)
 // get/set IO_RA5 aliases
-#define BlueOn_TRIS                 TRISAbits.TRISA5
-#define BlueOn_LAT                  LATAbits.LATA5
-#define BlueOn_PORT                 PORTAbits.RA5
-#define BlueOn_WPU                  WPUAbits.WPUA5
-#define BlueOn_OD                   ODCONAbits.ODCA5
-#define BlueOn_ANS                  ANSELAbits.ANSA5
-#define BlueOn_SetHigh()            do { LATAbits.LATA5 = 1; } while(0)
-#define BlueOn_SetLow()             do { LATAbits.LATA5 = 0; } while(0)
-#define BlueOn_Toggle()             do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0)
-#define BlueOn_GetValue()           PORTAbits.RA5
-#define BlueOn_SetDigitalInput()    do { TRISAbits.TRISA5 = 1; } while(0)
-#define BlueOn_SetDigitalOutput()   do { TRISAbits.TRISA5 = 0; } while(0)
-#define BlueOn_SetPullup()          do { WPUAbits.WPUA5 = 1; } while(0)
-#define BlueOn_ResetPullup()        do { WPUAbits.WPUA5 = 0; } while(0)
-#define BlueOn_SetPushPull()        do { ODCONAbits.ODCA5 = 0; } while(0)
-#define BlueOn_SetOpenDrain()       do { ODCONAbits.ODCA5 = 1; } while(0)
-#define BlueOn_SetAnalogMode()      do { ANSELAbits.ANSA5 = 1; } while(0)
-#define BlueOn_SetDigitalMode()     do { ANSELAbits.ANSA5 = 0; } while(0)
+#define RedOn_TRIS                 TRISAbits.TRISA5
+#define RedOn_LAT                  LATAbits.LATA5
+#define RedOn_PORT                 PORTAbits.RA5
+#define RedOn_WPU                  WPUAbits.WPUA5
+#define RedOn_OD                   ODCONAbits.ODCA5
+#define RedOn_ANS                  ANSELAbits.ANSA5
+#define RedOn_SetHigh()            do { LATAbits.LATA5 = 1; } while(0)
+#define RedOn_SetLow()             do { LATAbits.LATA5 = 0; } while(0)
+#define RedOn_Toggle()             do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0)
+#define RedOn_GetValue()           PORTAbits.RA5
+#define RedOn_SetDigitalInput()    do { TRISAbits.TRISA5 = 1; } while(0)
+#define RedOn_SetDigitalOutput()   do { TRISAbits.TRISA5 = 0; } while(0)
+#define RedOn_SetPullup()          do { WPUAbits.WPUA5 = 1; } while(0)
+#define RedOn_ResetPullup()        do { WPUAbits.WPUA5 = 0; } while(0)
+#define RedOn_SetPushPull()        do { ODCONAbits.ODCA5 = 0; } while(0)
+#define RedOn_SetOpenDrain()       do { ODCONAbits.ODCA5 = 1; } while(0)
+#define RedOn_SetAnalogMode()      do { ANSELAbits.ANSA5 = 1; } while(0)
+#define RedOn_SetDigitalMode()     do { ANSELAbits.ANSA5 = 0; } while(0)
 /**
  * @ingroup  pinsdriver
  * @brief GPIO and peripheral I/O initialization

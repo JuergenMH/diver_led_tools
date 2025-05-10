@@ -10119,29 +10119,40 @@ void TMR0_ISR(void);
 # 55 "./mcc_generated_files/system/system.h"
 void SYSTEM_Initialize(void);
 # 1 "main.c" 2
-# 22 "main.c"
+# 18 "main.c"
+static const uint8_t GreenTimes[3] = {0, 10, 80};
+static const uint8_t RedTimes[3] = {0, 10, 80};
+
 static uint8_t TimerFlag_u08 = 0;
-static uint8_t MinOnCycles_u08 = 3u;
+static uint8_t MinOnCycles_u08 = 5u +1;
 static uint16_t SwTimer1_u16 = 0;
 static uint16_t SwTimer2_u16 = 0;
 
+static uint8_t GreenOnTime_u08;
+static uint8_t RedOnTime_u08;
+
 typedef enum
 {
-  Main_Init,
-  Main_WaitOffTime,
-  Main_GreenIsOn,
-  Main_WaitBetweenGreenAndBlue,
-  Main_BlueIsOn
-} MainFSM_t;
-static MainFSM_t MainFSM = Main_Init;
+  Blink_Init,
+  Blink_WaitOffTime,
+  Blink_GreenIsOn,
+  Blink_WaitBetweenGreenAndRed,
+  Blink_RedIsOn
+} BlinkFSM_t;
+static BlinkFSM_t BlinkFSM = Blink_Init;
+
+typedef enum
+{
+  Power_Init,
+  Power_Low,
+  Power_High
+} PowerFSM_t;
+static PowerFSM_t PowerFSM = Power_Init;
 
 
 void MyTmr0(void)
 {
   TimerFlag_u08 = 1;
-
-
-
 }
 
 
@@ -10152,10 +10163,10 @@ void PerformSWTimer(void)
 }
 
 
+
 static void HandlePowerOff()
 {
-  if ((0!=PORTAbits.RA2) &&
-     (0 == MinOnCycles_u08))
+  if ((0 != PORTAbits.RA2) && (0 == MinOnCycles_u08))
   {
 
     TMR0_Stop();
@@ -10173,60 +10184,90 @@ static void HandlePowerOff()
     IOCAF = 0;
     GIE = 1;
     TMR0_Start();
-    MinOnCycles_u08 = 3u;
+    MinOnCycles_u08 = 5u;
   }
 }
 
 
-void PerformMainFSM(void)
+void PerformBlinkFSM(void)
 {
-  switch (MainFSM)
+  switch (BlinkFSM)
   {
-    case Main_Init:
-      if (0!= MinOnCycles_u08)
+    case Blink_Init:
+      if ((0 != MinOnCycles_u08))
         MinOnCycles_u08--;
       {SwTimer1_u16=2000u;};
-      MainFSM = Main_WaitOffTime;
+      BlinkFSM = Blink_WaitOffTime;
       break;
 
-    case Main_WaitOffTime:
+    case Blink_WaitOffTime:
       HandlePowerOff();
       if (0==SwTimer1_u16)
       {
         do { LATAbits.LATA4 = 1; } while(0);
-        {SwTimer1_u16=40u;};
-        MainFSM = Main_GreenIsOn;
+        {SwTimer1_u16=GreenOnTime_u08;};
+        BlinkFSM = Blink_GreenIsOn;
       }
       break;
 
-    case Main_GreenIsOn:
+    case Blink_GreenIsOn:
       if (0==SwTimer1_u16)
       {
         do { LATAbits.LATA4 = 0; } while(0);
-        {SwTimer1_u16=100u;};
-        MainFSM = Main_WaitBetweenGreenAndBlue;
+        {SwTimer1_u16=300u;};
+        BlinkFSM = Blink_WaitBetweenGreenAndRed;
       }
       break;
 
-    case Main_WaitBetweenGreenAndBlue:
+    case Blink_WaitBetweenGreenAndRed:
       if (0==SwTimer1_u16)
       {
         do { LATAbits.LATA5 = 1; } while(0);
-        {SwTimer1_u16=80u;};
-        MainFSM = Main_BlueIsOn;
+        {SwTimer1_u16=RedOnTime_u08;};
+        BlinkFSM = Blink_RedIsOn;
       }
       break;
 
-    case Main_BlueIsOn:
+    case Blink_RedIsOn:
       if (0==SwTimer1_u16)
       {
         do { LATAbits.LATA5 = 0; } while(0);
-        MainFSM = Main_Init;
+        BlinkFSM = Blink_Init;
       }
       break;
 
-    default: MainFSM = Main_Init;
+    default:
+      BlinkFSM = Blink_Init;
   }
+}
+
+
+void PerformPowerFSM(void)
+{
+  switch (PowerFSM)
+  {
+    case Power_Init:
+      PowerFSM = Power_Low;
+      break;
+
+    case Power_Low:
+    if ((0 != MinOnCycles_u08) && (0 != PORTAbits.RA2))
+      {
+        MinOnCycles_u08 = 5u;
+        PowerFSM = Power_High;
+      }
+      break;
+
+    case Power_High:
+
+      PowerFSM = Power_High;
+      break;
+
+    default:
+      PowerFSM = Power_Init;
+  }
+  GreenOnTime_u08 = GreenTimes[PowerFSM];
+  RedOnTime_u08 = RedTimes[PowerFSM];
 }
 
 
@@ -10242,12 +10283,10 @@ int main(void)
     {
       if (0 != TimerFlag_u08)
       {
-
-
-
         TimerFlag_u08 = 0;
         PerformSWTimer();
-        PerformMainFSM();
+        PerformPowerFSM();
+        PerformBlinkFSM();
       }
     }
 }

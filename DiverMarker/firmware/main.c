@@ -1,46 +1,53 @@
 #include "mcc_generated_files/system/system.h"
 
-// remove remark sign to active one of the checks defined below
-//#define CheckTimerISR
-//#define CheckTimerMain
-
 // Some defines to make code more readable -------------------------------------
 
-#define OffTime             2000u
-#define GreenOnTime         40u
-#define BlueOnTime          80u
-#define WaitBetween         100u
-#define MinOnCycles         3u                  // min on cycle count to avoid flicker
+#define OffTime               2000u
+#define WaitBetween           300u
+#define MinOnCycles           5u                  // setup time
 
-#define LoadMainTimer(T_u16) {SwTimer1_u16=T_u16;}
-#define MainTimerElapsed     0==SwTimer1_u16
+#define LoadBlinkTimer(T_u16) {SwTimer1_u16=T_u16;}
+#define BlinkTimerElapsed     0==SwTimer1_u16
 
-#define ReedIsOff            0!=ReedIn_GetValue()
+#define ReedIsOff             (0 != ReedIn_GetValue())
+#define MinOnCyclesActive     (0 != MinOnCycles_u08) 
+#define MinOnCyclesElapsed    (0 == MinOnCycles_u08)
 
 // module globale variables and flags ------------------------------------------
 
-static uint8_t  TimerFlag_u08 = 0;              // 1 = timer isr occured
-static uint8_t  MinOnCycles_u08 = MinOnCycles;  // min cnt of cycles after PO
-static uint16_t SwTimer1_u16 = 0;               // two SW timer vars
+static const uint8_t GreenTimes[3] = {0, 10, 80};
+static const uint8_t RedTimes[3]   = {0, 10, 80};
+
+static uint8_t  TimerFlag_u08 = 0;                // 1 = timer isr occured
+static uint8_t  MinOnCycles_u08 = MinOnCycles+1;  // +1 because of -- first
+static uint16_t SwTimer1_u16 = 0;                 // two SW timer vars
 static uint16_t SwTimer2_u16 = 0;
+
+static uint8_t  GreenOnTime_u08;
+static uint8_t  RedOnTime_u08;
 
 typedef enum 
 {
-  Main_Init,
-  Main_WaitOffTime,
-  Main_GreenIsOn,
-  Main_WaitBetweenGreenAndBlue,
-  Main_BlueIsOn
-} MainFSM_t;
-static MainFSM_t MainFSM = Main_Init;
+  Blink_Init,
+  Blink_WaitOffTime,
+  Blink_GreenIsOn,
+  Blink_WaitBetweenGreenAndRed,
+  Blink_RedIsOn
+} BlinkFSM_t;
+static BlinkFSM_t BlinkFSM = Blink_Init;
+
+typedef enum 
+{
+  Power_Init,
+  Power_Low,
+  Power_High
+} PowerFSM_t;
+static PowerFSM_t PowerFSM = Power_Init;
 
 // Coding area from here -------------------------------------------------------
 void MyTmr0(void)
 {
   TimerFlag_u08 = 1;
-  #ifdef CheckTimerISR 
-    DebugOut_Toggle(); 
-  #endif
 }
 
 // -----------------------------------------------------------------------------
@@ -51,10 +58,10 @@ void PerformSWTimer(void)
 }
 
 // -----------------------------------------------------------------------------
+
 static void HandlePowerOff()
 {
-  if ((ReedIsOff) &&              // user switch off request?  
-     (0 == MinOnCycles_u08))      // and minimum on cycles zero 
+  if (ReedIsOff && MinOnCyclesElapsed)   
   {                               
     // prepare sleep
     TMR0_Stop();                  // disable timer (avoid wakeup by timer Int)
@@ -77,55 +84,85 @@ static void HandlePowerOff()
 }
 
 // -----------------------------------------------------------------------------
-void PerformMainFSM(void)
+void PerformBlinkFSM(void)
 {
-  switch (MainFSM) 
+  switch (BlinkFSM) 
   {
-    case Main_Init:
-      if (0!= MinOnCycles_u08)          // count the cycles
-        MinOnCycles_u08--;              // to ensure a minimum on time
-      LoadMainTimer(OffTime);           // cycle starts with the off time  
-      MainFSM = Main_WaitOffTime;       // go to the wait state "off"
+    case Blink_Init:
+      if (MinOnCyclesActive)              // count the cycles
+        MinOnCycles_u08--;                // to ensure a minimum on time
+      LoadBlinkTimer(OffTime);            // cycle starts with the off time  
+      BlinkFSM = Blink_WaitOffTime;       // go to the wait state "off"
       break;
     
-    case Main_WaitOffTime:              // Cycle part 1: All LEDs are off
-      HandlePowerOff();                 // user power off request?
-      if (MainTimerElapsed)
+    case Blink_WaitOffTime:               // Cycle part 1: All LEDs are off
+      HandlePowerOff();                   // user power off request?
+      if (BlinkTimerElapsed)
       {
-        GreenOn_SetHigh();              // timer elapsed; next state is green
-        LoadMainTimer(GreenOnTime);
-        MainFSM = Main_GreenIsOn;
+        GreenOn_SetHigh();                // timer elapsed; next state is green
+        LoadBlinkTimer(GreenOnTime_u08);
+        BlinkFSM = Blink_GreenIsOn;
       }
       break;
     
-    case Main_GreenIsOn:                // Cycle part 2: green is on
-      if (MainTimerElapsed)
+    case Blink_GreenIsOn:                 // Cycle part 2: green is on
+      if (BlinkTimerElapsed)
       {
-        GreenOn_SetLow();               // time elapsed; next state = wait again
-        LoadMainTimer(WaitBetween);        
-        MainFSM = Main_WaitBetweenGreenAndBlue;
+        GreenOn_SetLow();                 // time elapsed; next state = wait again
+        LoadBlinkTimer(WaitBetween);        
+        BlinkFSM = Blink_WaitBetweenGreenAndRed;
       }
       break;
     
-    case Main_WaitBetweenGreenAndBlue:  // Cycle part 3 = all off again
-      if (MainTimerElapsed)
+    case Blink_WaitBetweenGreenAndRed:    // Cycle part 3 = all off again
+      if (BlinkTimerElapsed)
       {
-        BlueOn_SetHigh();               // timer elapsed; next state is blue
-        LoadMainTimer(BlueOnTime);        
-        MainFSM = Main_BlueIsOn;
+        RedOn_SetHigh();                  // timer elapsed; next state is Red
+        LoadBlinkTimer(RedOnTime_u08);        
+        BlinkFSM = Blink_RedIsOn;
       }
       break;
       
-    case Main_BlueIsOn:                 // Cycle part 4: Blue is on
-      if (MainTimerElapsed)
+    case Blink_RedIsOn:                   // Cycle part 4: Red is on
+      if (BlinkTimerElapsed)
       {
-        BlueOn_SetLow();                // timer elapsed; restart the cycle
-        MainFSM = Main_Init;
+        RedOn_SetLow();                   // timer elapsed; restart the cycle
+        BlinkFSM = Blink_Init;
       }
       break;
     
-    default: MainFSM =  Main_Init;    
+    default: 
+      BlinkFSM =  Blink_Init;    
   }        
+}
+
+// -----------------------------------------------------------------------------
+void PerformPowerFSM(void)
+{
+  switch (PowerFSM) 
+  {
+    case Power_Init:
+      PowerFSM = Power_Low;
+      break;
+    
+    case Power_Low:
+    if (MinOnCyclesActive && ReedIsOff)     // and user power request?
+      {
+        MinOnCycles_u08 = MinOnCycles;      // restart the min cycle
+        PowerFSM = Power_High;              // and now in high state
+      }         
+      break;
+   
+    case Power_High:
+      // currently is the high state the final state;
+      PowerFSM = Power_High;            // and now in high state
+      break;
+    
+    default:
+      PowerFSM = Power_Init;
+  }
+  GreenOnTime_u08 = GreenTimes[PowerFSM];   // Load times for LEDs 
+  RedOnTime_u08   = RedTimes[PowerFSM];     //according FSM State
 }
 
 // -----------------------------------------------------------------------------
@@ -139,21 +176,14 @@ int main(void)
 
     while(1)
     {
-      if (0 != TimerFlag_u08)
+      if (0 != TimerFlag_u08)               // one ms elapsed?
       {    
-        #ifdef CheckTimerMain 
-          DebugOut_Toggle(); 
-        #endif
-        TimerFlag_u08 = 0;
-        PerformSWTimer();
-        PerformMainFSM();  
+        TimerFlag_u08 = 0;                  // yes, reset the flag
+        PerformSWTimer();                   // call the software timer module
+        PerformPowerFSM();                  // call the power control FSM
+        PerformBlinkFSM();                  // call the blink generator
       }
     }    
 }
 // End of code area ------------------------------------------------------------
 
-    // Disable the Global Interrupts 
-    //INTERRUPT_GlobalInterruptDisable(); 
-    
-    // Disable the Peripheral Interrupts 
-    //INTERRUPT_PeripheralInterruptDisable(); 

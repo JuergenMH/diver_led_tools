@@ -3,27 +3,35 @@
 [d edition pro ]
 [d chip 16F15313 ]
 [d frameptr 6 ]
-"35 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\main.c
-[e E5933 . `uc
-Main_Init 0
-Main_WaitOffTime 1
-Main_GreenIsOn 2
-Main_WaitBetweenGreenAndBlue 3
-Main_BlueIsOn 4
+"37 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\main.c
+[e E5937 . `uc
+Blink_Init 0
+Blink_WaitOffTime 1
+Blink_GreenIsOn 2
+Blink_WaitBetweenGreenAndRed 3
+Blink_RedIsOn 4
+]
+"45
+[e E5945 . `uc
+Power_Init 0
+Power_Low 1
+Power_High 2
 ]
 "10 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"38 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\main.c
+"48 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\main.c
 [v _MyTmr0 MyTmr0 `(v  1 e 1 0 ]
-"47
-[v _PerformSWTimer PerformSWTimer `(v  1 e 1 0 ]
 "54
+[v _PerformSWTimer PerformSWTimer `(v  1 e 1 0 ]
+"62
 [v _HandlePowerOff HandlePowerOff `(v  1 s 1 HandlePowerOff ]
-"80
-[v _PerformMainFSM PerformMainFSM `(v  1 e 1 0 ]
-"132
+"87
+[v _PerformBlinkFSM PerformBlinkFSM `(v  1 e 1 0 ]
+"140
+[v _PerformPowerFSM PerformPowerFSM `(v  1 e 1 0 ]
+"169
 [v _main main `(i  1 e 2 0 ]
 "39 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\mcc_generated_files/system/src/clock.c
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
@@ -75,7 +83,7 @@ Main_BlueIsOn 4
 [v _INTCONbits INTCONbits `VES57  1 e 1 @11 ]
 "446
 [v _PORTA PORTA `VEuc  1 e 1 @12 ]
-[s S320 . 1 `uc 1 RA0 1 0 :1:0 
+[s S324 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -83,13 +91,13 @@ Main_BlueIsOn 4
 `uc 1 RA5 1 0 :1:5 
 ]
 "461
-[u S327 . 1 `S320 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES327  1 e 1 @12 ]
+[u S331 . 1 `S324 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES331  1 e 1 @12 ]
 "496
 [v _TRISA TRISA `VEuc  1 e 1 @18 ]
 "541
 [v _LATA LATA `VEuc  1 e 1 @24 ]
-[s S348 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S352 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -97,8 +105,8 @@ Main_BlueIsOn 4
 `uc 1 LATA5 1 0 :1:5 
 ]
 "556
-[u S355 . 1 `S348 1 . 1 0 ]
-[v _LATAbits LATAbits `VES355  1 e 1 @24 ]
+[u S359 . 1 `S352 1 . 1 0 ]
+[v _LATAbits LATAbits `VES359  1 e 1 @24 ]
 "6302
 [v _TMR0L TMR0L `VEuc  1 e 1 @1436 ]
 "6440
@@ -169,26 +177,36 @@ Main_BlueIsOn 4
 [v _IOCAN2 IOCAN2 `VEb  1 e 0 @63986 ]
 "18065
 [v _IOCIE IOCIE `VEb  1 e 0 @14516 ]
-"22 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\main.c
+"18 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\main.c
+[v _GreenTimes GreenTimes `DC[3]uc  1 s 3 GreenTimes ]
+"19
+[v _RedTimes RedTimes `DC[3]uc  1 s 3 RedTimes ]
+"21
 [v _TimerFlag_u08 TimerFlag_u08 `uc  1 s 1 TimerFlag_u08 ]
-"23
+"22
 [v _MinOnCycles_u08 MinOnCycles_u08 `uc  1 s 1 MinOnCycles_u08 ]
-"24
+"23
 [v _SwTimer1_u16 SwTimer1_u16 `us  1 s 2 SwTimer1_u16 ]
-"25
+"24
 [v _SwTimer2_u16 SwTimer2_u16 `us  1 s 2 SwTimer2_u16 ]
-"35
-[v _MainFSM MainFSM `E5933  1 s 1 MainFSM ]
+"26
+[v _GreenOnTime_u08 GreenOnTime_u08 `uc  1 s 1 GreenOnTime_u08 ]
+"27
+[v _RedOnTime_u08 RedOnTime_u08 `uc  1 s 1 RedOnTime_u08 ]
+"37
+[v _BlinkFSM BlinkFSM `E5937  1 s 1 BlinkFSM ]
+"45
+[v _PowerFSM PowerFSM `E5945  1 s 1 PowerFSM ]
 "38 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\mcc_generated_files/system/src/interrupt.c
 [v _INT_InterruptHandler INT_InterruptHandler `*.37(v  1 e 2 0 ]
 "52 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\mcc_generated_files/timer/src/tmr0.c
 [v _tmr0PeriodCount tmr0PeriodCount `VEus  1 s 2 tmr0PeriodCount ]
 "53
 [v _TMR0_OverflowCallback TMR0_OverflowCallback `*.37(v  1 s 2 TMR0_OverflowCallback ]
-"132 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\main.c
+"169 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"152
+"187
 } 0
 "153 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\mcc_generated_files/timer/src/tmr0.c
 [v _TMR0_OverflowCallbackRegister TMR0_OverflowCallbackRegister `(v  1 e 1 0 ]
@@ -227,20 +245,25 @@ Main_BlueIsOn 4
 {
 "53
 } 0
-"47 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\main.c
+"54 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\main.c
 [v _PerformSWTimer PerformSWTimer `(v  1 e 1 0 ]
 {
-"51
+"58
 } 0
-"80
-[v _PerformMainFSM PerformMainFSM `(v  1 e 1 0 ]
+"140
+[v _PerformPowerFSM PerformPowerFSM `(v  1 e 1 0 ]
 {
-"129
+"166
 } 0
-"54
+"87
+[v _PerformBlinkFSM PerformBlinkFSM `(v  1 e 1 0 ]
+{
+"137
+} 0
+"62
 [v _HandlePowerOff HandlePowerOff `(v  1 s 1 HandlePowerOff ]
 {
-"77
+"84
 } 0
 "99 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\mcc_generated_files/timer/src/tmr0.c
 [v _TMR0_Stop TMR0_Stop `(v  1 e 1 0 ]
@@ -262,10 +285,10 @@ Main_BlueIsOn 4
 {
 "151
 } 0
-"38 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\main.c
+"48 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\main.c
 [v _MyTmr0 MyTmr0 `(v  1 e 1 0 ]
 {
-"44
+"51
 } 0
 "158 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverMarker\firmware\mcc_generated_files/timer/src/tmr0.c
 [v _TMR0_DefaultOverflowCallback TMR0_DefaultOverflowCallback `(v  1 s 1 TMR0_DefaultOverflowCallback ]

@@ -9992,7 +9992,7 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    TRISA = 0x1;
+    TRISA = 0x5;
 
 
 
