@@ -1,8 +1,43 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"22 main.c
-[; ;main.c: 22: static MainFSM_t MainFSM = Main_Init;
-[c E5932 0 1 2 3 4 .. ]
-[n E5932 . Main_Init Main_WaitOffTime Main_GreenIsOn Main_WaitBetweenGreenAndBlue Main_BlueIsOn  ]
+"35 main.c
+[; ;main.c: 35: static MainFSM_t MainFSM = Main_Init;
+[c E5933 0 1 2 3 4 .. ]
+[n E5933 . Main_Init Main_WaitOffTime Main_GreenIsOn Main_WaitBetweenGreenAndBlue Main_BlueIsOn  ]
+"452 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 452:     struct {
+[s S33 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S33 . RA0 RA1 RA2 RA3 RA4 RA5 ]
+"451
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 451: typedef union {
+[u S32 `S33 1 ]
+[n S32 . . ]
+"461
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 461: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x00C)));
+[v _PORTAbits `VS32 ~T0 @X0 0 e@12 ]
+"177 ./mcc_generated_files/system/../timer/tmr0.h
+[; ;./mcc_generated_files/system/../timer/tmr0.h: 177: void TMR0_Stop(void);
+[v _TMR0_Stop `(v ~T0 @X0 0 ef ]
+"17867 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 17867: extern volatile __bit GIE __attribute__((address(0x5F)));
+[v _GIE `Vb ~T0 @X0 0 e@95 ]
+"446
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 446: extern volatile unsigned char PORTA __attribute__((address(0x00C)));
+[v _PORTA `Vuc ~T0 @X0 0 e@12 ]
+"16448
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 16448: extern volatile unsigned char IOCAF __attribute__((address(0x1F3F)));
+[v _IOCAF `Vuc ~T0 @X0 0 e@7999 ]
+"18035
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 18035: extern volatile __bit IOCAN2 __attribute__((address(0xF9F2)));
+[v _IOCAN2 `Vb ~T0 @X0 0 e@63986 ]
+"18065
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 18065: extern volatile __bit IOCIE __attribute__((address(0x38B4)));
+[v _IOCIE `Vb ~T0 @X0 0 e@14516 ]
+"8 C:\Program Files\Microchip\xc8\v2.50\pic\include\builtins.h
+[v ___nop `(v ~T0 @X0 0 ef ]
+[p i ___nop ]
+"168 ./mcc_generated_files/system/../timer/tmr0.h
+[; ;./mcc_generated_files/system/../timer/tmr0.h: 168: void TMR0_Start(void);
+[v _TMR0_Start `(v ~T0 @X0 0 ef ]
 "547 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 547:     struct {
 [s S37 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -33,9 +68,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "426
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 426: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"168 ./mcc_generated_files/system/../timer/tmr0.h
-[; ;./mcc_generated_files/system/../timer/tmr0.h: 168: void TMR0_Start(void);
-[v _TMR0_Start `(v ~T0 @X0 0 ef ]
 "110 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 110: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -840,290 +872,370 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16808
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 16808: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"9 main.c
-[; ;main.c: 9: static unsigned char TimerFlag_u08 = 0;
+"22 main.c
+[; ;main.c: 22: static uint8_t TimerFlag_u08 = 0;
 [v _TimerFlag_u08 `uc ~T0 @X0 1 s ]
 [i _TimerFlag_u08
 -> -> 0 `i `uc
 ]
-"10
-[; ;main.c: 10: static unsigned int SwTimer1_u16 = 0;
-[v _SwTimer1_u16 `ui ~T0 @X0 1 s ]
+"23
+[; ;main.c: 23: static uint8_t MinOnCycles_u08 = 3u;
+[v _MinOnCycles_u08 `uc ~T0 @X0 1 s ]
+[i _MinOnCycles_u08
+-> -> 3 `ui `uc
+]
+"24
+[; ;main.c: 24: static uint16_t SwTimer1_u16 = 0;
+[v _SwTimer1_u16 `us ~T0 @X0 1 s ]
 [i _SwTimer1_u16
--> -> 0 `i `ui
+-> -> 0 `i `us
 ]
-"11
-[; ;main.c: 11: static unsigned int SwTimer2_u16 = 0;
-[v _SwTimer2_u16 `ui ~T0 @X0 1 s ]
+"25
+[; ;main.c: 25: static uint16_t SwTimer2_u16 = 0;
+[v _SwTimer2_u16 `us ~T0 @X0 1 s ]
 [i _SwTimer2_u16
--> -> 0 `i `ui
+-> -> 0 `i `us
 ]
-"22
-[; ;main.c: 22: static MainFSM_t MainFSM = Main_Init;
-[v _MainFSM `E5932 ~T0 @X0 1 s ]
+"35
+[; ;main.c: 35: static MainFSM_t MainFSM = Main_Init;
+[v _MainFSM `E5933 ~T0 @X0 1 s ]
 [i _MainFSM
-. `E5932 0
+. `E5933 0
 ]
-"36
-[; ;main.c: 36: void MyTmr0(void)
+"38
+[; ;main.c: 38: void MyTmr0(void)
 [v _MyTmr0 `(v ~T0 @X0 1 ef ]
-"37
-[; ;main.c: 37: {
+"39
+[; ;main.c: 39: {
 {
 [e :U _MyTmr0 ]
 [f ]
-"38
-[; ;main.c: 38:   TimerFlag_u08 = 1;
+"40
+[; ;main.c: 40:   TimerFlag_u08 = 1;
 [e = _TimerFlag_u08 -> -> 1 `i `uc ]
-"42
-[; ;main.c: 42: }
+"44
+[; ;main.c: 44: }
 [e :UE 788 ]
 }
-"44
-[; ;main.c: 44: void PerformSWTimer(void)
+"47
+[; ;main.c: 47: void PerformSWTimer(void)
 [v _PerformSWTimer `(v ~T0 @X0 1 ef ]
-"45
-[; ;main.c: 45: {
+"48
+[; ;main.c: 48: {
 {
 [e :U _PerformSWTimer ]
 [f ]
-"46
-[; ;main.c: 46:   if (0 != SwTimer1_u16) SwTimer1_u16--;
-[e $ ! != -> -> 0 `i `ui _SwTimer1_u16 790  ]
-[e -- _SwTimer1_u16 -> -> 1 `i `ui ]
+"49
+[; ;main.c: 49:   if (0 != SwTimer1_u16) SwTimer1_u16--;
+[e $ ! != -> -> 0 `i `ui -> _SwTimer1_u16 `ui 790  ]
+[e -- _SwTimer1_u16 -> -> 1 `i `us ]
 [e :U 790 ]
-"47
-[; ;main.c: 47:   if (0 != SwTimer2_u16) SwTimer2_u16--;
-[e $ ! != -> -> 0 `i `ui _SwTimer2_u16 791  ]
-[e -- _SwTimer2_u16 -> -> 1 `i `ui ]
+"50
+[; ;main.c: 50:   if (0 != SwTimer2_u16) SwTimer2_u16--;
+[e $ ! != -> -> 0 `i `ui -> _SwTimer2_u16 `ui 791  ]
+[e -- _SwTimer2_u16 -> -> 1 `i `us ]
 [e :U 791 ]
-"48
-[; ;main.c: 48: }
+"51
+[; ;main.c: 51: }
 [e :UE 789 ]
 }
-"50
-[; ;main.c: 50: void PerformMainFSM(void)
+"54
+[; ;main.c: 54: static void HandlePowerOff()
+[v _HandlePowerOff `(v ~T0 @X0 1 sf ]
+"55
+[; ;main.c: 55: {
+{
+[e :U _HandlePowerOff ]
+[f ]
+"56
+[; ;main.c: 56:   if ((0!=PORTAbits.RA2) &&
+[e $ ! && != -> 0 `i -> . . _PORTAbits 0 2 `i == -> 0 `i -> _MinOnCycles_u08 `i 793  ]
+"58
+[; ;main.c: 58:   {
+{
+"60
+[; ;main.c: 60:     TMR0_Stop();
+[e ( _TMR0_Stop ..  ]
+"61
+[; ;main.c: 61:     GIE = 0;
+[e = _GIE -> -> 0 `i `b ]
+"62
+[; ;main.c: 62:     PORTA;
+[e _PORTA ]
+"63
+[; ;main.c: 63:     IOCAF = 0;
+[e = _IOCAF -> -> 0 `i `uc ]
+"64
+[; ;main.c: 64:     IOCAN2 = 1;
+[e = _IOCAN2 -> -> 1 `i `b ]
+"65
+[; ;main.c: 65:     IOCIE = 1;
+[e = _IOCIE -> -> 1 `i `b ]
+"66
+[; ;main.c: 66:     __asm("sleep");
+[; <" sleep ;# ">
+"67
+[; ;main.c: 67:     __nop();
+[e ( ___nop ..  ]
+"70
+[; ;main.c: 70:     IOCAN2 = 0;
+[e = _IOCAN2 -> -> 0 `i `b ]
+"71
+[; ;main.c: 71:     IOCIE = 0;
+[e = _IOCIE -> -> 0 `i `b ]
+"72
+[; ;main.c: 72:     IOCAF = 0;
+[e = _IOCAF -> -> 0 `i `uc ]
+"73
+[; ;main.c: 73:     GIE = 1;
+[e = _GIE -> -> 1 `i `b ]
+"74
+[; ;main.c: 74:     TMR0_Start();
+[e ( _TMR0_Start ..  ]
+"75
+[; ;main.c: 75:     MinOnCycles_u08 = 3u;
+[e = _MinOnCycles_u08 -> -> 3 `ui `uc ]
+"76
+[; ;main.c: 76:   }
+}
+[e :U 793 ]
+"77
+[; ;main.c: 77: }
+[e :UE 792 ]
+}
+"80
+[; ;main.c: 80: void PerformMainFSM(void)
 [v _PerformMainFSM `(v ~T0 @X0 1 ef ]
-"51
-[; ;main.c: 51: {
+"81
+[; ;main.c: 81: {
 {
 [e :U _PerformMainFSM ]
 [f ]
-"52
-[; ;main.c: 52:   switch (MainFSM)
-[e $U 794  ]
-"53
-[; ;main.c: 53:   {
+"82
+[; ;main.c: 82:   switch (MainFSM)
+[e $U 796  ]
+"83
+[; ;main.c: 83:   {
 {
-"54
-[; ;main.c: 54:     case Main_Init:
-[e :U 795 ]
-"55
-[; ;main.c: 55:       { SwTimer1_u16 = 2000u; };
+"84
+[; ;main.c: 84:     case Main_Init:
+[e :U 797 ]
+"85
+[; ;main.c: 85:       if (0!= MinOnCycles_u08)
+[e $ ! != -> 0 `i -> _MinOnCycles_u08 `i 798  ]
+"86
+[; ;main.c: 86:         MinOnCycles_u08--;
+[e -- _MinOnCycles_u08 -> -> 1 `i `uc ]
+[e :U 798 ]
+"87
+[; ;main.c: 87:       {SwTimer1_u16=2000u;};
 {
-[e = _SwTimer1_u16 -> 2000 `ui ]
+[e = _SwTimer1_u16 -> -> 2000 `ui `us ]
 }
-"56
-[; ;main.c: 56:       MainFSM = Main_WaitOffTime;
-[e = _MainFSM . `E5932 1 ]
-"57
-[; ;main.c: 57:       break;
-[e $U 793  ]
-"59
-[; ;main.c: 59:     case Main_WaitOffTime:
-[e :U 796 ]
-"60
-[; ;main.c: 60:       if (0 == SwTimer1_u16)
-[e $ ! == -> -> 0 `i `ui _SwTimer1_u16 797  ]
-"61
-[; ;main.c: 61:       {
+"88
+[; ;main.c: 88:       MainFSM = Main_WaitOffTime;
+[e = _MainFSM . `E5933 1 ]
+"89
+[; ;main.c: 89:       break;
+[e $U 795  ]
+"91
+[; ;main.c: 91:     case Main_WaitOffTime:
+[e :U 799 ]
+"92
+[; ;main.c: 92:       HandlePowerOff();
+[e ( _HandlePowerOff ..  ]
+"93
+[; ;main.c: 93:       if (0==SwTimer1_u16)
+[e $ ! == -> -> 0 `i `ui -> _SwTimer1_u16 `ui 800  ]
+"94
+[; ;main.c: 94:       {
 {
-"62
-[; ;main.c: 62:         do { LATAbits.LATA4 = 1; } while(0);
-[e :U 800 ]
+"95
+[; ;main.c: 95:         do { LATAbits.LATA4 = 1; } while(0);
+[e :U 803 ]
 {
 [e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 799 ]
-"63
-[; ;main.c: 63:         { SwTimer1_u16 = 40u; };
+[e :U 802 ]
+"96
+[; ;main.c: 96:         {SwTimer1_u16=40u;};
 {
-[e = _SwTimer1_u16 -> 40 `ui ]
+[e = _SwTimer1_u16 -> -> 40 `ui `us ]
 }
-"64
-[; ;main.c: 64:         MainFSM = Main_GreenIsOn;
-[e = _MainFSM . `E5932 2 ]
-"65
-[; ;main.c: 65:       }
+"97
+[; ;main.c: 97:         MainFSM = Main_GreenIsOn;
+[e = _MainFSM . `E5933 2 ]
+"98
+[; ;main.c: 98:       }
 }
-[e :U 797 ]
-"66
-[; ;main.c: 66:       break;
-[e $U 793  ]
-"68
-[; ;main.c: 68:     case Main_GreenIsOn:
-[e :U 801 ]
-"69
-[; ;main.c: 69:       if (0 == SwTimer1_u16)
-[e $ ! == -> -> 0 `i `ui _SwTimer1_u16 802  ]
-"70
-[; ;main.c: 70:       {
+[e :U 800 ]
+"99
+[; ;main.c: 99:       break;
+[e $U 795  ]
+"101
+[; ;main.c: 101:     case Main_GreenIsOn:
+[e :U 804 ]
+"102
+[; ;main.c: 102:       if (0==SwTimer1_u16)
+[e $ ! == -> -> 0 `i `ui -> _SwTimer1_u16 `ui 805  ]
+"103
+[; ;main.c: 103:       {
 {
-"71
-[; ;main.c: 71:         do { LATAbits.LATA4 = 0; } while(0);
-[e :U 805 ]
+"104
+[; ;main.c: 104:         do { LATAbits.LATA4 = 0; } while(0);
+[e :U 808 ]
 {
 [e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 804 ]
-"72
-[; ;main.c: 72:         { SwTimer1_u16 = 100u; };
+[e :U 807 ]
+"105
+[; ;main.c: 105:         {SwTimer1_u16=100u;};
 {
-[e = _SwTimer1_u16 -> 100 `ui ]
+[e = _SwTimer1_u16 -> -> 100 `ui `us ]
 }
-"73
-[; ;main.c: 73:         MainFSM = Main_WaitBetweenGreenAndBlue;
-[e = _MainFSM . `E5932 3 ]
-"74
-[; ;main.c: 74:       }
+"106
+[; ;main.c: 106:         MainFSM = Main_WaitBetweenGreenAndBlue;
+[e = _MainFSM . `E5933 3 ]
+"107
+[; ;main.c: 107:       }
 }
-[e :U 802 ]
-"75
-[; ;main.c: 75:       break;
-[e $U 793  ]
-"77
-[; ;main.c: 77:     case Main_WaitBetweenGreenAndBlue:
-[e :U 806 ]
-"78
-[; ;main.c: 78:       if (0 == SwTimer1_u16)
-[e $ ! == -> -> 0 `i `ui _SwTimer1_u16 807  ]
-"79
-[; ;main.c: 79:       {
+[e :U 805 ]
+"108
+[; ;main.c: 108:       break;
+[e $U 795  ]
+"110
+[; ;main.c: 110:     case Main_WaitBetweenGreenAndBlue:
+[e :U 809 ]
+"111
+[; ;main.c: 111:       if (0==SwTimer1_u16)
+[e $ ! == -> -> 0 `i `ui -> _SwTimer1_u16 `ui 810  ]
+"112
+[; ;main.c: 112:       {
 {
-"80
-[; ;main.c: 80:         do { LATAbits.LATA5 = 1; } while(0);
-[e :U 810 ]
+"113
+[; ;main.c: 113:         do { LATAbits.LATA5 = 1; } while(0);
+[e :U 813 ]
 {
 [e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 809 ]
-"81
-[; ;main.c: 81:         { SwTimer1_u16 = 80u; };
+[e :U 812 ]
+"114
+[; ;main.c: 114:         {SwTimer1_u16=80u;};
 {
-[e = _SwTimer1_u16 -> 80 `ui ]
+[e = _SwTimer1_u16 -> -> 80 `ui `us ]
 }
-"82
-[; ;main.c: 82:         MainFSM = Main_BlueIsOn;
-[e = _MainFSM . `E5932 4 ]
-"83
-[; ;main.c: 83:       }
+"115
+[; ;main.c: 115:         MainFSM = Main_BlueIsOn;
+[e = _MainFSM . `E5933 4 ]
+"116
+[; ;main.c: 116:       }
 }
-[e :U 807 ]
-"84
-[; ;main.c: 84:       break;
-[e $U 793  ]
-"86
-[; ;main.c: 86:     case Main_BlueIsOn:
-[e :U 811 ]
-"87
-[; ;main.c: 87:       if (0 == SwTimer1_u16)
-[e $ ! == -> -> 0 `i `ui _SwTimer1_u16 812  ]
-"88
-[; ;main.c: 88:       {
+[e :U 810 ]
+"117
+[; ;main.c: 117:       break;
+[e $U 795  ]
+"119
+[; ;main.c: 119:     case Main_BlueIsOn:
+[e :U 814 ]
+"120
+[; ;main.c: 120:       if (0==SwTimer1_u16)
+[e $ ! == -> -> 0 `i `ui -> _SwTimer1_u16 `ui 815  ]
+"121
+[; ;main.c: 121:       {
 {
-"89
-[; ;main.c: 89:         do { LATAbits.LATA5 = 0; } while(0);
-[e :U 815 ]
+"122
+[; ;main.c: 122:         do { LATAbits.LATA5 = 0; } while(0);
+[e :U 818 ]
 {
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 814 ]
-"90
-[; ;main.c: 90:         MainFSM = Main_Init;
-[e = _MainFSM . `E5932 0 ]
-"91
-[; ;main.c: 91:       }
+[e :U 817 ]
+"123
+[; ;main.c: 123:         MainFSM = Main_Init;
+[e = _MainFSM . `E5933 0 ]
+"124
+[; ;main.c: 124:       }
 }
-[e :U 812 ]
-"92
-[; ;main.c: 92:       break;
-[e $U 793  ]
-"94
-[; ;main.c: 94:     default: MainFSM = Main_Init;
-[e :U 816 ]
-[e = _MainFSM . `E5932 0 ]
-"95
-[; ;main.c: 95:   }
+[e :U 815 ]
+"125
+[; ;main.c: 125:       break;
+[e $U 795  ]
+"127
+[; ;main.c: 127:     default: MainFSM = Main_Init;
+[e :U 819 ]
+[e = _MainFSM . `E5933 0 ]
+"128
+[; ;main.c: 128:   }
 }
-[e $U 793  ]
-[e :U 794 ]
-[e [\ -> _MainFSM `ui , $ -> . `E5932 0 `ui 795
- , $ -> . `E5932 1 `ui 796
- , $ -> . `E5932 2 `ui 801
- , $ -> . `E5932 3 `ui 806
- , $ -> . `E5932 4 `ui 811
- 816 ]
-[e :U 793 ]
-"96
-[; ;main.c: 96: }
-[e :UE 792 ]
+[e $U 795  ]
+[e :U 796 ]
+[e [\ -> _MainFSM `ui , $ -> . `E5933 0 `ui 797
+ , $ -> . `E5933 1 `ui 799
+ , $ -> . `E5933 2 `ui 804
+ , $ -> . `E5933 3 `ui 809
+ , $ -> . `E5933 4 `ui 814
+ 819 ]
+[e :U 795 ]
+"129
+[; ;main.c: 129: }
+[e :UE 794 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"100
-[; ;main.c: 100: int main(void)
+"132
+[; ;main.c: 132: int main(void)
 [v _main `(i ~T0 @X0 1 ef ]
-"101
-[; ;main.c: 101: {
+"133
+[; ;main.c: 133: {
 {
 [e :U _main ]
 [f ]
-"102
-[; ;main.c: 102:    SYSTEM_Initialize();
+"134
+[; ;main.c: 134:    SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"103
-[; ;main.c: 103:     TMR0_OverflowCallbackRegister(MyTmr0);
+"135
+[; ;main.c: 135:     TMR0_OverflowCallbackRegister(MyTmr0);
 [e ( _TMR0_OverflowCallbackRegister (1 &U _MyTmr0 ]
-"104
-[; ;main.c: 104:     (INTCONbits.GIE = 1);
+"136
+[; ;main.c: 136:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"105
-[; ;main.c: 105:     (INTCONbits.PEIE = 1);
+"137
+[; ;main.c: 137:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-"106
-[; ;main.c: 106:     TMR0_Start();
+"138
+[; ;main.c: 138:     TMR0_Start();
 [e ( _TMR0_Start ..  ]
-"108
-[; ;main.c: 108:     while(1)
-[e :U 819 ]
-"109
-[; ;main.c: 109:     {
+"140
+[; ;main.c: 140:     while(1)
+[e :U 822 ]
+"141
+[; ;main.c: 141:     {
 {
-"110
-[; ;main.c: 110:       if (0 != TimerFlag_u08)
-[e $ ! != -> 0 `i -> _TimerFlag_u08 `i 821  ]
-"111
-[; ;main.c: 111:       {
+"142
+[; ;main.c: 142:       if (0 != TimerFlag_u08)
+[e $ ! != -> 0 `i -> _TimerFlag_u08 `i 824  ]
+"143
+[; ;main.c: 143:       {
 {
-"115
-[; ;main.c: 115:         TimerFlag_u08 = 0;
+"147
+[; ;main.c: 147:         TimerFlag_u08 = 0;
 [e = _TimerFlag_u08 -> -> 0 `i `uc ]
-"116
-[; ;main.c: 116:         PerformSWTimer();
+"148
+[; ;main.c: 148:         PerformSWTimer();
 [e ( _PerformSWTimer ..  ]
-"117
-[; ;main.c: 117:         PerformMainFSM();
+"149
+[; ;main.c: 149:         PerformMainFSM();
 [e ( _PerformMainFSM ..  ]
-"118
-[; ;main.c: 118:       }
+"150
+[; ;main.c: 150:       }
+}
+[e :U 824 ]
+"151
+[; ;main.c: 151:     }
 }
 [e :U 821 ]
-"119
-[; ;main.c: 119:     }
-}
-[e :U 818 ]
-[e $U 819  ]
-[e :U 820 ]
-"120
-[; ;main.c: 120: }
-[e :UE 817 ]
+[e $U 822  ]
+[e :U 823 ]
+"152
+[; ;main.c: 152: }
+[e :UE 820 ]
 }

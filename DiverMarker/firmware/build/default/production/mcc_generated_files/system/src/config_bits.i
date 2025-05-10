@@ -11,17 +11,17 @@
 #pragma config FEXTOSC = OFF
 #pragma config RSTOSC = HFINT32
 #pragma config CLKOUTEN = OFF
-#pragma config CSWEN = ON
+#pragma config CSWEN = OFF
 #pragma config FCMEN = OFF
 
 
 #pragma config MCLRE = ON
 #pragma config LPBOREN = OFF
-#pragma config BOREN = ON
+#pragma config BOREN = OFF
 #pragma config BORV = LO
 #pragma config ZCD = OFF
 #pragma config PPS1WAY = ON
-#pragma config STVREN = ON
+#pragma config STVREN = OFF
 
 
 #pragma config WDTCPS = WDTCPS_31

@@ -845,8 +845,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/pins.c: 43:     LATA = 0x0;
 [e = _LATA -> -> 0 `i `uc ]
 "48
-[; ;mcc_generated_files/system/src/pins.c: 48:     TRISA = 0x1;
-[e = _TRISA -> -> 1 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 48:     TRISA = 0x5;
+[e = _TRISA -> -> 5 `i `uc ]
 "53
 [; ;mcc_generated_files/system/src/pins.c: 53:     ANSELA = 0x1;
 [e = _ANSELA -> -> 1 `i `uc ]

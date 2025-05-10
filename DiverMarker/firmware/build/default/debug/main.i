@@ -10119,17 +10119,11 @@ void TMR0_ISR(void);
 # 55 "./mcc_generated_files/system/system.h"
 void SYSTEM_Initialize(void);
 # 1 "main.c" 2
-
-
-
-
-
-
-
-
-static unsigned char TimerFlag_u08 = 0;
-static unsigned int SwTimer1_u16 = 0;
-static unsigned int SwTimer2_u16 = 0;
+# 22 "main.c"
+static uint8_t TimerFlag_u08 = 0;
+static uint8_t MinOnCycles_u08 = 3u;
+static uint16_t SwTimer1_u16 = 0;
+static uint16_t SwTimer2_u16 = 0;
 
 typedef enum
 {
@@ -10139,9 +10133,9 @@ typedef enum
   Main_WaitBetweenGreenAndBlue,
   Main_BlueIsOn
 } MainFSM_t;
-
 static MainFSM_t MainFSM = Main_Init;
-# 36 "main.c"
+
+
 void MyTmr0(void)
 {
   TimerFlag_u08 = 1;
@@ -10150,50 +10144,81 @@ void MyTmr0(void)
 
 }
 
+
 void PerformSWTimer(void)
 {
   if (0 != SwTimer1_u16) SwTimer1_u16--;
   if (0 != SwTimer2_u16) SwTimer2_u16--;
 }
 
+
+static void HandlePowerOff()
+{
+  if ((0!=PORTAbits.RA2) &&
+     (0 == MinOnCycles_u08))
+  {
+
+    TMR0_Stop();
+    GIE = 0;
+    PORTA;
+    IOCAF = 0;
+    IOCAN2 = 1;
+    IOCIE = 1;
+    __asm("sleep");
+    __nop();
+
+
+    IOCAN2 = 0;
+    IOCIE = 0;
+    IOCAF = 0;
+    GIE = 1;
+    TMR0_Start();
+    MinOnCycles_u08 = 3u;
+  }
+}
+
+
 void PerformMainFSM(void)
 {
   switch (MainFSM)
   {
     case Main_Init:
-      { SwTimer1_u16 = 2000u; };
+      if (0!= MinOnCycles_u08)
+        MinOnCycles_u08--;
+      {SwTimer1_u16=2000u;};
       MainFSM = Main_WaitOffTime;
       break;
 
     case Main_WaitOffTime:
-      if (0 == SwTimer1_u16)
+      HandlePowerOff();
+      if (0==SwTimer1_u16)
       {
         do { LATAbits.LATA4 = 1; } while(0);
-        { SwTimer1_u16 = 50u; };
+        {SwTimer1_u16=40u;};
         MainFSM = Main_GreenIsOn;
       }
       break;
 
     case Main_GreenIsOn:
-      if (0 == SwTimer1_u16)
+      if (0==SwTimer1_u16)
       {
         do { LATAbits.LATA4 = 0; } while(0);
-        { SwTimer1_u16 = 100u; };
+        {SwTimer1_u16=100u;};
         MainFSM = Main_WaitBetweenGreenAndBlue;
       }
       break;
 
     case Main_WaitBetweenGreenAndBlue:
-      if (0 == SwTimer1_u16)
+      if (0==SwTimer1_u16)
       {
         do { LATAbits.LATA5 = 1; } while(0);
-        { SwTimer1_u16 = 50u; };
+        {SwTimer1_u16=80u;};
         MainFSM = Main_BlueIsOn;
       }
       break;
 
     case Main_BlueIsOn:
-      if (0 == SwTimer1_u16)
+      if (0==SwTimer1_u16)
       {
         do { LATAbits.LATA5 = 0; } while(0);
         MainFSM = Main_Init;
@@ -10203,7 +10228,6 @@ void PerformMainFSM(void)
     default: MainFSM = Main_Init;
   }
 }
-
 
 
 int main(void)
