@@ -2418,6 +2418,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "IRuhe ca. 50µA"
+		(exclude_from_sim no)
+		(at 59.182 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "fbaf4e51-3fec-48ec-b528-61a82fff2336")
+	)
 	(text_box "Version overview\nV1.0 integrated booster circuit (too weak)\nV1.1 home brew booster circuit"
 		(exclude_from_sim no)
 		(at 15.24 170.18 0)
