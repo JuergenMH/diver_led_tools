@@ -53,14 +53,14 @@ TMR2_CLC2OUT 11
 TMR2_CLC3OUT 12
 TMR2_CLC4OUT 13
 ]
-"47 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\main.c
+"45 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\main.c
 [e E5988 . `uc
 Init 0
-Idle 1
+PrepareCycle 1
 PulseOn 2
 PulseOff 3
 ]
-"186
+"187
 [e E5878 . `uc
 channel_AVSS 59
 channel_Temp 60
@@ -73,19 +73,19 @@ Current 4
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"53 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\main.c
+"51 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\main.c
 [v _MyTmr0 MyTmr0 `(v  1 s 1 MyTmr0 ]
-"95
+"93
 [v _MyTmr2 MyTmr2 `(v  1 s 1 MyTmr2 ]
-"103
+"101
 [v _StartStopBooster StartStopBooster `(v  1 s 1 StartStopBooster ]
-"112
+"110
 [v _DoSWTimer DoSWTimer `(v  1 s 1 DoSWTimer ]
-"120
+"116
 [v _HandlePowerOff HandlePowerOff `(v  1 s 1 HandlePowerOff ]
 "143
 [v _DoMainFSM DoMainFSM `(v  1 s 1 DoMainFSM ]
-"181
+"182
 [v _main main `(i  1 e 2 0 ]
 "53 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\mcc_generated_files/adc/src/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
@@ -129,6 +129,8 @@ Current 4
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 "90
 [v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
+"95
+[v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
 "145
 [v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
 "155
@@ -143,6 +145,8 @@ Current 4
 "426 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h
 [u S212 . 1 `S207 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES212  1 e 1 @11 ]
+"446
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
 [s S656 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
@@ -382,19 +386,21 @@ Current 4
 [v _IOCAN2 IOCAN2 `VEb  1 e 0 @63986 ]
 "18065
 [v _IOCIE IOCIE `VEb  1 e 0 @14516 ]
-"40 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\main.c
+"37 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\main.c
 [v _ActualCurrent_s16 ActualCurrent_s16 `s  1 s 2 ActualCurrent_s16 ]
-"42
+"39
 [v _T2PRLoad_u8 T2PRLoad_u8 `uc  1 s 1 T2PRLoad_u8 ]
-"43
+"40
 [v _MsTimerOccured_u8 MsTimerOccured_u8 `uc  1 s 1 MsTimerOccured_u8 ]
-"44
+"41
 [v _MsTimer_u8 MsTimer_u8 `uc  1 s 1 MsTimer_u8 ]
-"45
+"42
 [v _BoosterActive_u8 BoosterActive_u8 `uc  1 s 1 BoosterActive_u8 ]
-"46
+"43
+[v _MinOnCycles_u08 MinOnCycles_u08 `uc  1 s 1 MinOnCycles_u08 ]
+"44
 [v _SWTimerPeriod_u16 SWTimerPeriod_u16 `us  1 s 2 SWTimerPeriod_u16 ]
-"47
+"45
 [v _MainFSM MainFSM `E5988  1 s 1 MainFSM ]
 "38 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\mcc_generated_files/system/src/interrupt.c
 [v _INT_InterruptHandler INT_InterruptHandler `*.37(v  1 e 2 0 ]
@@ -404,10 +410,10 @@ Current 4
 [v _TMR0_OverflowCallback TMR0_OverflowCallback `*.37(v  1 s 2 TMR0_OverflowCallback ]
 "43 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\mcc_generated_files/timer/src/tmr2.c
 [v _TMR2_PeriodMatchCallback TMR2_PeriodMatchCallback `*.37(v  1 s 2 TMR2_PeriodMatchCallback ]
-"181 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\main.c
+"182 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"203
+"204
 } 0
 "155 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\mcc_generated_files/timer/src/tmr2.c
 [v _TMR2_PeriodMatchCallbackRegister TMR2_PeriodMatchCallbackRegister `(v  1 e 1 0 ]
@@ -467,29 +473,34 @@ Current 4
 {
 "72
 } 0
-"112 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\main.c
+"110 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\main.c
 [v _DoSWTimer DoSWTimer `(v  1 s 1 DoSWTimer ]
 {
-"115
+"113
 } 0
 "143
 [v _DoMainFSM DoMainFSM `(v  1 s 1 DoMainFSM ]
 {
-"176
+"177
 } 0
-"103
+"101
 [v _StartStopBooster StartStopBooster `(v  1 s 1 StartStopBooster ]
 {
 [v StartStopBooster@Control_u8 Control_u8 `uc  1 p 1 wreg ]
 [v StartStopBooster@Control_u8 Control_u8 `uc  1 p 1 wreg ]
-"105
+"103
 [v StartStopBooster@Control_u8 Control_u8 `uc  1 p 1 0 ]
-"109
+"107
 } 0
-"120
+"116
 [v _HandlePowerOff HandlePowerOff `(v  1 s 1 HandlePowerOff ]
 {
 "140
+} 0
+"95 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\mcc_generated_files/timer/src/tmr2.c
+[v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
+{
+"98
 } 0
 "84 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\mcc_generated_files/timer/src/tmr0.c
 [v _TMR0_Stop TMR0_Stop `(v  1 e 1 0 ]
@@ -520,10 +531,10 @@ Current 4
 {
 "153
 } 0
-"95 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\main.c
+"93 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\main.c
 [v _MyTmr2 MyTmr2 `(v  1 s 1 MyTmr2 ]
 {
-"98
+"96
 } 0
 "160 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\mcc_generated_files/timer/src/tmr2.c
 [v _TMR2_DefaultPeriodMatchCallback TMR2_DefaultPeriodMatchCallback `(v  1 s 1 TMR2_DefaultPeriodMatchCallback ]
@@ -535,10 +546,10 @@ Current 4
 {
 "149
 } 0
-"53 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\main.c
+"51 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\main.c
 [v _MyTmr0 MyTmr0 `(v  1 s 1 MyTmr0 ]
 {
-"92
+"90
 } 0
 "156 C:\Users\juerg\Documents\_Workspaces\diver_led_tools\DiverFlasher\firmware\mcc_generated_files/timer/src/tmr0.c
 [v _TMR0_DefaultCallback TMR0_DefaultCallback `(v  1 s 1 TMR0_DefaultCallback ]

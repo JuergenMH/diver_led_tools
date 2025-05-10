@@ -17,23 +17,20 @@
 #define TicsPerMs     25u                 // 25 * 40탎 = 1ms
 #define LEDOntTime    50u                 // LED on for 50ms
 #define LEDOffTime    950u                // while developement LED period = 1s
-//#define TargetCurrent 730                 // .. a little bit below 750mA
-#define TargetCurrent 50                 // .. a little bit below 750mA
-#define T2PRLoadInit  50u                // control value start up value (+6탎)
-//#define T2PRLoadInit  150u                // control value start up value (+6탎)
-#define T2PRLoadMin   40u                 // 80 is about 10 + 6탎 = 16탎
-//#define T2PRLoadMin   80u                 // 80 is about 10 + 6탎 = 16탎
+#define TargetCurrent 730                 // .. a little bit below 750mA
+#define T2PRLoadInit  150u                // control value start up value (+6탎)
+#define T2PRLoadMin   80u                 // 80 is about 10 + 6탎 = 16탎
 #define T2PRLoadMax   200u                // 200 is about 25 + 6탎 = 31탎
-
+#define MinOnCycles   3u                  // min on cycle count to avoid flicker
 #define REED_IS_OFF   0!=Reed_GetValue()  // Reed switch is low acitve 
 
 // type definitions 
 typedef enum 
 {
-  Init,
-  Idle,
-  PulseOn,
-  PulseOff        
+  Init,                                   // set up some vars
+  PrepareCycle,                           // start pulse on
+  PulseOn,                                // LEDs are on, wait for timer
+  PulseOff                                // LEDs are off, wait for timer
 } MainFSM_t;
 
 // Variables
@@ -43,6 +40,7 @@ static uint8_t    T2PRLoad_u8;          // calculated reload value for pulse
 static uint8_t    MsTimerOccured_u8;    // flag 1ms timer
 static uint8_t    MsTimer_u8;           // helper counter for 1m timer
 static uint8_t    BoosterActive_u8;     // control pulse output on/off
+static uint8_t    MinOnCycles_u08;      // minimum count of cycles after PO
 static uint16_t   SWTimerPeriod_u16;    // SW timer to control the LED period
 static MainFSM_t  MainFSM = Init;       // the main FSM for behaviour control
 
@@ -117,23 +115,27 @@ static void DoSWTimer()
 // ----------------------------------------------------------------------------
 static void HandlePowerOff()
 {
-  if (REED_IS_OFF)              // user switch off request?  
+  if ((REED_IS_OFF) &&             // user switch off request?  
+     (0 == MinOnCycles_u08))       // and minimum on cycles zero 
   {                             
     // prepare sleep
-    TMR0_Stop();                // disable timer to avoid wakeup by timer interrupt
+    TMR0_Stop();                  // disable timer (avoid wakeup by timer Int)
     TMR2_Stop();
-    GIE    = 0;                 // real interrupt is not necessary for wakeup
-    IOCAF  = 0;                 // clear all interrupt change flags from port RA
-    IOCAN2 = 1;                 // enable wakeup by falling edge on RA2
-    IOCIE  = 1;                 // enable IO change interrupt module
-    SLEEP();                    // stop the system exactly here 
-    NOP();                      // proposed to do that after sleep ..
+    GIE    = 0;                   // real interrupt is not necessary for wakeup
+    PORTA;                        // dummy read before clear flags
+    IOCAF  = 0;                   // clear interrupt change flags from port RA
+    IOCAN2 = 1;                   // enable wakeup by falling edge on RA2
+    IOCIE  = 1;                   // enable IO change interrupt module
+    SLEEP();                      // stop the system exactly here 
+    NOP();                        // proposed to do that after sleep ..
+    
     // restart the system    
-    IOCAN2 = 0;                 // disable interrupt by falling edge on RA2
-    IOCIE  = 0;                 // disable IO interrupt module
-    IOCAF  = 0;                 // clear all interrupt change flags from port RA
-    GIE    = 1;                 // enable interrupt system again
-    TMR0_Start();               // enable timer again for basic functionality
+    IOCAN2 = 0;                   // disable interrupt by falling edge on RA2
+    IOCIE  = 0;                   // disable IO interrupt module
+    IOCAF  = 0;                   // clear interrupt change flags from port RA
+    GIE    = 1;                   // enable interrupt system again
+    TMR0_Start();                 // enable timer again for basic functionality
+    MinOnCycles_u08 = MinOnCycles;
   }
 }
 
@@ -143,31 +145,32 @@ static void DoMainFSM()
   switch(MainFSM)
   {
     case Init:
-      MainFSM = Idle;
+      MinOnCycles_u08 = MinOnCycles;
+      MainFSM = PrepareCycle;
       break;
       
-    case Idle:
-      StartStopBooster(1);
+    case PrepareCycle:
+      if (0!= MinOnCycles_u08)          // count the cycles
+        MinOnCycles_u08--;              // to ensure a minimum on time
+      StartStopBooster(1);              // switch on the booster and LEDs
       SWTimerPeriod_u16 = LEDOntTime;
       MainFSM = PulseOn;
       break;
       
-    case PulseOn:                   // LED is in ON state
-      if (0 == SWTimerPeriod_u16)   // on timer elapsed?
-      {                             // yes, switch to off period
+    case PulseOn:                       // LEDs are in ON state
+      if (0 == SWTimerPeriod_u16)       // on timer elapsed?
+      {                                 // yes, switch to off period
         StartStopBooster(0);
         SWTimerPeriod_u16 = LEDOffTime;
         MainFSM = PulseOff;        
       }
       break;
       
-    case PulseOff:                  // LED is in OFF state
-      HandlePowerOff();             // switch off in LED off mode only
-      if (0 == SWTimerPeriod_u16)   // off timer elapsed?
-      {                             // yes, switch to on period
-        StartStopBooster(1);
-        SWTimerPeriod_u16 = LEDOntTime;
-        MainFSM = PulseOn;        
+    case PulseOff:                      // LEDs are in OFF state
+      HandlePowerOff();                 // switch off in LED off mode only
+      if (0 == SWTimerPeriod_u16)       // off timer elapsed?
+      {                                 // yes, restart the cycle
+        MainFSM = PrepareCycle;        
       }
       break;
   }

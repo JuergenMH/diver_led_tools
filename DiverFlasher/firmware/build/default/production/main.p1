@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"47 main.c
-[; ;main.c: 47: static MainFSM_t MainFSM = Init;
+"45 main.c
+[; ;main.c: 45: static MainFSM_t MainFSM = Init;
 [c E5988 0 1 2 3 .. ]
-[n E5988 . Init Idle PulseOn PulseOff  ]
+[n E5988 . Init PrepareCycle PulseOn PulseOff  ]
 "119 ./mcc_generated_files/system/../adc/adc.h
 [; ;./mcc_generated_files/system/../adc/adc.h: 119: adc_result_t ADC_GetConversionResult(void);
 [v _ADC_GetConversionResult `(us ~T0 @X0 0 ef ]
@@ -51,9 +51,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "195 ./mcc_generated_files/system/../timer/tmr0.h
 [; ;./mcc_generated_files/system/../timer/tmr0.h: 195: void TMR0_Stop(void);
 [v _TMR0_Stop `(v ~T0 @X0 0 ef ]
+"391 ./mcc_generated_files/system/../timer/tmr2.h
+[; ;./mcc_generated_files/system/../timer/tmr2.h: 391: void TMR2_Stop(void);
+[v _TMR2_Stop `(v ~T0 @X0 0 ef ]
 "17867 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 17867: extern volatile __bit GIE __attribute__((address(0x5F)));
 [v _GIE `Vb ~T0 @X0 0 e@95 ]
+"446
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 446: extern volatile unsigned char PORTA __attribute__((address(0x00C)));
+[v _PORTA `Vuc ~T0 @X0 0 e@12 ]
 "16448
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 16448: extern volatile unsigned char IOCAF __attribute__((address(0x1F3F)));
 [v _IOCAF `Vuc ~T0 @X0 0 e@7999 ]
@@ -81,9 +87,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "485 ./mcc_generated_files/system/../timer/tmr2.h
 [; ;./mcc_generated_files/system/../timer/tmr2.h: 485: void TMR2_PeriodMatchCallbackRegister(void (* callbackHandler)(void));
 [v _TMR2_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F5984 ]
-[v F6011 `(v ~T0 @X0 0 tf ]
-"186 main.c
-[; ;main.c: 186:     ADC_SelectChannel(Current);
+[v F6012 `(v ~T0 @X0 0 tf ]
+"187 main.c
+[; ;main.c: 187:   ADC_SelectChannel(Current);
 [c E5878 59 60 61 62 63 4 .. ]
 [n E5878 . channel_AVSS channel_Temp channel_DAC1 channel_FVR_BUF1 channel_FVR_BUF2 Current  ]
 "94 ./mcc_generated_files/system/../adc/adc.h
@@ -896,242 +902,254 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16808
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 16808: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"40 main.c
-[; ;main.c: 40: static int16_t ActualCurrent_s16;
+"37 main.c
+[; ;main.c: 37: static int16_t ActualCurrent_s16;
 [v _ActualCurrent_s16 `s ~T0 @X0 1 s ]
-"41
-[; ;main.c: 41: static int16_t DeviationCurrent_s16;
+"38
+[; ;main.c: 38: static int16_t DeviationCurrent_s16;
 [v _DeviationCurrent_s16 `s ~T0 @X0 1 s ]
-"42
-[; ;main.c: 42: static uint8_t T2PRLoad_u8;
+"39
+[; ;main.c: 39: static uint8_t T2PRLoad_u8;
 [v _T2PRLoad_u8 `uc ~T0 @X0 1 s ]
-"43
-[; ;main.c: 43: static uint8_t MsTimerOccured_u8;
+"40
+[; ;main.c: 40: static uint8_t MsTimerOccured_u8;
 [v _MsTimerOccured_u8 `uc ~T0 @X0 1 s ]
-"44
-[; ;main.c: 44: static uint8_t MsTimer_u8;
+"41
+[; ;main.c: 41: static uint8_t MsTimer_u8;
 [v _MsTimer_u8 `uc ~T0 @X0 1 s ]
-"45
-[; ;main.c: 45: static uint8_t BoosterActive_u8;
+"42
+[; ;main.c: 42: static uint8_t BoosterActive_u8;
 [v _BoosterActive_u8 `uc ~T0 @X0 1 s ]
-"46
-[; ;main.c: 46: static uint16_t SWTimerPeriod_u16;
+"43
+[; ;main.c: 43: static uint8_t MinOnCycles_u08;
+[v _MinOnCycles_u08 `uc ~T0 @X0 1 s ]
+"44
+[; ;main.c: 44: static uint16_t SWTimerPeriod_u16;
 [v _SWTimerPeriod_u16 `us ~T0 @X0 1 s ]
-"47
-[; ;main.c: 47: static MainFSM_t MainFSM = Init;
+"45
+[; ;main.c: 45: static MainFSM_t MainFSM = Init;
 [v _MainFSM `E5988 ~T0 @X0 1 s ]
 [i _MainFSM
 . `E5988 0
 ]
-"53
-[; ;main.c: 53: static void MyTmr0(void)
+"51
+[; ;main.c: 51: static void MyTmr0(void)
 [v _MyTmr0 `(v ~T0 @X0 1 sf ]
-"54
-[; ;main.c: 54: {
+"52
+[; ;main.c: 52: {
 {
 [e :U _MyTmr0 ]
 [f ]
-"59
-[; ;main.c: 59:   if (0 != BoosterActive_u8)
+"57
+[; ;main.c: 57:   if (0 != BoosterActive_u8)
 [e $ ! != -> 0 `i -> _BoosterActive_u8 `i 789  ]
-"60
-[; ;main.c: 60:   {
+"58
+[; ;main.c: 58:   {
 {
-"63
-[; ;main.c: 63:     ActualCurrent_s16 = (int16_t) ADC_GetConversionResult();
+"61
+[; ;main.c: 61:     ActualCurrent_s16 = (int16_t) ADC_GetConversionResult();
 [e = _ActualCurrent_s16 -> ( _ADC_GetConversionResult ..  `s ]
-"64
-[; ;main.c: 64:     ADC_StartConversion();
+"62
+[; ;main.c: 62:     ADC_StartConversion();
 [e ( _ADC_StartConversion ..  ]
-"67
-[; ;main.c: 67:     if (0 < ActualCurrent_s16-50)
-[e $ ! < -> 0 `i - -> _ActualCurrent_s16 `i -> 50 `i 790  ]
-"68
-[; ;main.c: 68:     {
+"65
+[; ;main.c: 65:     if (0 < ActualCurrent_s16-730)
+[e $ ! < -> 0 `i - -> _ActualCurrent_s16 `i -> 730 `i 790  ]
+"66
+[; ;main.c: 66:     {
 {
-"69
-[; ;main.c: 69:       if (40u <= T2PRLoad_u8)
-[e $ ! <= -> 40 `ui -> _T2PRLoad_u8 `ui 791  ]
-"70
-[; ;main.c: 70:         T2PRLoad_u8--;
+"67
+[; ;main.c: 67:       if (80u <= T2PRLoad_u8)
+[e $ ! <= -> 80 `ui -> _T2PRLoad_u8 `ui 791  ]
+"68
+[; ;main.c: 68:         T2PRLoad_u8--;
 [e -- _T2PRLoad_u8 -> -> 1 `i `uc ]
 [e :U 791 ]
-"71
-[; ;main.c: 71:     }
+"69
+[; ;main.c: 69:     }
 }
 [e $U 792  ]
-"72
-[; ;main.c: 72:     else
+"70
+[; ;main.c: 70:     else
 [e :U 790 ]
-"73
-[; ;main.c: 73:     {
+"71
+[; ;main.c: 71:     {
 {
-"74
-[; ;main.c: 74:       if (200u >= T2PRLoad_u8)
+"72
+[; ;main.c: 72:       if (200u >= T2PRLoad_u8)
 [e $ ! >= -> 200 `ui -> _T2PRLoad_u8 `ui 793  ]
-"75
-[; ;main.c: 75:         T2PRLoad_u8++;
+"73
+[; ;main.c: 73:         T2PRLoad_u8++;
 [e ++ _T2PRLoad_u8 -> -> 1 `i `uc ]
 [e :U 793 ]
-"76
-[; ;main.c: 76:     }
+"74
+[; ;main.c: 74:     }
 }
 [e :U 792 ]
-"79
-[; ;main.c: 79:     do { LATAbits.LATA5 = 1; } while(0);
+"77
+[; ;main.c: 77:     do { LATAbits.LATA5 = 1; } while(0);
 [e :U 796 ]
 {
 [e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
 }
 [e :U 795 ]
-"80
-[; ;main.c: 80:     T2PR = T2PRLoad_u8;
+"78
+[; ;main.c: 78:     T2PR = T2PRLoad_u8;
 [e = _T2PR _T2PRLoad_u8 ]
-"81
-[; ;main.c: 81:     TMR2_Start();
+"79
+[; ;main.c: 79:     TMR2_Start();
 [e ( _TMR2_Start ..  ]
-"82
-[; ;main.c: 82:   }
+"80
+[; ;main.c: 80:   }
 }
 [e :U 789 ]
-"83
-[; ;main.c: 83:   if (0 == MsTimer_u8)
+"81
+[; ;main.c: 81:   if (0 == MsTimer_u8)
 [e $ ! == -> 0 `i -> _MsTimer_u8 `i 797  ]
-"84
-[; ;main.c: 84:   {
+"82
+[; ;main.c: 82:   {
 {
-"85
-[; ;main.c: 85:     MsTimer_u8 = 25u;
+"83
+[; ;main.c: 83:     MsTimer_u8 = 25u;
 [e = _MsTimer_u8 -> -> 25 `ui `uc ]
-"86
-[; ;main.c: 86:     MsTimerOccured_u8 = 1;
+"84
+[; ;main.c: 84:     MsTimerOccured_u8 = 1;
 [e = _MsTimerOccured_u8 -> -> 1 `i `uc ]
-"87
-[; ;main.c: 87:   }
+"85
+[; ;main.c: 85:   }
 }
 [e :U 797 ]
-"88
-[; ;main.c: 88:   MsTimer_u8--;
+"86
+[; ;main.c: 86:   MsTimer_u8--;
 [e -- _MsTimer_u8 -> -> 1 `i `uc ]
-"92
-[; ;main.c: 92: }
+"90
+[; ;main.c: 90: }
 [e :UE 788 ]
 }
-"95
-[; ;main.c: 95: static void MyTmr2()
+"93
+[; ;main.c: 93: static void MyTmr2()
 [v _MyTmr2 `(v ~T0 @X0 1 sf ]
-"96
-[; ;main.c: 96: {
+"94
+[; ;main.c: 94: {
 {
 [e :U _MyTmr2 ]
 [f ]
-"97
-[; ;main.c: 97:   do { LATAbits.LATA5 = 0; } while(0);
+"95
+[; ;main.c: 95:   do { LATAbits.LATA5 = 0; } while(0);
 [e :U 801 ]
 {
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 800 ]
-"98
-[; ;main.c: 98: }
+"96
+[; ;main.c: 96: }
 [e :UE 798 ]
 }
-"103
-[; ;main.c: 103: static void StartStopBooster(uint8_t Control_u8)
+"101
+[; ;main.c: 101: static void StartStopBooster(uint8_t Control_u8)
 [v _StartStopBooster `(v ~T0 @X0 1 sf1`uc ]
-"104
-[; ;main.c: 104: {
+"102
+[; ;main.c: 102: {
 {
 [e :U _StartStopBooster ]
-"103
-[; ;main.c: 103: static void StartStopBooster(uint8_t Control_u8)
+"101
+[; ;main.c: 101: static void StartStopBooster(uint8_t Control_u8)
 [v _Control_u8 `uc ~T0 @X0 1 r1 ]
-"104
-[; ;main.c: 104: {
+"102
+[; ;main.c: 102: {
 [f ]
-"105
-[; ;main.c: 105:   (INTCONbits.GIE = 0);
+"103
+[; ;main.c: 103:   (INTCONbits.GIE = 0);
 [e = . . _INTCONbits 0 3 -> -> 0 `i `uc ]
-"106
-[; ;main.c: 106:   BoosterActive_u8 = Control_u8;
+"104
+[; ;main.c: 104:   BoosterActive_u8 = Control_u8;
 [e = _BoosterActive_u8 _Control_u8 ]
-"107
-[; ;main.c: 107:   T2PRLoad_u8 = 50u;
-[e = _T2PRLoad_u8 -> -> 50 `ui `uc ]
-"108
-[; ;main.c: 108:   (INTCONbits.GIE = 1);
+"105
+[; ;main.c: 105:   T2PRLoad_u8 = 150u;
+[e = _T2PRLoad_u8 -> -> 150 `ui `uc ]
+"106
+[; ;main.c: 106:   (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"109
-[; ;main.c: 109: }
+"107
+[; ;main.c: 107: }
 [e :UE 802 ]
 }
-"112
-[; ;main.c: 112: static void DoSWTimer()
+"110
+[; ;main.c: 110: static void DoSWTimer()
 [v _DoSWTimer `(v ~T0 @X0 1 sf ]
-"113
-[; ;main.c: 113: {
+"111
+[; ;main.c: 111: {
 {
 [e :U _DoSWTimer ]
 [f ]
-"114
-[; ;main.c: 114:   if (0!=SWTimerPeriod_u16) SWTimerPeriod_u16--;
+"112
+[; ;main.c: 112:   if (0!=SWTimerPeriod_u16) SWTimerPeriod_u16--;
 [e $ ! != -> -> 0 `i `ui -> _SWTimerPeriod_u16 `ui 804  ]
 [e -- _SWTimerPeriod_u16 -> -> 1 `i `us ]
 [e :U 804 ]
-"115
-[; ;main.c: 115: }
+"113
+[; ;main.c: 113: }
 [e :UE 803 ]
 }
-"120
-[; ;main.c: 120: static void HandlePowerOff()
+"116
+[; ;main.c: 116: static void HandlePowerOff()
 [v _HandlePowerOff `(v ~T0 @X0 1 sf ]
-"121
-[; ;main.c: 121: {
+"117
+[; ;main.c: 117: {
 {
 [e :U _HandlePowerOff ]
 [f ]
-"122
-[; ;main.c: 122:   if (0!=PORTAbits.RA2)
-[e $ ! != -> 0 `i -> . . _PORTAbits 0 2 `i 806  ]
-"123
-[; ;main.c: 123:   {
+"118
+[; ;main.c: 118:   if ((0!=PORTAbits.RA2) &&
+[e $ ! && != -> 0 `i -> . . _PORTAbits 0 2 `i == -> 0 `i -> _MinOnCycles_u08 `i 806  ]
+"120
+[; ;main.c: 120:   {
 {
-"125
-[; ;main.c: 125:     TMR0_Stop();
+"122
+[; ;main.c: 122:     TMR0_Stop();
 [e ( _TMR0_Stop ..  ]
-"126
-[; ;main.c: 126:     GIE = 0;
+"123
+[; ;main.c: 123:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"124
+[; ;main.c: 124:     GIE = 0;
 [e = _GIE -> -> 0 `i `b ]
+"125
+[; ;main.c: 125:     PORTA;
+[e _PORTA ]
+"126
+[; ;main.c: 126:     IOCAF = 0;
+[e = _IOCAF -> -> 0 `i `uc ]
 "127
-[; ;main.c: 127:     IOCAF = 0;
-[e = _IOCAF -> -> 0 `i `uc ]
-"128
-[; ;main.c: 128:     IOCAN2 = 1;
+[; ;main.c: 127:     IOCAN2 = 1;
 [e = _IOCAN2 -> -> 1 `i `b ]
-"129
-[; ;main.c: 129:     IOCIE = 1;
+"128
+[; ;main.c: 128:     IOCIE = 1;
 [e = _IOCIE -> -> 1 `i `b ]
-"130
-[; ;main.c: 130:     __asm("sleep");
+"129
+[; ;main.c: 129:     __asm("sleep");
 [; <" sleep ;# ">
-"131
-[; ;main.c: 131:     __nop();
+"130
+[; ;main.c: 130:     __nop();
 [e ( ___nop ..  ]
-"134
-[; ;main.c: 134:     IOCAN2 = 0;
+"133
+[; ;main.c: 133:     IOCAN2 = 0;
 [e = _IOCAN2 -> -> 0 `i `b ]
-"135
-[; ;main.c: 135:     IOCIE = 0;
+"134
+[; ;main.c: 134:     IOCIE = 0;
 [e = _IOCIE -> -> 0 `i `b ]
-"136
-[; ;main.c: 136:     IOCAF = 0;
+"135
+[; ;main.c: 135:     IOCAF = 0;
 [e = _IOCAF -> -> 0 `i `uc ]
-"137
-[; ;main.c: 137:     GIE = 1;
+"136
+[; ;main.c: 136:     GIE = 1;
 [e = _GIE -> -> 1 `i `b ]
-"138
-[; ;main.c: 138:     TMR0_Start();
+"137
+[; ;main.c: 137:     TMR0_Start();
 [e ( _TMR0_Start ..  ]
+"138
+[; ;main.c: 138:     MinOnCycles_u08 = 3u;
+[e = _MinOnCycles_u08 -> -> 3 `ui `uc ]
 "139
 [; ;main.c: 139:   }
 }
@@ -1158,162 +1176,166 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 147:     case Init:
 [e :U 810 ]
 "148
-[; ;main.c: 148:       MainFSM = Idle;
-[e = _MainFSM . `E5988 1 ]
+[; ;main.c: 148:       MinOnCycles_u08 = 3u;
+[e = _MinOnCycles_u08 -> -> 3 `ui `uc ]
 "149
-[; ;main.c: 149:       break;
+[; ;main.c: 149:       MainFSM = PrepareCycle;
+[e = _MainFSM . `E5988 1 ]
+"150
+[; ;main.c: 150:       break;
 [e $U 808  ]
-"151
-[; ;main.c: 151:     case Idle:
-[e :U 811 ]
 "152
-[; ;main.c: 152:       StartStopBooster(1);
-[e ( _StartStopBooster (1 -> -> 1 `i `uc ]
+[; ;main.c: 152:     case PrepareCycle:
+[e :U 811 ]
 "153
-[; ;main.c: 153:       SWTimerPeriod_u16 = 50u;
-[e = _SWTimerPeriod_u16 -> -> 50 `ui `us ]
+[; ;main.c: 153:       if (0!= MinOnCycles_u08)
+[e $ ! != -> 0 `i -> _MinOnCycles_u08 `i 812  ]
 "154
-[; ;main.c: 154:       MainFSM = PulseOn;
-[e = _MainFSM . `E5988 2 ]
-"155
-[; ;main.c: 155:       break;
-[e $U 808  ]
-"157
-[; ;main.c: 157:     case PulseOn:
+[; ;main.c: 154:         MinOnCycles_u08--;
+[e -- _MinOnCycles_u08 -> -> 1 `i `uc ]
 [e :U 812 ]
+"155
+[; ;main.c: 155:       StartStopBooster(1);
+[e ( _StartStopBooster (1 -> -> 1 `i `uc ]
+"156
+[; ;main.c: 156:       SWTimerPeriod_u16 = 50u;
+[e = _SWTimerPeriod_u16 -> -> 50 `ui `us ]
+"157
+[; ;main.c: 157:       MainFSM = PulseOn;
+[e = _MainFSM . `E5988 2 ]
 "158
-[; ;main.c: 158:       if (0 == SWTimerPeriod_u16)
-[e $ ! == -> -> 0 `i `ui -> _SWTimerPeriod_u16 `ui 813  ]
-"159
-[; ;main.c: 159:       {
-{
-"160
-[; ;main.c: 160:         StartStopBooster(0);
-[e ( _StartStopBooster (1 -> -> 0 `i `uc ]
-"161
-[; ;main.c: 161:         SWTimerPeriod_u16 = 950u;
-[e = _SWTimerPeriod_u16 -> -> 950 `ui `us ]
-"162
-[; ;main.c: 162:         MainFSM = PulseOff;
-[e = _MainFSM . `E5988 3 ]
-"163
-[; ;main.c: 163:       }
-}
-[e :U 813 ]
-"164
-[; ;main.c: 164:       break;
+[; ;main.c: 158:       break;
 [e $U 808  ]
+"160
+[; ;main.c: 160:     case PulseOn:
+[e :U 813 ]
+"161
+[; ;main.c: 161:       if (0 == SWTimerPeriod_u16)
+[e $ ! == -> -> 0 `i `ui -> _SWTimerPeriod_u16 `ui 814  ]
+"162
+[; ;main.c: 162:       {
+{
+"163
+[; ;main.c: 163:         StartStopBooster(0);
+[e ( _StartStopBooster (1 -> -> 0 `i `uc ]
+"164
+[; ;main.c: 164:         SWTimerPeriod_u16 = 950u;
+[e = _SWTimerPeriod_u16 -> -> 950 `ui `us ]
+"165
+[; ;main.c: 165:         MainFSM = PulseOff;
+[e = _MainFSM . `E5988 3 ]
 "166
-[; ;main.c: 166:     case PulseOff:
+[; ;main.c: 166:       }
+}
 [e :U 814 ]
 "167
-[; ;main.c: 167:       HandlePowerOff();
-[e ( _HandlePowerOff ..  ]
-"168
-[; ;main.c: 168:       if (0 == SWTimerPeriod_u16)
-[e $ ! == -> -> 0 `i `ui -> _SWTimerPeriod_u16 `ui 815  ]
-"169
-[; ;main.c: 169:       {
-{
-"170
-[; ;main.c: 170:         StartStopBooster(1);
-[e ( _StartStopBooster (1 -> -> 1 `i `uc ]
-"171
-[; ;main.c: 171:         SWTimerPeriod_u16 = 50u;
-[e = _SWTimerPeriod_u16 -> -> 50 `ui `us ]
-"172
-[; ;main.c: 172:         MainFSM = PulseOn;
-[e = _MainFSM . `E5988 2 ]
-"173
-[; ;main.c: 173:       }
-}
-[e :U 815 ]
-"174
-[; ;main.c: 174:       break;
+[; ;main.c: 167:       break;
 [e $U 808  ]
+"169
+[; ;main.c: 169:     case PulseOff:
+[e :U 815 ]
+"170
+[; ;main.c: 170:       HandlePowerOff();
+[e ( _HandlePowerOff ..  ]
+"171
+[; ;main.c: 171:       if (0 == SWTimerPeriod_u16)
+[e $ ! == -> -> 0 `i `ui -> _SWTimerPeriod_u16 `ui 816  ]
+"172
+[; ;main.c: 172:       {
+{
+"173
+[; ;main.c: 173:         MainFSM = PrepareCycle;
+[e = _MainFSM . `E5988 1 ]
+"174
+[; ;main.c: 174:       }
+}
+[e :U 816 ]
 "175
-[; ;main.c: 175:   }
+[; ;main.c: 175:       break;
+[e $U 808  ]
+"176
+[; ;main.c: 176:   }
 }
 [e $U 808  ]
 [e :U 809 ]
 [e [\ -> _MainFSM `ui , $ -> . `E5988 0 `ui 810
  , $ -> . `E5988 1 `ui 811
- , $ -> . `E5988 2 `ui 812
- , $ -> . `E5988 3 `ui 814
+ , $ -> . `E5988 2 `ui 813
+ , $ -> . `E5988 3 `ui 815
  808 ]
 [e :U 808 ]
-"176
-[; ;main.c: 176: }
+"177
+[; ;main.c: 177: }
 [e :UE 807 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"181
-[; ;main.c: 181: int main(void)
-[v _main `(i ~T0 @X0 1 ef ]
 "182
-[; ;main.c: 182: {
+[; ;main.c: 182: int main(void)
+[v _main `(i ~T0 @X0 1 ef ]
+"183
+[; ;main.c: 183: {
 {
 [e :U _main ]
 [f ]
-"183
-[; ;main.c: 183:     SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
 "184
-[; ;main.c: 184:     TMR0_OverflowCallbackRegister(MyTmr0);
-[e ( _TMR0_OverflowCallbackRegister (1 &U _MyTmr0 ]
+[; ;main.c: 184:   SYSTEM_Initialize();
+[e ( _SYSTEM_Initialize ..  ]
 "185
-[; ;main.c: 185:     TMR2_PeriodMatchCallbackRegister(MyTmr2);
-[e ( _TMR2_PeriodMatchCallbackRegister (1 -> &U _MyTmr2 `*F6011 ]
+[; ;main.c: 185:   TMR0_OverflowCallbackRegister(MyTmr0);
+[e ( _TMR0_OverflowCallbackRegister (1 &U _MyTmr0 ]
 "186
-[; ;main.c: 186:     ADC_SelectChannel(Current);
-[e ( _ADC_SelectChannel (1 . `E5878 5 ]
+[; ;main.c: 186:   TMR2_PeriodMatchCallbackRegister(MyTmr2);
+[e ( _TMR2_PeriodMatchCallbackRegister (1 -> &U _MyTmr2 `*F6012 ]
 "187
-[; ;main.c: 187:     FVRCON = 0xC1;
+[; ;main.c: 187:   ADC_SelectChannel(Current);
+[e ( _ADC_SelectChannel (1 . `E5878 5 ]
+"188
+[; ;main.c: 188:   FVRCON = 0xC1;
 [e = _FVRCON -> -> 193 `i `uc ]
-"189
-[; ;main.c: 189:     (INTCONbits.GIE = 1);
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
 "190
-[; ;main.c: 190:     (INTCONbits.PEIE = 1);
-[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 190:   (INTCONbits.GIE = 1);
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
 "191
-[; ;main.c: 191:     StartStopBooster(0);
-[e ( _StartStopBooster (1 -> -> 0 `i `uc ]
+[; ;main.c: 191:   (INTCONbits.PEIE = 1);
+[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
 "192
-[; ;main.c: 192:     TMR0_Start();
+[; ;main.c: 192:   StartStopBooster(0);
+[e ( _StartStopBooster (1 -> -> 0 `i `uc ]
+"193
+[; ;main.c: 193:   TMR0_Start();
 [e ( _TMR0_Start ..  ]
-"194
-[; ;main.c: 194:     while(1)
-[e :U 818 ]
 "195
-[; ;main.c: 195:     {
-{
+[; ;main.c: 195:   while(1)
+[e :U 819 ]
 "196
-[; ;main.c: 196:       if (0 != MsTimerOccured_u8)
-[e $ ! != -> 0 `i -> _MsTimerOccured_u8 `i 820  ]
-"197
-[; ;main.c: 197:       {
+[; ;main.c: 196:   {
 {
+"197
+[; ;main.c: 197:     if (0 != MsTimerOccured_u8)
+[e $ ! != -> 0 `i -> _MsTimerOccured_u8 `i 821  ]
 "198
-[; ;main.c: 198:         MsTimerOccured_u8 = 0;
-[e = _MsTimerOccured_u8 -> -> 0 `i `uc ]
+[; ;main.c: 198:     {
+{
 "199
-[; ;main.c: 199:         DoSWTimer();
-[e ( _DoSWTimer ..  ]
+[; ;main.c: 199:       MsTimerOccured_u8 = 0;
+[e = _MsTimerOccured_u8 -> -> 0 `i `uc ]
 "200
-[; ;main.c: 200:         DoMainFSM();
-[e ( _DoMainFSM ..  ]
+[; ;main.c: 200:       DoSWTimer();
+[e ( _DoSWTimer ..  ]
 "201
-[; ;main.c: 201:       }
-}
-[e :U 820 ]
+[; ;main.c: 201:       DoMainFSM();
+[e ( _DoMainFSM ..  ]
 "202
 [; ;main.c: 202:     }
 }
-[e :U 817 ]
-[e $U 818  ]
-[e :U 819 ]
+[e :U 821 ]
 "203
-[; ;main.c: 203: }
-[e :UE 816 ]
+[; ;main.c: 203:   }
+}
+[e :U 818 ]
+[e $U 819  ]
+[e :U 820 ]
+"204
+[; ;main.c: 204: }
+[e :UE 817 ]
 }

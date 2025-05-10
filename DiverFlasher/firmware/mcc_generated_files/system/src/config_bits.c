@@ -39,13 +39,13 @@
 #pragma config FEXTOSC = OFF    // External Oscillator Selection bits->Oscillator not enabled
 #pragma config RSTOSC = HFINT32    // Reset Oscillator Selection bits->HFINTOSC with OSCFRQ= 32 MHz and CDIV = 1:1
 #pragma config CLKOUTEN = OFF    // Clock Out Enable bit->CLKOUT function is disabled; i/o or oscillator function on OSC2
-#pragma config CSWEN = ON    // Clock Switch Enable bit->Writing to NOSC and NDIV is allowed
-#pragma config FCMEN = ON    // Fail-Safe Clock Monitor Enable bit->FSCM timer enabled
+#pragma config CSWEN = OFF    // Clock Switch Enable bit->The NOSC and NDIV bits cannot be changed by user software
+#pragma config FCMEN = OFF    // Fail-Safe Clock Monitor Enable bit->FSCM timer disabled
 
 //CONFIG2
 #pragma config MCLRE = ON    // Master Clear Enable bit->MCLR pin is Master Clear function
 #pragma config LPBOREN = OFF    // Low-Power BOR Enable bit->ULPBOR disabled
-#pragma config BOREN = ON    // Brown-out Reset Enable bits->Brown-out Reset Enabled, SBOREN bit is ignored
+#pragma config BOREN = OFF    // Brown-out Reset Enable bits->Brown-out reset disabled
 #pragma config BORV = LO    // Brown-out Reset Voltage Selection bit->Brown-out Reset Voltage (VBOR) set to 1.9V on LF, and 2.45V on F Devices
 #pragma config ZCD = OFF    // ZCD Disable bit->Zero-cross detect circuit is disabled at POR.
 #pragma config PPS1WAY = ON    // PPSLOCKED One-Way Set Enable bit->The PPSLOCK bit can be cleared and set only once in software

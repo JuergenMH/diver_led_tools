@@ -10397,11 +10397,11 @@ void TMR2_PeriodMatchCallbackRegister(void (* callbackHandler)(void));
 # 58 "./mcc_generated_files/system/system.h"
 void SYSTEM_Initialize(void);
 # 4 "main.c" 2
-# 31 "main.c"
+# 28 "main.c"
 typedef enum
 {
   Init,
-  Idle,
+  PrepareCycle,
   PulseOn,
   PulseOff
 } MainFSM_t;
@@ -10413,6 +10413,7 @@ static uint8_t T2PRLoad_u8;
 static uint8_t MsTimerOccured_u8;
 static uint8_t MsTimer_u8;
 static uint8_t BoosterActive_u8;
+static uint8_t MinOnCycles_u08;
 static uint16_t SWTimerPeriod_u16;
 static MainFSM_t MainFSM = Init;
 
@@ -10434,9 +10435,9 @@ static void MyTmr0(void)
     ADC_StartConversion();
 
 
-    if (0 < ActualCurrent_s16-50)
+    if (0 < ActualCurrent_s16-730)
     {
-      if (40u <= T2PRLoad_u8)
+      if (80u <= T2PRLoad_u8)
         T2PRLoad_u8--;
     }
     else
@@ -10474,7 +10475,7 @@ static void StartStopBooster(uint8_t Control_u8)
 {
   (INTCONbits.GIE = 0);
   BoosterActive_u8 = Control_u8;
-  T2PRLoad_u8 = 50u;
+  T2PRLoad_u8 = 150u;
   (INTCONbits.GIE = 1);
 }
 
@@ -10485,15 +10486,16 @@ static void DoSWTimer()
 }
 
 
-
-
 static void HandlePowerOff()
 {
-  if (0!=PORTAbits.RA2)
+  if ((0!=PORTAbits.RA2) &&
+     (0 == MinOnCycles_u08))
   {
 
     TMR0_Stop();
+    TMR2_Stop();
     GIE = 0;
+    PORTA;
     IOCAF = 0;
     IOCAN2 = 1;
     IOCIE = 1;
@@ -10506,6 +10508,7 @@ static void HandlePowerOff()
     IOCAF = 0;
     GIE = 1;
     TMR0_Start();
+    MinOnCycles_u08 = 3u;
   }
 }
 
@@ -10515,10 +10518,13 @@ static void DoMainFSM()
   switch(MainFSM)
   {
     case Init:
-      MainFSM = Idle;
+      MinOnCycles_u08 = 3u;
+      MainFSM = PrepareCycle;
       break;
 
-    case Idle:
+    case PrepareCycle:
+      if (0!= MinOnCycles_u08)
+        MinOnCycles_u08--;
       StartStopBooster(1);
       SWTimerPeriod_u16 = 50u;
       MainFSM = PulseOn;
@@ -10537,9 +10543,7 @@ static void DoMainFSM()
       HandlePowerOff();
       if (0 == SWTimerPeriod_u16)
       {
-        StartStopBooster(1);
-        SWTimerPeriod_u16 = 50u;
-        MainFSM = PulseOn;
+        MainFSM = PrepareCycle;
       }
       break;
   }
@@ -10550,24 +10554,24 @@ static void DoMainFSM()
 
 int main(void)
 {
-    SYSTEM_Initialize();
-    TMR0_OverflowCallbackRegister(MyTmr0);
-    TMR2_PeriodMatchCallbackRegister(MyTmr2);
-    ADC_SelectChannel(Current);
-    FVRCON = 0xC1;
+  SYSTEM_Initialize();
+  TMR0_OverflowCallbackRegister(MyTmr0);
+  TMR2_PeriodMatchCallbackRegister(MyTmr2);
+  ADC_SelectChannel(Current);
+  FVRCON = 0xC1;
 
-    (INTCONbits.GIE = 1);
-    (INTCONbits.PEIE = 1);
-    StartStopBooster(0);
-    TMR0_Start();
+  (INTCONbits.GIE = 1);
+  (INTCONbits.PEIE = 1);
+  StartStopBooster(0);
+  TMR0_Start();
 
-    while(1)
+  while(1)
+  {
+    if (0 != MsTimerOccured_u8)
     {
-      if (0 != MsTimerOccured_u8)
-      {
-        MsTimerOccured_u8 = 0;
-        DoSWTimer();
-        DoMainFSM();
-      }
+      MsTimerOccured_u8 = 0;
+      DoSWTimer();
+      DoMainFSM();
     }
+  }
 }
