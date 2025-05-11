@@ -7,6 +7,7 @@
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
+# 37 "main.c"
 # 1 "./mcc_generated_files/system/system.h" 1
 # 39 "./mcc_generated_files/system/system.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 1 3
@@ -10118,18 +10119,16 @@ void TMR0_ISR(void);
 # 46 "./mcc_generated_files/system/system.h" 2
 # 55 "./mcc_generated_files/system/system.h"
 void SYSTEM_Initialize(void);
-# 1 "main.c" 2
-# 18 "main.c"
-static const uint8_t GreenTimes[3] = {0, 5, 300};
-static const uint8_t RedTimes[3] = {0, 0, 300};
-
+# 37 "main.c" 2
+# 60 "main.c"
 static uint8_t TimerFlag_u08 = 0;
+static uint8_t GreenIsOnFlag_u08 = 0;
+static uint8_t RedIsOnFlag_u08 = 0;
 static uint8_t MinOnCycles_u08 = 5u +1;
-static uint16_t SwTimer1_u16 = 0;
-static uint16_t SwTimer2_u16 = 0;
+static uint8_t WaitReedOnFlag_u8 = 0;
+static uint16_t SwTimer_u16 = 0;
+static uint16_t OffTime_u16 = 500u;
 
-static uint8_t GreenOnTime_u08;
-static uint8_t RedOnTime_u08;
 
 typedef enum
 {
@@ -10143,11 +10142,16 @@ static BlinkFSM_t BlinkFSM = Blink_Init;
 
 typedef enum
 {
-  Power_Init,
   Power_Low,
+  Power_Medium,
   Power_High
 } PowerFSM_t;
-static PowerFSM_t PowerFSM = Power_Init;
+static PowerFSM_t PowerFSM = Power_Low;
+
+
+
+
+
 
 
 void MyTmr0(void)
@@ -10156,11 +10160,51 @@ void MyTmr0(void)
 }
 
 
-void PerformSWTimer(void)
+
+
+
+
+void SetActiveLedsOn(void)
 {
-  if (0 != SwTimer1_u16) SwTimer1_u16--;
-  if (0 != SwTimer2_u16) SwTimer2_u16--;
+  if (GreenIsOnFlag_u08) do { LATAbits.LATA4 = 1; } while(0);
+  if (RedIsOnFlag_u08) do { LATAbits.LATA5 = 1; } while(0);
 }
+
+void SetLedsOff(void)
+{
+  do { LATAbits.LATA4 = 0; } while(0);
+  do { LATAbits.LATA5 = 0; } while(0);
+}
+
+void Perform_LedPWM(void)
+{
+  static uint8_t PWMCnt = 0;
+
+
+  if (!GreenIsOnFlag_u08) do { LATAbits.LATA4 = 0; } while(0);
+  if (!RedIsOnFlag_u08) do { LATAbits.LATA5 = 0; } while(0);
+  switch (PowerFSM)
+  {
+    case Power_Low:
+      if (0==PWMCnt) SetActiveLedsOn();
+      else SetLedsOff();
+      break;
+
+    case Power_Medium:
+      if (2>PWMCnt) SetActiveLedsOn();
+      else SetLedsOff();
+      break;
+
+    case Power_High:
+      SetActiveLedsOn();
+      break;
+  }
+  PWMCnt++;
+  if (3 == PWMCnt) PWMCnt = 0;
+}
+
+
+
 
 
 
@@ -10184,54 +10228,62 @@ static void HandlePowerOff()
     IOCAF = 0;
     GIE = 1;
     TMR0_Start();
+
+
     MinOnCycles_u08 = 5u;
+    WaitReedOnFlag_u8 = 0;
+    OffTime_u16 = 500u;
+    PowerFSM = Power_Low;
   }
 }
 
 
-void PerformBlinkFSM(void)
+
+
+
+void Perform_BlinkFSM(void)
 {
   switch (BlinkFSM)
   {
     case Blink_Init:
       if ((0 != MinOnCycles_u08))
         MinOnCycles_u08--;
-      {SwTimer1_u16=2000u;};
+      {SwTimer_u16=OffTime_u16;};
       BlinkFSM = Blink_WaitOffTime;
       break;
 
     case Blink_WaitOffTime:
       HandlePowerOff();
-      if (0==SwTimer1_u16)
+      if (0==SwTimer_u16)
       {
-        do { LATAbits.LATA4 = 1; } while(0);
-        {SwTimer1_u16=GreenOnTime_u08;};
+        GreenIsOnFlag_u08 = 1;
+        {SwTimer_u16=50u;};
         BlinkFSM = Blink_GreenIsOn;
       }
       break;
 
     case Blink_GreenIsOn:
-      if (0==SwTimer1_u16)
+      if (0==SwTimer_u16)
       {
-        do { LATAbits.LATA4 = 0; } while(0);
-        {SwTimer1_u16=300u;};
+        GreenIsOnFlag_u08 = 0;
+        {SwTimer_u16=300u;};
         BlinkFSM = Blink_WaitBetweenGreenAndRed;
       }
       break;
 
     case Blink_WaitBetweenGreenAndRed:
-      if (0==SwTimer1_u16)
+      if (0==SwTimer_u16)
       {
-        do { LATAbits.LATA5 = 1; } while(0);
-        {SwTimer1_u16=RedOnTime_u08;};
+        RedIsOnFlag_u08 = 1;
+        {SwTimer_u16=50u;};
         BlinkFSM = Blink_RedIsOn;
       }
       break;
 
     case Blink_RedIsOn:
-      if (0==SwTimer1_u16)
+      if (0==SwTimer_u16)
       {
-        do { LATAbits.LATA5 = 0; } while(0);
+        RedIsOnFlag_u08 = 0;
         BlinkFSM = Blink_Init;
       }
       break;
@@ -10239,22 +10291,35 @@ void PerformBlinkFSM(void)
     default:
       BlinkFSM = Blink_Init;
   }
+  OffTime_u16 = 2000u;
 }
 
 
-void PerformPowerFSM(void)
+
+
+void Perform_PowerFSM(void)
 {
   switch (PowerFSM)
   {
-    case Power_Init:
-      PowerFSM = Power_Low;
-      break;
-
     case Power_Low:
     if ((0 != MinOnCycles_u08) && (0 != PORTAbits.RA2))
       {
         MinOnCycles_u08 = 5u;
-        PowerFSM = Power_High;
+        WaitReedOnFlag_u8 = 1;
+        PowerFSM = Power_Medium;
+      }
+      break;
+
+    case Power_Medium:
+      if (0!= WaitReedOnFlag_u8)
+      {
+        if ((0 == PORTAbits.RA2))
+          WaitReedOnFlag_u8 = 0;
+      }
+      else
+      {
+        if ((0 != MinOnCycles_u08) && (0 != PORTAbits.RA2))
+          PowerFSM = Power_High;
       }
       break;
 
@@ -10264,29 +10329,30 @@ void PerformPowerFSM(void)
       break;
 
     default:
-      PowerFSM = Power_Init;
+      PowerFSM = Power_Low;
   }
-  GreenOnTime_u08 = GreenTimes[PowerFSM];
-  RedOnTime_u08 = RedTimes[PowerFSM];
 }
+
+
 
 
 int main(void)
 {
-   SYSTEM_Initialize();
-    TMR0_OverflowCallbackRegister(MyTmr0);
-    (INTCONbits.GIE = 1);
-    (INTCONbits.PEIE = 1);
-    TMR0_Start();
-
-    while(1)
+  SYSTEM_Initialize();
+  TMR0_OverflowCallbackRegister(MyTmr0);
+  (INTCONbits.GIE = 1);
+  (INTCONbits.PEIE = 1);
+  TMR0_Start();
+  while(1)
+  {
+    if (0 != TimerFlag_u08)
     {
-      if (0 != TimerFlag_u08)
-      {
-        TimerFlag_u08 = 0;
-        PerformSWTimer();
-        PerformPowerFSM();
-        PerformBlinkFSM();
-      }
+      TimerFlag_u08 = 0;
+      if (0!=SwTimer_u16) SwTimer_u16--;
+
+      Perform_LedPWM();
+      Perform_PowerFSM();
+      Perform_BlinkFSM();
     }
+  }
 }

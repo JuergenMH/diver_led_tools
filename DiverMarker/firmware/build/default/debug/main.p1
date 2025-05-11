@@ -1,13 +1,24 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"37 main.c
-[; ;main.c: 37: static BlinkFSM_t BlinkFSM = Blink_Init;
-[c E5937 0 1 2 3 4 .. ]
-[n E5937 . Blink_Init Blink_WaitOffTime Blink_GreenIsOn Blink_WaitBetweenGreenAndRed Blink_RedIsOn  ]
-"45
-[; ;main.c: 45: static PowerFSM_t PowerFSM = Power_Init;
-[c E5945 0 1 2 .. ]
-[n E5945 . Power_Init Power_Low Power_High  ]
-"452 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h
+"77 main.c
+[; ;main.c: 77: static BlinkFSM_t BlinkFSM = Blink_Init;
+[c E5936 0 1 2 3 4 .. ]
+[n E5936 . Blink_Init Blink_WaitOffTime Blink_GreenIsOn Blink_WaitBetweenGreenAndRed Blink_RedIsOn  ]
+"85
+[; ;main.c: 85: static PowerFSM_t PowerFSM = Power_Low;
+[c E5944 0 1 2 .. ]
+[n E5944 . Power_Low Power_Medium Power_High  ]
+"547 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 547:     struct {
+[s S37 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S37 . LATA0 LATA1 LATA2 . LATA4 LATA5 ]
+"546
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 546: typedef union {
+[u S36 `S37 1 ]
+[n S36 . . ]
+"556
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 556: extern volatile LATAbits_t LATAbits __attribute__((address(0x018)));
+[v _LATAbits `VS36 ~T0 @X0 0 e@24 ]
+"452
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 452:     struct {
 [s S33 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S33 . RA0 RA1 RA2 RA3 RA4 RA5 ]
@@ -42,17 +53,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "168 ./mcc_generated_files/system/../timer/tmr0.h
 [; ;./mcc_generated_files/system/../timer/tmr0.h: 168: void TMR0_Start(void);
 [v _TMR0_Start `(v ~T0 @X0 0 ef ]
-"547 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 547:     struct {
-[s S37 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S37 . LATA0 LATA1 LATA2 . LATA4 LATA5 ]
-"546
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 546: typedef union {
-[u S36 `S37 1 ]
-[n S36 . . ]
-"556
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 556: extern volatile LATAbits_t LATAbits __attribute__((address(0x018)));
-[v _LATAbits `VS36 ~T0 @X0 0 e@24 ]
 [p mainexit ]
 "55 ./mcc_generated_files/system/system.h
 [; ;./mcc_generated_files/system/system.h: 55: void SYSTEM_Initialize(void);
@@ -876,487 +876,643 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16808
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f15313.h: 16808: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"18 main.c
-[; ;main.c: 18: static const uint8_t GreenTimes[3] = {0, 5, 300};
-[v _GreenTimes `Cuc ~T0 @X0 -> 3 `i s ]
-[i _GreenTimes
-:U ..
--> -> 0 `i `uc
--> -> 5 `i `uc
--> -> 300 `i `uc
-..
-]
-"19
-[; ;main.c: 19: static const uint8_t RedTimes[3] = {0, 0, 300};
-[v _RedTimes `Cuc ~T0 @X0 -> 3 `i s ]
-[i _RedTimes
-:U ..
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 300 `i `uc
-..
-]
-"21
-[; ;main.c: 21: static uint8_t TimerFlag_u08 = 0;
+"60 main.c
+[; ;main.c: 60: static uint8_t TimerFlag_u08 = 0;
 [v _TimerFlag_u08 `uc ~T0 @X0 1 s ]
 [i _TimerFlag_u08
 -> -> 0 `i `uc
 ]
-"22
-[; ;main.c: 22: static uint8_t MinOnCycles_u08 = 5u +1;
+"61
+[; ;main.c: 61: static uint8_t GreenIsOnFlag_u08 = 0;
+[v _GreenIsOnFlag_u08 `uc ~T0 @X0 1 s ]
+[i _GreenIsOnFlag_u08
+-> -> 0 `i `uc
+]
+"62
+[; ;main.c: 62: static uint8_t RedIsOnFlag_u08 = 0;
+[v _RedIsOnFlag_u08 `uc ~T0 @X0 1 s ]
+[i _RedIsOnFlag_u08
+-> -> 0 `i `uc
+]
+"63
+[; ;main.c: 63: static uint8_t MinOnCycles_u08 = 5u +1;
 [v _MinOnCycles_u08 `uc ~T0 @X0 1 s ]
 [i _MinOnCycles_u08
 -> + -> 5 `ui -> -> 1 `i `ui `uc
 ]
-"23
-[; ;main.c: 23: static uint16_t SwTimer1_u16 = 0;
-[v _SwTimer1_u16 `us ~T0 @X0 1 s ]
-[i _SwTimer1_u16
+"64
+[; ;main.c: 64: static uint8_t WaitReedOnFlag_u8 = 0;
+[v _WaitReedOnFlag_u8 `uc ~T0 @X0 1 s ]
+[i _WaitReedOnFlag_u8
+-> -> 0 `i `uc
+]
+"65
+[; ;main.c: 65: static uint16_t SwTimer_u16 = 0;
+[v _SwTimer_u16 `us ~T0 @X0 1 s ]
+[i _SwTimer_u16
 -> -> 0 `i `us
 ]
-"24
-[; ;main.c: 24: static uint16_t SwTimer2_u16 = 0;
-[v _SwTimer2_u16 `us ~T0 @X0 1 s ]
-[i _SwTimer2_u16
--> -> 0 `i `us
+"66
+[; ;main.c: 66: static uint16_t OffTime_u16 = 500u;
+[v _OffTime_u16 `us ~T0 @X0 1 s ]
+[i _OffTime_u16
+-> -> 500 `ui `us
 ]
-"26
-[; ;main.c: 26: static uint8_t GreenOnTime_u08;
-[v _GreenOnTime_u08 `uc ~T0 @X0 1 s ]
-"27
-[; ;main.c: 27: static uint8_t RedOnTime_u08;
-[v _RedOnTime_u08 `uc ~T0 @X0 1 s ]
-"37
-[; ;main.c: 37: static BlinkFSM_t BlinkFSM = Blink_Init;
-[v _BlinkFSM `E5937 ~T0 @X0 1 s ]
+"77
+[; ;main.c: 77: static BlinkFSM_t BlinkFSM = Blink_Init;
+[v _BlinkFSM `E5936 ~T0 @X0 1 s ]
 [i _BlinkFSM
-. `E5937 0
+. `E5936 0
 ]
-"45
-[; ;main.c: 45: static PowerFSM_t PowerFSM = Power_Init;
-[v _PowerFSM `E5945 ~T0 @X0 1 s ]
+"85
+[; ;main.c: 85: static PowerFSM_t PowerFSM = Power_Low;
+[v _PowerFSM `E5944 ~T0 @X0 1 s ]
 [i _PowerFSM
-. `E5945 0
+. `E5944 0
 ]
-"48
-[; ;main.c: 48: void MyTmr0(void)
+"93
+[; ;main.c: 93: void MyTmr0(void)
 [v _MyTmr0 `(v ~T0 @X0 1 ef ]
-"49
-[; ;main.c: 49: {
+"94
+[; ;main.c: 94: {
 {
 [e :U _MyTmr0 ]
 [f ]
-"50
-[; ;main.c: 50:   TimerFlag_u08 = 1;
+"95
+[; ;main.c: 95:   TimerFlag_u08 = 1;
 [e = _TimerFlag_u08 -> -> 1 `i `uc ]
-"51
-[; ;main.c: 51: }
+"96
+[; ;main.c: 96: }
 [e :UE 788 ]
 }
-"54
-[; ;main.c: 54: void PerformSWTimer(void)
-[v _PerformSWTimer `(v ~T0 @X0 1 ef ]
-"55
-[; ;main.c: 55: {
+"103
+[; ;main.c: 103: void SetActiveLedsOn(void)
+[v _SetActiveLedsOn `(v ~T0 @X0 1 ef ]
+"104
+[; ;main.c: 104: {
 {
-[e :U _PerformSWTimer ]
+[e :U _SetActiveLedsOn ]
 [f ]
-"56
-[; ;main.c: 56:   if (0 != SwTimer1_u16) SwTimer1_u16--;
-[e $ ! != -> -> 0 `i `ui -> _SwTimer1_u16 `ui 790  ]
-[e -- _SwTimer1_u16 -> -> 1 `i `us ]
-[e :U 790 ]
-"57
-[; ;main.c: 57:   if (0 != SwTimer2_u16) SwTimer2_u16--;
-[e $ ! != -> -> 0 `i `ui -> _SwTimer2_u16 `ui 791  ]
-[e -- _SwTimer2_u16 -> -> 1 `i `us ]
-[e :U 791 ]
-"58
-[; ;main.c: 58: }
-[e :UE 789 ]
-}
-"62
-[; ;main.c: 62: static void HandlePowerOff()
-[v _HandlePowerOff `(v ~T0 @X0 1 sf ]
-"63
-[; ;main.c: 63: {
-{
-[e :U _HandlePowerOff ]
-[f ]
-"64
-[; ;main.c: 64:   if ((0 != PORTAbits.RA2) && (0 == MinOnCycles_u08))
-[e $ ! && != -> 0 `i -> . . _PORTAbits 0 2 `i == -> 0 `i -> _MinOnCycles_u08 `i 793  ]
-"65
-[; ;main.c: 65:   {
-{
-"67
-[; ;main.c: 67:     TMR0_Stop();
-[e ( _TMR0_Stop ..  ]
-"68
-[; ;main.c: 68:     GIE = 0;
-[e = _GIE -> -> 0 `i `b ]
-"69
-[; ;main.c: 69:     PORTA;
-[e _PORTA ]
-"70
-[; ;main.c: 70:     IOCAF = 0;
-[e = _IOCAF -> -> 0 `i `uc ]
-"71
-[; ;main.c: 71:     IOCAN2 = 1;
-[e = _IOCAN2 -> -> 1 `i `b ]
-"72
-[; ;main.c: 72:     IOCIE = 1;
-[e = _IOCIE -> -> 1 `i `b ]
-"73
-[; ;main.c: 73:     __asm("sleep");
-[; <" sleep ;# ">
-"74
-[; ;main.c: 74:     __nop();
-[e ( ___nop ..  ]
-"77
-[; ;main.c: 77:     IOCAN2 = 0;
-[e = _IOCAN2 -> -> 0 `i `b ]
-"78
-[; ;main.c: 78:     IOCIE = 0;
-[e = _IOCIE -> -> 0 `i `b ]
-"79
-[; ;main.c: 79:     IOCAF = 0;
-[e = _IOCAF -> -> 0 `i `uc ]
-"80
-[; ;main.c: 80:     GIE = 1;
-[e = _GIE -> -> 1 `i `b ]
-"81
-[; ;main.c: 81:     TMR0_Start();
-[e ( _TMR0_Start ..  ]
-"82
-[; ;main.c: 82:     MinOnCycles_u08 = 5u;
-[e = _MinOnCycles_u08 -> -> 5 `ui `uc ]
-"83
-[; ;main.c: 83:   }
-}
+"105
+[; ;main.c: 105:   if (GreenIsOnFlag_u08) do { LATAbits.LATA4 = 1; } while(0);
+[e $ ! != -> _GreenIsOnFlag_u08 `i -> 0 `i 790  ]
 [e :U 793 ]
-"84
-[; ;main.c: 84: }
-[e :UE 792 ]
-}
-"87
-[; ;main.c: 87: void PerformBlinkFSM(void)
-[v _PerformBlinkFSM `(v ~T0 @X0 1 ef ]
-"88
-[; ;main.c: 88: {
-{
-[e :U _PerformBlinkFSM ]
-[f ]
-"89
-[; ;main.c: 89:   switch (BlinkFSM)
-[e $U 796  ]
-"90
-[; ;main.c: 90:   {
-{
-"91
-[; ;main.c: 91:     case Blink_Init:
-[e :U 797 ]
-"92
-[; ;main.c: 92:       if ((0 != MinOnCycles_u08))
-[e $ ! != -> 0 `i -> _MinOnCycles_u08 `i 798  ]
-"93
-[; ;main.c: 93:         MinOnCycles_u08--;
-[e -- _MinOnCycles_u08 -> -> 1 `i `uc ]
-[e :U 798 ]
-"94
-[; ;main.c: 94:       {SwTimer1_u16=2000u;};
-{
-[e = _SwTimer1_u16 -> -> 2000 `ui `us ]
-}
-"95
-[; ;main.c: 95:       BlinkFSM = Blink_WaitOffTime;
-[e = _BlinkFSM . `E5937 1 ]
-"96
-[; ;main.c: 96:       break;
-[e $U 795  ]
-"98
-[; ;main.c: 98:     case Blink_WaitOffTime:
-[e :U 799 ]
-"99
-[; ;main.c: 99:       HandlePowerOff();
-[e ( _HandlePowerOff ..  ]
-"100
-[; ;main.c: 100:       if (0==SwTimer1_u16)
-[e $ ! == -> -> 0 `i `ui -> _SwTimer1_u16 `ui 800  ]
-"101
-[; ;main.c: 101:       {
-{
-"102
-[; ;main.c: 102:         do { LATAbits.LATA4 = 1; } while(0);
-[e :U 803 ]
 {
 [e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 802 ]
-"103
-[; ;main.c: 103:         {SwTimer1_u16=GreenOnTime_u08;};
-{
-[e = _SwTimer1_u16 -> _GreenOnTime_u08 `us ]
-}
-"104
-[; ;main.c: 104:         BlinkFSM = Blink_GreenIsOn;
-[e = _BlinkFSM . `E5937 2 ]
-"105
-[; ;main.c: 105:       }
-}
-[e :U 800 ]
+[e :U 792 ]
+[e :U 790 ]
 "106
-[; ;main.c: 106:       break;
-[e $U 795  ]
-"108
-[; ;main.c: 108:     case Blink_GreenIsOn:
-[e :U 804 ]
-"109
-[; ;main.c: 109:       if (0==SwTimer1_u16)
-[e $ ! == -> -> 0 `i `ui -> _SwTimer1_u16 `ui 805  ]
-"110
-[; ;main.c: 110:       {
-{
-"111
-[; ;main.c: 111:         do { LATAbits.LATA4 = 0; } while(0);
-[e :U 808 ]
-{
-[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
-}
-[e :U 807 ]
-"112
-[; ;main.c: 112:         {SwTimer1_u16=300u;};
-{
-[e = _SwTimer1_u16 -> -> 300 `ui `us ]
-}
-"113
-[; ;main.c: 113:         BlinkFSM = Blink_WaitBetweenGreenAndRed;
-[e = _BlinkFSM . `E5937 3 ]
-"114
-[; ;main.c: 114:       }
-}
-[e :U 805 ]
-"115
-[; ;main.c: 115:       break;
-[e $U 795  ]
-"117
-[; ;main.c: 117:     case Blink_WaitBetweenGreenAndRed:
-[e :U 809 ]
-"118
-[; ;main.c: 118:       if (0==SwTimer1_u16)
-[e $ ! == -> -> 0 `i `ui -> _SwTimer1_u16 `ui 810  ]
-"119
-[; ;main.c: 119:       {
-{
-"120
-[; ;main.c: 120:         do { LATAbits.LATA5 = 1; } while(0);
-[e :U 813 ]
+[; ;main.c: 106:   if (RedIsOnFlag_u08) do { LATAbits.LATA5 = 1; } while(0);
+[e $ ! != -> _RedIsOnFlag_u08 `i -> 0 `i 794  ]
+[e :U 797 ]
 {
 [e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 812 ]
-"121
-[; ;main.c: 121:         {SwTimer1_u16=RedOnTime_u08;};
-{
-[e = _SwTimer1_u16 -> _RedOnTime_u08 `us ]
+[e :U 796 ]
+[e :U 794 ]
+"107
+[; ;main.c: 107: }
+[e :UE 789 ]
 }
-"122
-[; ;main.c: 122:         BlinkFSM = Blink_RedIsOn;
-[e = _BlinkFSM . `E5937 4 ]
-"123
-[; ;main.c: 123:       }
-}
-[e :U 810 ]
-"124
-[; ;main.c: 124:       break;
-[e $U 795  ]
-"126
-[; ;main.c: 126:     case Blink_RedIsOn:
-[e :U 814 ]
-"127
-[; ;main.c: 127:       if (0==SwTimer1_u16)
-[e $ ! == -> -> 0 `i `ui -> _SwTimer1_u16 `ui 815  ]
-"128
-[; ;main.c: 128:       {
+"109
+[; ;main.c: 109: void SetLedsOff(void)
+[v _SetLedsOff `(v ~T0 @X0 1 ef ]
+"110
+[; ;main.c: 110: {
 {
-"129
-[; ;main.c: 129:         do { LATAbits.LATA5 = 0; } while(0);
-[e :U 818 ]
+[e :U _SetLedsOff ]
+[f ]
+"111
+[; ;main.c: 111:   do { LATAbits.LATA4 = 0; } while(0);
+[e :U 801 ]
+{
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
+}
+[e :U 800 ]
+"112
+[; ;main.c: 112:   do { LATAbits.LATA5 = 0; } while(0);
+[e :U 804 ]
 {
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 817 ]
-"130
-[; ;main.c: 130:         BlinkFSM = Blink_Init;
-[e = _BlinkFSM . `E5937 0 ]
-"131
-[; ;main.c: 131:       }
+[e :U 803 ]
+"113
+[; ;main.c: 113: }
+[e :UE 798 ]
 }
-[e :U 815 ]
+"115
+[; ;main.c: 115: void Perform_LedPWM(void)
+[v _Perform_LedPWM `(v ~T0 @X0 1 ef ]
+"116
+[; ;main.c: 116: {
+{
+[e :U _Perform_LedPWM ]
+[f ]
+"117
+[; ;main.c: 117:   static uint8_t PWMCnt = 0;
+[v F5954 `uc ~T0 @X0 1 s PWMCnt ]
+[i F5954
+-> -> 0 `i `uc
+]
+"120
+[; ;main.c: 120:   if (!GreenIsOnFlag_u08) do { LATAbits.LATA4 = 0; } while(0);
+[e $ ! ! != -> _GreenIsOnFlag_u08 `i -> 0 `i 806  ]
+[e :U 809 ]
+{
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
+}
+[e :U 808 ]
+[e :U 806 ]
+"121
+[; ;main.c: 121:   if (!RedIsOnFlag_u08) do { LATAbits.LATA5 = 0; } while(0);
+[e $ ! ! != -> _RedIsOnFlag_u08 `i -> 0 `i 810  ]
+[e :U 813 ]
+{
+[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+}
+[e :U 812 ]
+[e :U 810 ]
+"122
+[; ;main.c: 122:   switch (PowerFSM)
+[e $U 815  ]
+"123
+[; ;main.c: 123:   {
+{
+"124
+[; ;main.c: 124:     case Power_Low:
+[e :U 816 ]
+"125
+[; ;main.c: 125:       if (0==PWMCnt) SetActiveLedsOn();
+[e $ ! == -> 0 `i -> F5954 `i 817  ]
+[e ( _SetActiveLedsOn ..  ]
+[e $U 818  ]
+"126
+[; ;main.c: 126:       else SetLedsOff();
+[e :U 817 ]
+[e ( _SetLedsOff ..  ]
+[e :U 818 ]
+"127
+[; ;main.c: 127:       break;
+[e $U 814  ]
+"129
+[; ;main.c: 129:     case Power_Medium:
+[e :U 819 ]
+"130
+[; ;main.c: 130:       if (2>PWMCnt) SetActiveLedsOn();
+[e $ ! > -> 2 `i -> F5954 `i 820  ]
+[e ( _SetActiveLedsOn ..  ]
+[e $U 821  ]
+"131
+[; ;main.c: 131:       else SetLedsOff();
+[e :U 820 ]
+[e ( _SetLedsOff ..  ]
+[e :U 821 ]
 "132
 [; ;main.c: 132:       break;
-[e $U 795  ]
+[e $U 814  ]
 "134
-[; ;main.c: 134:     default:
-[e :U 819 ]
+[; ;main.c: 134:     case Power_High:
+[e :U 822 ]
 "135
-[; ;main.c: 135:       BlinkFSM = Blink_Init;
-[e = _BlinkFSM . `E5937 0 ]
+[; ;main.c: 135:       SetActiveLedsOn();
+[e ( _SetActiveLedsOn ..  ]
 "136
-[; ;main.c: 136:   }
-}
-[e $U 795  ]
-[e :U 796 ]
-[e [\ -> _BlinkFSM `ui , $ -> . `E5937 0 `ui 797
- , $ -> . `E5937 1 `ui 799
- , $ -> . `E5937 2 `ui 804
- , $ -> . `E5937 3 `ui 809
- , $ -> . `E5937 4 `ui 814
- 819 ]
-[e :U 795 ]
+[; ;main.c: 136:       break;
+[e $U 814  ]
 "137
-[; ;main.c: 137: }
-[e :UE 794 ]
+[; ;main.c: 137:   }
 }
-"140
-[; ;main.c: 140: void PerformPowerFSM(void)
-[v _PerformPowerFSM `(v ~T0 @X0 1 ef ]
-"141
-[; ;main.c: 141: {
-{
-[e :U _PerformPowerFSM ]
-[f ]
-"142
-[; ;main.c: 142:   switch (PowerFSM)
-[e $U 822  ]
-"143
-[; ;main.c: 143:   {
-{
-"144
-[; ;main.c: 144:     case Power_Init:
+[e $U 814  ]
+[e :U 815 ]
+[e [\ -> _PowerFSM `ui , $ -> . `E5944 0 `ui 816
+ , $ -> . `E5944 1 `ui 819
+ , $ -> . `E5944 2 `ui 822
+ 814 ]
+[e :U 814 ]
+"138
+[; ;main.c: 138:   PWMCnt++;
+[e ++ F5954 -> -> 1 `i `uc ]
+"139
+[; ;main.c: 139:   if (3 == PWMCnt) PWMCnt = 0;
+[e $ ! == -> 3 `i -> F5954 `i 823  ]
+[e = F5954 -> -> 0 `i `uc ]
 [e :U 823 ]
-"145
-[; ;main.c: 145:       PowerFSM = Power_Low;
-[e = _PowerFSM . `E5945 1 ]
-"146
-[; ;main.c: 146:       break;
-[e $U 821  ]
+"140
+[; ;main.c: 140: }
+[e :UE 805 ]
+}
+"147
+[; ;main.c: 147: static void HandlePowerOff()
+[v _HandlePowerOff `(v ~T0 @X0 1 sf ]
 "148
-[; ;main.c: 148:     case Power_Low:
-[e :U 824 ]
-"149
-[; ;main.c: 149:     if ((0 != MinOnCycles_u08) && (0 != PORTAbits.RA2))
-[e $ ! && != -> 0 `i -> _MinOnCycles_u08 `i != -> 0 `i -> . . _PORTAbits 0 2 `i 825  ]
-"150
-[; ;main.c: 150:       {
+[; ;main.c: 148: {
 {
-"151
-[; ;main.c: 151:         MinOnCycles_u08 = 5u;
-[e = _MinOnCycles_u08 -> -> 5 `ui `uc ]
+[e :U _HandlePowerOff ]
+[f ]
+"149
+[; ;main.c: 149:   if ((0 != PORTAbits.RA2) && (0 == MinOnCycles_u08))
+[e $ ! && != -> 0 `i -> . . _PORTAbits 0 2 `i == -> 0 `i -> _MinOnCycles_u08 `i 825  ]
+"150
+[; ;main.c: 150:   {
+{
 "152
-[; ;main.c: 152:         PowerFSM = Power_High;
-[e = _PowerFSM . `E5945 2 ]
+[; ;main.c: 152:     TMR0_Stop();
+[e ( _TMR0_Stop ..  ]
 "153
-[; ;main.c: 153:       }
+[; ;main.c: 153:     GIE = 0;
+[e = _GIE -> -> 0 `i `b ]
+"154
+[; ;main.c: 154:     PORTA;
+[e _PORTA ]
+"155
+[; ;main.c: 155:     IOCAF = 0;
+[e = _IOCAF -> -> 0 `i `uc ]
+"156
+[; ;main.c: 156:     IOCAN2 = 1;
+[e = _IOCAN2 -> -> 1 `i `b ]
+"157
+[; ;main.c: 157:     IOCIE = 1;
+[e = _IOCIE -> -> 1 `i `b ]
+"158
+[; ;main.c: 158:     __asm("sleep");
+[; <" sleep ;# ">
+"159
+[; ;main.c: 159:     __nop();
+[e ( ___nop ..  ]
+"162
+[; ;main.c: 162:     IOCAN2 = 0;
+[e = _IOCAN2 -> -> 0 `i `b ]
+"163
+[; ;main.c: 163:     IOCIE = 0;
+[e = _IOCIE -> -> 0 `i `b ]
+"164
+[; ;main.c: 164:     IOCAF = 0;
+[e = _IOCAF -> -> 0 `i `uc ]
+"165
+[; ;main.c: 165:     GIE = 1;
+[e = _GIE -> -> 1 `i `b ]
+"166
+[; ;main.c: 166:     TMR0_Start();
+[e ( _TMR0_Start ..  ]
+"169
+[; ;main.c: 169:     MinOnCycles_u08 = 5u;
+[e = _MinOnCycles_u08 -> -> 5 `ui `uc ]
+"170
+[; ;main.c: 170:     WaitReedOnFlag_u8 = 0;
+[e = _WaitReedOnFlag_u8 -> -> 0 `i `uc ]
+"171
+[; ;main.c: 171:     OffTime_u16 = 500u;
+[e = _OffTime_u16 -> -> 500 `ui `us ]
+"172
+[; ;main.c: 172:     PowerFSM = Power_Low;
+[e = _PowerFSM . `E5944 0 ]
+"173
+[; ;main.c: 173:   }
 }
 [e :U 825 ]
-"154
-[; ;main.c: 154:       break;
-[e $U 821  ]
-"156
-[; ;main.c: 156:     case Power_High:
-[e :U 826 ]
-"158
-[; ;main.c: 158:       PowerFSM = Power_High;
-[e = _PowerFSM . `E5945 2 ]
-"159
-[; ;main.c: 159:       break;
-[e $U 821  ]
-"161
-[; ;main.c: 161:     default:
-[e :U 827 ]
-"162
-[; ;main.c: 162:       PowerFSM = Power_Init;
-[e = _PowerFSM . `E5945 0 ]
-"163
-[; ;main.c: 163:   }
+"174
+[; ;main.c: 174: }
+[e :UE 824 ]
 }
-[e $U 821  ]
-[e :U 822 ]
-[e [\ -> _PowerFSM `ui , $ -> . `E5945 0 `ui 823
- , $ -> . `E5945 1 `ui 824
- , $ -> . `E5945 2 `ui 826
- 827 ]
-[e :U 821 ]
-"164
-[; ;main.c: 164:   GreenOnTime_u08 = GreenTimes[PowerFSM];
-[e = _GreenOnTime_u08 *U + &U _GreenTimes * -> _PowerFSM `ux -> -> # *U &U _GreenTimes `ui `ux ]
-"165
-[; ;main.c: 165:   RedOnTime_u08 = RedTimes[PowerFSM];
-[e = _RedOnTime_u08 *U + &U _RedTimes * -> _PowerFSM `ux -> -> # *U &U _RedTimes `ui `ux ]
-"166
-[; ;main.c: 166: }
-[e :UE 820 ]
+"180
+[; ;main.c: 180: void Perform_BlinkFSM(void)
+[v _Perform_BlinkFSM `(v ~T0 @X0 1 ef ]
+"181
+[; ;main.c: 181: {
+{
+[e :U _Perform_BlinkFSM ]
+[f ]
+"182
+[; ;main.c: 182:   switch (BlinkFSM)
+[e $U 828  ]
+"183
+[; ;main.c: 183:   {
+{
+"184
+[; ;main.c: 184:     case Blink_Init:
+[e :U 829 ]
+"185
+[; ;main.c: 185:       if ((0 != MinOnCycles_u08))
+[e $ ! != -> 0 `i -> _MinOnCycles_u08 `i 830  ]
+"186
+[; ;main.c: 186:         MinOnCycles_u08--;
+[e -- _MinOnCycles_u08 -> -> 1 `i `uc ]
+[e :U 830 ]
+"187
+[; ;main.c: 187:       {SwTimer_u16=OffTime_u16;};
+{
+[e = _SwTimer_u16 _OffTime_u16 ]
+}
+"188
+[; ;main.c: 188:       BlinkFSM = Blink_WaitOffTime;
+[e = _BlinkFSM . `E5936 1 ]
+"189
+[; ;main.c: 189:       break;
+[e $U 827  ]
+"191
+[; ;main.c: 191:     case Blink_WaitOffTime:
+[e :U 831 ]
+"192
+[; ;main.c: 192:       HandlePowerOff();
+[e ( _HandlePowerOff ..  ]
+"193
+[; ;main.c: 193:       if (0==SwTimer_u16)
+[e $ ! == -> -> 0 `i `ui -> _SwTimer_u16 `ui 832  ]
+"194
+[; ;main.c: 194:       {
+{
+"195
+[; ;main.c: 195:         GreenIsOnFlag_u08 = 1;
+[e = _GreenIsOnFlag_u08 -> -> 1 `i `uc ]
+"196
+[; ;main.c: 196:         {SwTimer_u16=50u;};
+{
+[e = _SwTimer_u16 -> -> 50 `ui `us ]
+}
+"197
+[; ;main.c: 197:         BlinkFSM = Blink_GreenIsOn;
+[e = _BlinkFSM . `E5936 2 ]
+"198
+[; ;main.c: 198:       }
+}
+[e :U 832 ]
+"199
+[; ;main.c: 199:       break;
+[e $U 827  ]
+"201
+[; ;main.c: 201:     case Blink_GreenIsOn:
+[e :U 833 ]
+"202
+[; ;main.c: 202:       if (0==SwTimer_u16)
+[e $ ! == -> -> 0 `i `ui -> _SwTimer_u16 `ui 834  ]
+"203
+[; ;main.c: 203:       {
+{
+"204
+[; ;main.c: 204:         GreenIsOnFlag_u08 = 0;
+[e = _GreenIsOnFlag_u08 -> -> 0 `i `uc ]
+"205
+[; ;main.c: 205:         {SwTimer_u16=300u;};
+{
+[e = _SwTimer_u16 -> -> 300 `ui `us ]
+}
+"206
+[; ;main.c: 206:         BlinkFSM = Blink_WaitBetweenGreenAndRed;
+[e = _BlinkFSM . `E5936 3 ]
+"207
+[; ;main.c: 207:       }
+}
+[e :U 834 ]
+"208
+[; ;main.c: 208:       break;
+[e $U 827  ]
+"210
+[; ;main.c: 210:     case Blink_WaitBetweenGreenAndRed:
+[e :U 835 ]
+"211
+[; ;main.c: 211:       if (0==SwTimer_u16)
+[e $ ! == -> -> 0 `i `ui -> _SwTimer_u16 `ui 836  ]
+"212
+[; ;main.c: 212:       {
+{
+"213
+[; ;main.c: 213:         RedIsOnFlag_u08 = 1;
+[e = _RedIsOnFlag_u08 -> -> 1 `i `uc ]
+"214
+[; ;main.c: 214:         {SwTimer_u16=50u;};
+{
+[e = _SwTimer_u16 -> -> 50 `ui `us ]
+}
+"215
+[; ;main.c: 215:         BlinkFSM = Blink_RedIsOn;
+[e = _BlinkFSM . `E5936 4 ]
+"216
+[; ;main.c: 216:       }
+}
+[e :U 836 ]
+"217
+[; ;main.c: 217:       break;
+[e $U 827  ]
+"219
+[; ;main.c: 219:     case Blink_RedIsOn:
+[e :U 837 ]
+"220
+[; ;main.c: 220:       if (0==SwTimer_u16)
+[e $ ! == -> -> 0 `i `ui -> _SwTimer_u16 `ui 838  ]
+"221
+[; ;main.c: 221:       {
+{
+"222
+[; ;main.c: 222:         RedIsOnFlag_u08 = 0;
+[e = _RedIsOnFlag_u08 -> -> 0 `i `uc ]
+"223
+[; ;main.c: 223:         BlinkFSM = Blink_Init;
+[e = _BlinkFSM . `E5936 0 ]
+"224
+[; ;main.c: 224:       }
+}
+[e :U 838 ]
+"225
+[; ;main.c: 225:       break;
+[e $U 827  ]
+"227
+[; ;main.c: 227:     default:
+[e :U 839 ]
+"228
+[; ;main.c: 228:       BlinkFSM = Blink_Init;
+[e = _BlinkFSM . `E5936 0 ]
+"229
+[; ;main.c: 229:   }
+}
+[e $U 827  ]
+[e :U 828 ]
+[e [\ -> _BlinkFSM `ui , $ -> . `E5936 0 `ui 829
+ , $ -> . `E5936 1 `ui 831
+ , $ -> . `E5936 2 `ui 833
+ , $ -> . `E5936 3 `ui 835
+ , $ -> . `E5936 4 `ui 837
+ 839 ]
+[e :U 827 ]
+"230
+[; ;main.c: 230:   OffTime_u16 = 2000u;
+[e = _OffTime_u16 -> -> 2000 `ui `us ]
+"231
+[; ;main.c: 231: }
+[e :UE 826 ]
+}
+"236
+[; ;main.c: 236: void Perform_PowerFSM(void)
+[v _Perform_PowerFSM `(v ~T0 @X0 1 ef ]
+"237
+[; ;main.c: 237: {
+{
+[e :U _Perform_PowerFSM ]
+[f ]
+"238
+[; ;main.c: 238:   switch (PowerFSM)
+[e $U 842  ]
+"239
+[; ;main.c: 239:   {
+{
+"240
+[; ;main.c: 240:     case Power_Low:
+[e :U 843 ]
+"241
+[; ;main.c: 241:     if ((0 != MinOnCycles_u08) && (0 != PORTAbits.RA2))
+[e $ ! && != -> 0 `i -> _MinOnCycles_u08 `i != -> 0 `i -> . . _PORTAbits 0 2 `i 844  ]
+"242
+[; ;main.c: 242:       {
+{
+"243
+[; ;main.c: 243:         MinOnCycles_u08 = 5u;
+[e = _MinOnCycles_u08 -> -> 5 `ui `uc ]
+"244
+[; ;main.c: 244:         WaitReedOnFlag_u8 = 1;
+[e = _WaitReedOnFlag_u8 -> -> 1 `i `uc ]
+"245
+[; ;main.c: 245:         PowerFSM = Power_Medium;
+[e = _PowerFSM . `E5944 1 ]
+"246
+[; ;main.c: 246:       }
+}
+[e :U 844 ]
+"247
+[; ;main.c: 247:       break;
+[e $U 841  ]
+"249
+[; ;main.c: 249:     case Power_Medium:
+[e :U 845 ]
+"250
+[; ;main.c: 250:       if (0!= WaitReedOnFlag_u8)
+[e $ ! != -> 0 `i -> _WaitReedOnFlag_u8 `i 846  ]
+"251
+[; ;main.c: 251:       {
+{
+"252
+[; ;main.c: 252:         if ((0 == PORTAbits.RA2))
+[e $ ! == -> 0 `i -> . . _PORTAbits 0 2 `i 847  ]
+"253
+[; ;main.c: 253:           WaitReedOnFlag_u8 = 0;
+[e = _WaitReedOnFlag_u8 -> -> 0 `i `uc ]
+[e :U 847 ]
+"254
+[; ;main.c: 254:       }
+}
+[e $U 848  ]
+"255
+[; ;main.c: 255:       else
+[e :U 846 ]
+"256
+[; ;main.c: 256:       {
+{
+"257
+[; ;main.c: 257:         if ((0 != MinOnCycles_u08) && (0 != PORTAbits.RA2))
+[e $ ! && != -> 0 `i -> _MinOnCycles_u08 `i != -> 0 `i -> . . _PORTAbits 0 2 `i 849  ]
+"258
+[; ;main.c: 258:           PowerFSM = Power_High;
+[e = _PowerFSM . `E5944 2 ]
+[e :U 849 ]
+"259
+[; ;main.c: 259:       }
+}
+[e :U 848 ]
+"260
+[; ;main.c: 260:       break;
+[e $U 841  ]
+"262
+[; ;main.c: 262:     case Power_High:
+[e :U 850 ]
+"264
+[; ;main.c: 264:       PowerFSM = Power_High;
+[e = _PowerFSM . `E5944 2 ]
+"265
+[; ;main.c: 265:       break;
+[e $U 841  ]
+"267
+[; ;main.c: 267:     default:
+[e :U 851 ]
+"268
+[; ;main.c: 268:       PowerFSM = Power_Low;
+[e = _PowerFSM . `E5944 0 ]
+"269
+[; ;main.c: 269:   }
+}
+[e $U 841  ]
+[e :U 842 ]
+[e [\ -> _PowerFSM `ui , $ -> . `E5944 0 `ui 843
+ , $ -> . `E5944 1 `ui 845
+ , $ -> . `E5944 2 `ui 850
+ 851 ]
+[e :U 841 ]
+"270
+[; ;main.c: 270: }
+[e :UE 840 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"169
-[; ;main.c: 169: int main(void)
+"275
+[; ;main.c: 275: int main(void)
 [v _main `(i ~T0 @X0 1 ef ]
-"170
-[; ;main.c: 170: {
+"276
+[; ;main.c: 276: {
 {
 [e :U _main ]
 [f ]
-"171
-[; ;main.c: 171:    SYSTEM_Initialize();
+"277
+[; ;main.c: 277:   SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"172
-[; ;main.c: 172:     TMR0_OverflowCallbackRegister(MyTmr0);
+"278
+[; ;main.c: 278:   TMR0_OverflowCallbackRegister(MyTmr0);
 [e ( _TMR0_OverflowCallbackRegister (1 &U _MyTmr0 ]
-"173
-[; ;main.c: 173:     (INTCONbits.GIE = 1);
+"279
+[; ;main.c: 279:   (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"174
-[; ;main.c: 174:     (INTCONbits.PEIE = 1);
+"280
+[; ;main.c: 280:   (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-"175
-[; ;main.c: 175:     TMR0_Start();
+"281
+[; ;main.c: 281:   TMR0_Start();
 [e ( _TMR0_Start ..  ]
-"177
-[; ;main.c: 177:     while(1)
-[e :U 830 ]
-"178
-[; ;main.c: 178:     {
+"282
+[; ;main.c: 282:   while(1)
+[e :U 854 ]
+"283
+[; ;main.c: 283:   {
 {
-"179
-[; ;main.c: 179:       if (0 != TimerFlag_u08)
-[e $ ! != -> 0 `i -> _TimerFlag_u08 `i 832  ]
-"180
-[; ;main.c: 180:       {
+"284
+[; ;main.c: 284:     if (0 != TimerFlag_u08)
+[e $ ! != -> 0 `i -> _TimerFlag_u08 `i 856  ]
+"285
+[; ;main.c: 285:     {
 {
-"181
-[; ;main.c: 181:         TimerFlag_u08 = 0;
+"286
+[; ;main.c: 286:       TimerFlag_u08 = 0;
 [e = _TimerFlag_u08 -> -> 0 `i `uc ]
-"182
-[; ;main.c: 182:         PerformSWTimer();
-[e ( _PerformSWTimer ..  ]
-"183
-[; ;main.c: 183:         PerformPowerFSM();
-[e ( _PerformPowerFSM ..  ]
-"184
-[; ;main.c: 184:         PerformBlinkFSM();
-[e ( _PerformBlinkFSM ..  ]
-"185
-[; ;main.c: 185:       }
+"287
+[; ;main.c: 287:       if (0!=SwTimer_u16) SwTimer_u16--;
+[e $ ! != -> -> 0 `i `ui -> _SwTimer_u16 `ui 857  ]
+[e -- _SwTimer_u16 -> -> 1 `i `us ]
+[e :U 857 ]
+"289
+[; ;main.c: 289:       Perform_LedPWM();
+[e ( _Perform_LedPWM ..  ]
+"290
+[; ;main.c: 290:       Perform_PowerFSM();
+[e ( _Perform_PowerFSM ..  ]
+"291
+[; ;main.c: 291:       Perform_BlinkFSM();
+[e ( _Perform_BlinkFSM ..  ]
+"292
+[; ;main.c: 292:     }
 }
-[e :U 832 ]
-"186
-[; ;main.c: 186:     }
+[e :U 856 ]
+"293
+[; ;main.c: 293:   }
 }
-[e :U 829 ]
-[e $U 830  ]
-[e :U 831 ]
-"187
-[; ;main.c: 187: }
-[e :UE 828 ]
+[e :U 853 ]
+[e $U 854  ]
+[e :U 855 ]
+"294
+[; ;main.c: 294: }
+[e :UE 852 ]
 }
