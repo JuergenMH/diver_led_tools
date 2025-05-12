@@ -10129,7 +10129,6 @@ static uint8_t WaitReedOnFlag_u8 = 0;
 static uint16_t SwTimer_u16 = 0;
 static uint16_t OffTime_u16 = 500u;
 
-
 typedef enum
 {
   Blink_Init,

@@ -64,7 +64,6 @@ static uint8_t  MinOnCycles_u08   = MinOnCycles+1;  // +1 because of -- first
 static uint8_t  WaitReedOnFlag_u8 = 0;              // Edge power mid => high
 static uint16_t SwTimer_u16       = 0;              // only one SW timer var
 static uint16_t OffTime_u16       = FirstOffTime;   // pause time is variable  
-  
 
 typedef enum 
 {
