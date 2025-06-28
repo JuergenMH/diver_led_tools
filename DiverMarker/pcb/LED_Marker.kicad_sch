@@ -2611,8 +2611,8 @@
 		)
 	)
 	(rectangle
-		(start 87.63 96.52)
-		(end 215.265 161.925)
+		(start 86.36 100.33)
+		(end 213.995 165.735)
 		(stroke
 			(width 0)
 			(type dash)
@@ -2655,6 +2655,16 @@
 			)
 		)
 		(uuid "278523d7-72ff-4048-9a31-15a126fbe673")
+	)
+	(text "LED-Strom ca. 100mA"
+		(exclude_from_sim no)
+		(at 165.608 38.608 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "5b44b1f7-475d-4fc3-8de6-2b456e46ac07")
 	)
 	(text "LED Schaltsturfe\n"
 		(exclude_from_sim no)
@@ -3745,6 +3755,182 @@
 			(type default)
 		)
 		(uuid "ffff7e62-4c35-444a-8dd6-c7e0e9c5853d")
+	)
+	(table
+		(column_count 3)
+		(border
+			(external yes)
+			(header yes)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+		)
+		(separators
+			(rows yes)
+			(cols yes)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+		)
+		(column_widths 19.05 19.05 19.05)
+		(row_heights 2.54 2.54 2.54)
+		(cells
+			(table_cell ""
+				(exclude_from_sim no)
+				(at 226.06 17.78 0)
+				(size 19.05 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "5c718ebc-772f-4121-8534-8c3681092e0c")
+			)
+			(table_cell "LED rot"
+				(exclude_from_sim no)
+				(at 245.11 17.78 0)
+				(size 19.05 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "b36e4d47-decc-47db-9d66-15a06c1a747d")
+			)
+			(table_cell "LED grün"
+				(exclude_from_sim no)
+				(at 264.16 17.78 0)
+				(size 19.05 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "96fd29d0-e5b1-441b-b529-2be2571cc191")
+			)
+			(table_cell "Brennspannung"
+				(exclude_from_sim no)
+				(at 226.06 20.32 0)
+				(size 19.05 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "19e9a634-8ad9-42e9-8024-7d44ff6edc18")
+			)
+			(table_cell "2,3V"
+				(exclude_from_sim no)
+				(at 245.11 20.32 0)
+				(size 19.05 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "60cb694f-c8b2-495c-8261-c12375840ebd")
+			)
+			(table_cell "3,2V"
+				(exclude_from_sim no)
+				(at 264.16 20.32 0)
+				(size 19.05 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "00984780-70b8-4d92-b33d-f2bdd2b312a4")
+			)
+			(table_cell "Strom @1Ohm"
+				(exclude_from_sim no)
+				(at 226.06 22.86 0)
+				(size 19.05 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "5496f5c2-c032-41b9-8dd9-123d21cca99f")
+			)
+			(table_cell "122mA"
+				(exclude_from_sim no)
+				(at 245.11 22.86 0)
+				(size 19.05 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "950280a8-5b62-4fc9-91a6-b4d7dafa7de3")
+			)
+			(table_cell "53mA"
+				(exclude_from_sim no)
+				(at 264.16 22.86 0)
+				(size 19.05 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "feb8ef32-7f8a-4fa7-aeef-e19f12be2a8d")
+			)
+		)
 	)
 	(label "A_D103"
 		(at 139.7 40.64 180)
