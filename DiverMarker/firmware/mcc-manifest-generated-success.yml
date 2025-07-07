@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: FW_DiverMarker
-creation_date: 2025-05-10T21:23:25.323+02:00[Europe/Berlin]
+creation_date: 2025-07-01T12:23:57.689+02:00[Europe/Berlin]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.20
@@ -15,7 +15,7 @@ is_mcc_offline: false
 is_using_prerelease_versions: false
 mcc_content_registries: https://registry.npmjs.org/
 device_library: {library_class: com.microchip.mcc.melody.Library, name: Melody, version: 2.8.1}
-packs: {name: PIC16F1xxxx_DFP, version: 1.27.418}
+packs: {name: PIC16F1xxxx_DFP, version: 1.26.410}
 modules:
 - {name: '@mchp-mcc/main-manager', type: MELODY, version: 3.1.2}
 - {name: '@mchp-mcc/pic-8bit', type: MELODY, version: 5.29.0}

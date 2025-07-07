@@ -47,7 +47,7 @@ void CLOCK_Initialize(void)
         | (0 << _OSCEN_MFOEN_POSN)   // MFOEN disabled
         | (0 << _OSCEN_LFOEN_POSN)   // LFOEN disabled
         | (0 << _OSCEN_ADOEN_POSN);  // ADOEN disabled
-    OSCFRQ = (6 << _OSCFRQ_HFFRQ_POSN);  // HFFRQ 32_MHz
+    OSCFRQ = (0 << _OSCFRQ_HFFRQ_POSN);  // HFFRQ 1_MHz
     OSCTUNE = (0 << _OSCTUNE_HFTUN_POSN);  // HFTUN 0x20
 
 }

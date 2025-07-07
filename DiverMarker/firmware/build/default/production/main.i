@@ -10344,12 +10344,14 @@ int main(void)
   {
     if (0 != TimerFlag_u08)
     {
+      do { LATAbits.LATA1 = 1; } while(0);
       TimerFlag_u08 = 0;
       if (0!=SwTimer_u16) SwTimer_u16--;
 
       Perform_LedPWM();
       Perform_PowerFSM();
       Perform_BlinkFSM();
+      do { LATAbits.LATA1 = 0; } while(0);
     }
   }
 }

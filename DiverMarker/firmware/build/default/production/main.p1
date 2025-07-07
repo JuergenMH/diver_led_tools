@@ -1486,33 +1486,47 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 282:     {
 {
 "283
-[; ;main.c: 283:       TimerFlag_u08 = 0;
-[e = _TimerFlag_u08 -> -> 0 `i `uc ]
+[; ;main.c: 283:       do { LATAbits.LATA1 = 1; } while(0);
+[e :U 859 ]
+{
+[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
+}
+[e :U 858 ]
 "284
-[; ;main.c: 284:       if (0!=SwTimer_u16) SwTimer_u16--;
-[e $ ! != -> -> 0 `i `ui -> _SwTimer_u16 `ui 857  ]
+[; ;main.c: 284:       TimerFlag_u08 = 0;
+[e = _TimerFlag_u08 -> -> 0 `i `uc ]
+"285
+[; ;main.c: 285:       if (0!=SwTimer_u16) SwTimer_u16--;
+[e $ ! != -> -> 0 `i `ui -> _SwTimer_u16 `ui 860  ]
 [e -- _SwTimer_u16 -> -> 1 `i `us ]
-[e :U 857 ]
-"286
-[; ;main.c: 286:       Perform_LedPWM();
-[e ( _Perform_LedPWM ..  ]
+[e :U 860 ]
 "287
-[; ;main.c: 287:       Perform_PowerFSM();
-[e ( _Perform_PowerFSM ..  ]
+[; ;main.c: 287:       Perform_LedPWM();
+[e ( _Perform_LedPWM ..  ]
 "288
-[; ;main.c: 288:       Perform_BlinkFSM();
-[e ( _Perform_BlinkFSM ..  ]
+[; ;main.c: 288:       Perform_PowerFSM();
+[e ( _Perform_PowerFSM ..  ]
 "289
-[; ;main.c: 289:     }
+[; ;main.c: 289:       Perform_BlinkFSM();
+[e ( _Perform_BlinkFSM ..  ]
+"290
+[; ;main.c: 290:       do { LATAbits.LATA1 = 0; } while(0);
+[e :U 863 ]
+{
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+}
+[e :U 862 ]
+"291
+[; ;main.c: 291:     }
 }
 [e :U 856 ]
-"290
-[; ;main.c: 290:   }
+"292
+[; ;main.c: 292:   }
 }
 [e :U 853 ]
 [e $U 854  ]
 [e :U 855 ]
-"291
-[; ;main.c: 291: }
+"293
+[; ;main.c: 293: }
 [e :UE 852 ]
 }

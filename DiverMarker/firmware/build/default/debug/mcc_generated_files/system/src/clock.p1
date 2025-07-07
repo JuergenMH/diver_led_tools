@@ -836,8 +836,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/clock.c: 45:     OSCEN = (0 << 0x7)
 [e = _OSCEN -> | | | | << -> 0 `i -> 7 `i << -> 0 `i -> 6 `i << -> 0 `i -> 5 `i << -> 0 `i -> 4 `i << -> 0 `i -> 2 `i `uc ]
 "50
-[; ;mcc_generated_files/system/src/clock.c: 50:     OSCFRQ = (6 << 0x0);
-[e = _OSCFRQ -> << -> 6 `i -> 0 `i `uc ]
+[; ;mcc_generated_files/system/src/clock.c: 50:     OSCFRQ = (0 << 0x0);
+[e = _OSCFRQ -> << -> 0 `i -> 0 `i `uc ]
 "51
 [; ;mcc_generated_files/system/src/clock.c: 51:     OSCTUNE = (0 << 0x0);
 [e = _OSCTUNE -> << -> 0 `i -> 0 `i `uc ]

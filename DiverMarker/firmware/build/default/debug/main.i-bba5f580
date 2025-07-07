@@ -10251,7 +10251,7 @@ void Perform_BlinkFSM(void)
       break;
 
     case Blink_WaitOffTime:
-      HandlePowerOff();
+
       if (0==SwTimer_u16)
       {
         GreenIsOnFlag_u08 = 1;

@@ -9984,7 +9984,7 @@ void CLOCK_Initialize(void)
         | (0 << 0x5)
         | (0 << 0x4)
         | (0 << 0x2);
-    OSCFRQ = (6 << 0x0);
+    OSCFRQ = (0 << 0x0);
     OSCTUNE = (0 << 0x0);
 
 }

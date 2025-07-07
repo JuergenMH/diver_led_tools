@@ -280,12 +280,14 @@ int main(void)
   {
     if (0 != TimerFlag_u08)               // one ms elapsed?
     {    
+      DebugOut_SetHigh();
       TimerFlag_u08 = 0;                  // yes, reset the flag
       if (0!=SwTimer_u16) SwTimer_u16--;  // currently one timer is enough
 
       Perform_LedPWM();                   // perform SW PWM for the LEDs
       Perform_PowerFSM();                 // call the power control FSM
       Perform_BlinkFSM();                 // call the blink generator
+      DebugOut_SetLow();
     }
   }    
 }

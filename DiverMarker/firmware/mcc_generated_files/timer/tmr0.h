@@ -55,7 +55,7 @@
  * @brief Defines the timer prescaled clock frequency in hertz.
  */
 /* cppcheck-suppress misra-c2012-2.5 */  
-#define TMR0_CLOCK_FREQ (32000000UL)
+#define TMR0_CLOCK_FREQ (1000000UL)
 /**
  * @ingroup timerdriver
  * @brief Defines the Custom Name for the \ref TMR0_MAX_COUNT.
